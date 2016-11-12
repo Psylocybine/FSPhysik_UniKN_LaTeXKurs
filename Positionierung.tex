@@ -17,39 +17,25 @@
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	
-\vspace{0.1cm}
-\begin{columns}
-	\column{0.5\linewidth}
 	\begin{lstlisting}
-\begin{figure}[(!)h/b/t/p]
-	\centering
-	\includegraphics[]{}
-	...
-\end{figure}
-\end{lstlisting}
-	\column{0.5\linewidth}
-	\begin{lstlisting}
-\begin{figure}[H]
+\begin{figure}[(!)h/b/t/p/H]
 	\centering
 	\includegraphics[]{}
 	...
 \end{figure}
 	\end{lstlisting}
-\end{columns}	
-\vspace{-0.1cm}
-%	\btVFill\Befehle
+	
+	\btVFill\Befehle
 	\begin{center}
-		\begin{tabular}{rl|  p{6.5cm} }
+		\begin{tabular}{l p{6cm} }
 			\toprule
-			Argument		&&	Positionierung																			\\ \midrule
-		\rule{0pt}{9pt}	 \texttt{[h]}	& \textit{here} &	ungefähr (!) an der Stelle im Code 			\\
-		\rule{0pt}{9pt}	 \texttt{[t]}	& \textit{top} &	am Anfang der Seite 																\\
-		\rule{0pt}{9pt}	 \texttt{[b]}	& \textit{bottom}&	am Ende der Seite 																\\
-		\rule{0pt}{9pt}	 \texttt{[p]}	& \textit{page}&	auf einer Extraseite für Abbildungen / Tabellen 									\\
-		\rule{0pt}{9pt}	 \texttt{[!]}	&&	überschreibt interne Regeln für die Positionierung								\\
-		\rule{0pt}{9pt}	 \texttt{[H]}	 & \textit{HERE} &	Platzierung an \emph{exakt} der Stelle im Code \\
-			&&(benötigt das \texttt{float}-Package)	\\
+			Argument		&	Positionierung																			\\ \midrule
+			\lstinline|[h]|	&	ungefähr an der Stelle im Code (allerdings nicht unbedingt genau dort) (here)			\\
+			\lstinline|[t]|	&	am Anfang der Seite (top)																\\
+			\lstinline|[b]|	&	am Ende der Seite (bottom)																\\
+			\lstinline|[p]|	&	auf einer Extraseite für Abbildungen / Tabellen (page)									\\
+			\lstinline|[!]|	&	überschreibt \LaTeX-interne Regeln für die Positionierung								\\
+			\lstinline|[H]|	&	Platzierung an \emph{exakt} der Stelle im Code (benötigt das \texttt{float}-Package)	\\
 			\bottomrule
 		\end{tabular}
 	\end{center}

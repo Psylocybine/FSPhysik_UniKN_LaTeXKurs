@@ -13,139 +13,19 @@
 		\large Grundlagen
 	\end{center}
 \end{frame}
-
-
 %-----------------------------------------------------------------------------------%
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-		Das SIUnitX-Paket bietet eine korrekte Darstellung von SI-Einheiten:
-	\begin{center}
-	\begin{tabular}{r|ll|l}
-		\toprule
-		\LaTeX\ Befehl					& Beispiel		&Ausgabe	&	Funktion								\\ \midrule
-		\lstinline|\SI{}{}|			&	\lstinline|\SI{220}{\gram}| & \SI{220}{\gram}			&	Zahl + Einheit				\\
-		\lstinline/\si{}/			&	\lstinline|\si{\gram}|	& \si{\gram}				&	\underline{nur} Einheit					\\
-			\lstinline/\num{}/			&	\lstinline|\num{220}|& \num{220}					&	\underline{nur} Zahl					\\
-		\bottomrule
-	\end{tabular}
-\end{center}
-Einheiten können mit Abkürzungen oder ausgeschrieben angegeben werden. Allerdings muss mit einem {\textbackslash} eingeleitet werden:
-	\begin{center}
-	\begin{tabular}{ll|c}
-	\toprule
-	Ausgeschrieben						& Abgekürzt						& Ausgabe				\\ \midrule
-	\lstinline/\si{\gram}/				&	\lstinline|\si{\g}|			& \si{\gram}			\\
-	\lstinline/\si{\degreeCelsius}/		&	\lstinline|\si{\celsius}|	& \si{\celsius}		\\
-	\lstinline/\si{\watt}/				&	\lstinline|\si{\W}|			& \si{\W}			\\
-	\bottomrule
-\end{tabular}
-\end{center}
-Ausgeschrieben ist die Einheit klein zuschreiben, wird sie abgekürzt muss sie entsprechend der Notationgroß oder klein geschrieben werden (siehe \lstinline|\si{\g}| - \si{\g}, \lstinline|\si{\W}| - \si{\W}).
-\end{frame}
-
-
-
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\vspace{-0.3cm}
-	\begin{Aufgabe}
-	Ergänze die Tabelle um folgende Angaben mit Hilfe der entsprechenden Befehle:
-	\end{Aufgabe}
+	\Ausgabe
 	\begin{outputbox}
-		\begin{center}
-			\begin{tabular}{r|cc}
-				\hline
-				&	\textbf{Löwe}										& \textbf{Mensch} 						\\ \hline
-				\textbf{Gewicht des Gehirns}		&	\SI{220}{\g}										& 2			\\ 
-				\textbf{Körpertemperatur}			&	\SI{37.9}{\degreeCelsius}							& 3	\\
-				\textbf{Atemfrequenz}				&	5								& 6 					\\
-				\textbf{Maximale Geschwindigkeit}	&	7								& 8				\\ 
-				\textbf{Grundstoffwechselumsatz}	& 9	&  \SI{82.78}{\watt}\\
-				\hline
-			\end{tabular}
-		\end{center}
+		\SI{3.5 +- 1}{\metre\per\second\cubed\per\kilogram}
 	\end{outputbox}
-	
-	\begin{center}
-		\begin{tabular}{ll}
-			\toprule
-			\LaTeX\ Befehl						&	Funktion						\\ \midrule
-			\lstinline|\SI{}{}|					&	Zahl + Einheit					\\
-			\lstinline|\einheit|				&	ausgeschriebene Einheit			\\
-			\lstinline|\E| oder \lstinline|\e|	&	abgekürzte Einheit				\\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-	\vspace{0.1cm}
-\end{frame}
 
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-\Losung
-	\begin{outputbox}
-		\begin{center}
-			\begin{tabular}{r|cc}
-				\hline
-				&	\textbf{Löwe}										& \textbf{Mensch} 						\\ \hline
-				\textbf{Gewicht des Gehirns}		&	\SI{220}{\g}										& 2			\\ 
-				\textbf{Körpertemperatur}			&	\SI{37.9}{\celsius}							& 3	\\
-				\textbf{Atemfrequenz}				&	5								& 6 					\\
-				\textbf{Maximale Geschwindigkeit}	&	7								& 8				\\ 
-				\textbf{Grundstoffwechselumsatz}	& 9	&  \SI{82.78}{\watt}\\
-				\hline
-			\end{tabular}
-		\end{center}
-	\end{outputbox}
-			\begin{center}
-			\begin{tabular}{ll}
-				\toprule
-				\LaTeX\ Befehl						&	Ausgabe						\\ \midrule
-				\lstinline|\SI{220}{\g}|			&	\SI{220}{\g}					\\
-				\lstinline|\SI{37.9}{\celsius}|		&	\SI{37.9}{\celsius}			\\
-				\lstinline|\SI{82.78}{\watt}|		&	\SI{82.78}{\watt}			\\
-				\bottomrule
-			\end{tabular}
-		\end{center}
-	
-	
-	
-\end{frame}
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\begin{center}
-		\begin{tabular}{r|ll|l}
-			\toprule
-			\LaTeX\ Befehl				& Beispiel		&Ausgabe	&	Funktion								\\ \midrule
-			\lstinline|\SIrange{}{}{}|	&	\lstinline|\SIrange{35.9}{38}{\celsius}| & \SIrange{35.9}{38}{\celsius}			&	Zahl bis Zahl + Einheit				\\
-			\lstinline/\pm/			&	\lstinline|\num{1.35 \pm 0.15}|	& \num{1.35 \pm 0.15}				&	 Unsicherheit					\\
-			\lstinline/e/			&	\lstinline|\num{2.2 e2}|& \num{2.2 e2}					&	 Zehnerpotenzen					\\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-		Größenordnungen können wie Einheiten angegeben werden. Allerdings muss mit einem {\textbackslash} eingeleitet werden:
-	\begin{center}
-		\begin{tabular}{ll|c}
-			\toprule
-			Ausgeschrieben						& Abgekürzt						& Ausgabe				\\ \midrule
-			\lstinline/\si{\gram}/				&	\lstinline|\si{\g}|			& \si{\gram}			\\
-			\lstinline/\si{\milli\gram}/				&	\lstinline|\si{\mg}|			& \si{\mg}			\\
-			\lstinline/\si{\kilo\gram}/				&	\lstinline|\si{\kg}|			& \si{\kg} 		\\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-Einige Regeln: 
-\begin{itemize}
-	\item Kombinationen von Abkürzung/Ausgeschieben wie \lstinline|\si{\mgram}| funktionieren nicht
-	\item Ungewöhnliche Kombinationen wie \lstinline|\si{\mega\gram}| müssen ausgeschrieben formuliert werden 
-\end{itemize}
-
+	\pause\Code
+	\begin{lstlisting}
+\SI{3.5 +- 1}{\metre\per\second\tothe{3}\per\kilogram}
+	\end{lstlisting}
 \end{frame}
 %-----------------------------------------------------------------------------------%
 %---------------------------------------FRAME---------------------------------------%
@@ -153,152 +33,40 @@ Einige Regeln:
 \begin{frame}[fragile]
 	\vspace{-0.3cm}
 	\begin{Aufgabe}
-		Ergänze die Tabelle um folgende Angaben mit Hilfe der entsprechenden Befehle:
+		Ergänze die Tabelle um folgende Angaben mit Hilfe von \lstinline[basicstyle=\normalfont\normalsize]|\SI|:
 	\end{Aufgabe}
 	\begin{outputbox}
 		\begin{center}
-			\begin{tabular}{r|cc}
+			\begin{tabular}{rcc}
 				\hline
-				&	\textbf{Löwe}										& \textbf{Mensch} 						\\ \hline 
-				\textbf{Gewicht des Gehirns}		&	\SI{2.2 e2}{\g}										& \SI{1.35 \pm 0.15}{\kg}				\\ 
+				&	\textbf{Löwe}										& \textbf{Mensch} 						\\ \hline
+				%\textbf{Lebensdauer} 				&	\SI{27}{\years}										& \SI{66}{\years}						\\ 
+				\textbf{Gewicht des Gehirns}		&	\SI{220}{\g}										& \SI{1.35 \pm 0.15}{\kg}				\\ 
 				\textbf{Körpertemperatur}			&	\SI{37.9}{\degreeCelsius}							& \SIrange{35.9}{38}{\degreeCelsius}	\\
-				\textbf{Atemfrequenz}				&	5								& 6					\\
-				\textbf{Maximale Geschwindigkeit}	&	7								& 8				\\ 
-				\textbf{Grundstoffwechselumsatz}	&	9	&  \SI{82.78}{\watt}\\
+				\textbf{Atemfrequenz}				&	\SI{10}{\per \minute}								& \SI{11}{\per\minute} 					\\
+				\textbf{Maximale Geschwindigkeit}	&	\SI{75}{\km\per\hour}								& \SI{44.46}{\km\per\hour} 				\\ 
+				\textbf{Grundstoffwechselumsatz}	&	\SI{94.58}{\kg\metre\squared\per\second\tothe{3}}	&  \SI{82.78}{\watt}\\
 				\hline
 			\end{tabular}
 		\end{center}
 	\end{outputbox}
 
+	\btVFill\Befehle
 	\begin{center}
-	\begin{tabular}{ll}
-		\toprule
-		\LaTeX\ Befehl						&	Funktion									\\ \midrule
-		\lstinline|\SIrange{}{}|			&	Zahl bis Zahl + Einheit						\\
-		\lstinline|\pm			|			&	Unsicherheit								\\		
-		\lstinline|e			|			&	Zehnerpotenzen						\\		
-		\lstinline|\größenordnung\einheit|	&	ausgeschriebene Einheit	mit Größenordnung	\\
-		\lstinline|\gE|, \lstinline|\ge|, \lstinline|\Ge| oder \lstinline|\GE|&	abgekürzte Einheit mit Größenordnung		\\
-		\bottomrule
-	\end{tabular}
-\end{center}
+		\begin{tabular}{ll}
+			\toprule
+			\LaTeX\ Befehl				&	Funktion						\\ \midrule
+			\lstinline|\SI{}{}|			&									\\
+			\lstinline|\SIrange{}{}|	&									\\
+			\lstinline|\SIlist{}{}|		&									\\
+			\lstinline|\num{}|			&									\\
+			\lstinline|\per|			&									\\
+			\lstinline|\tothe{}|		&									\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
 	\vspace{0.1cm}
 \end{frame}
-
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\Losung
-	\begin{outputbox}
-		\begin{center}
-			\begin{tabular}{r|cc}
-				\hline
-				&	\textbf{Löwe}										& \textbf{Mensch} 						\\ \hline
-				\textbf{Gewicht des Gehirns}		&	\SI{2.2 e2}{\g}										& \SI{1.35 \pm 0.15}{\kg}			\\ 
-				\textbf{Körpertemperatur}			&	\SI{37.9}{\celsius}							& \SIrange{35.9}{38}{\degreeCelsius}	\\
-				\textbf{Atemfrequenz}				&	5								& 6 					\\
-				\textbf{Maximale Geschwindigkeit}	&	7								& 8				\\ 
-				\textbf{Grundstoffwechselumsatz}	& 9	&  \SI{82.78}{\watt}\\
-				\hline
-			\end{tabular}
-		\end{center}
-	\end{outputbox}
-
-				\begin{center}
-		\begin{tabular}{ll}
-			\toprule
-			\LaTeX\ Befehl						&	Ausgabe						\\ \midrule
-			\lstinline|\SI{2.2 e2}{\g} |			&	\SI{2.2 e2}{\g} 					\\
-			\lstinline|\SI{1.35 \pm 0.15}{\kg}|		&	\SI{1.35 \pm 0.15}{\kg}			\\
-			\lstinline|\SIrange{35.9}{38}{\celsius}|		&	\SIrange{35.9}{38}{\celsius}			\\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-	
-	
-\end{frame}
-
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\begin{center}
-		\begin{tabular}{r|ll|l}
-			\toprule
-			\LaTeX\ Befehl				& Beispiel		&Ausgabe	&	Funktion								\\ \midrule
-			\lstinline|\squared|	&	\lstinline|\si{\meter\squared}| &\si{\meter\squared}			&	Quadrat 				\\
-						\lstinline|\cubed|	&	\lstinline|\si{\meter\cubed}| &\si{\meter\cubed}			&	hoch drei				\\
-			\lstinline/\tothe{}/			&	\lstinline|\si{\meter\tothe{4}}|	& \si{\meter\tothe{2}}				&	 positive Exponenten					\\
-			\lstinline/\per/			&	\lstinline|\si{\per\meter}|& \si{\per\meter}				&	 	Bruch			\\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-Jede Einheit muss extra mit einem Exponenten versehen werden. Dies gilt auch für Einheiten die unterhalb des Bruchstrichs stehen sollen:
-	\vspace{12px}
-\begin{columns}[c]
-\column{0.6\linewidth}
-\begin{lstlisting}
-\si{\meter\tothe{1}\meter\squared\meter\cubed
-\meter\tothe{4}}
-
-\si{\per\meter\per\meter\per\meter}
-
-\si{\per\meter\tothe{1}\per\meter\squared\per
-\meter\cubed\per\meter\tothe{4}}
-\end{lstlisting}
-\column{0.4\linewidth}
-\begin{outputbox}
-	\begin{center}
-		\vspace{3px}
-\si{\meter\tothe{1}\meter\squared\meter\cubed\meter\tothe{4}} \\
-\vspace{10px}
-\si{\per\meter\per\meter\per\meter} \\
-\vspace{10px}
-\si{\per\meter\tothe{1}\per\meter\squared\per\meter\cubed\per\meter\tothe{4}}
-	\end{center}
-\end{outputbox}
-\end{columns}
-\end{frame}
-
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\begin{Aufgabe}
-	Ergänze die Tabelle um folgende Angaben mit Hilfe der entsprechenden Befehle:
-\end{Aufgabe}
-	\begin{outputbox}
-		\vspace{-0.1cm}
-		\begin{center}
-			\begin{tabular}{r|cc}
-				\hline
-				&	\textbf{Löwe}										& \textbf{Mensch} 						\\ \hline
-				\textbf{Gewicht des Gehirns}		&	\SI{2.2e2}{\g}										& \SI{1.35 \pm 0.15}{\kg}				\\ 
-				\textbf{Körpertemperatur}			&	\SI{37.9}{\degreeCelsius}							& \SIrange{35.9}{38}{\degreeCelsius}	\\
-				\textbf{Atemfrequenz}				&	\SI{10}{\per \minute}								& \SI{15840}{\per\day} 					\\
-				\textbf{Maximale Geschwindigkeit}	&	\SI{20.83}{\m\per\s}								& \SI{44.46}{\km\per\hour} 				\\ 
-				\textbf{Grundstoffwechselumsatz}	&	\SI{94.58}{\kg\meter\squared\per\second\tothe{3}}	&  \SI{82.78}{\watt}\\
-				\hline
-			\end{tabular}
-		\end{center}
-		\vspace{-0.1cm}
-	\end{outputbox}
-	
-	\begin{center}
-		\begin{tabular}{ll}
-	\toprule
-	\LaTeX\ Befehl				& 	Funktion								\\ \midrule
-	\lstinline|\squared|	&	Quadrat 				\\
-	\lstinline|\cubed|				&	hoch drei				\\
-	\lstinline/\tothe{}/			&	 positive Exponenten					\\
-	\lstinline/\per/		&	Bruch			\\
-	\bottomrule
-\end{tabular}
-	\end{center}
-\end{frame}
-
-
 %-----------------------------------------------------------------------------------%
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
@@ -307,30 +75,81 @@ Jede Einheit muss extra mit einem Exponenten versehen werden. Dies gilt auch fü
 	\begin{outputbox}
 		\vspace{-0.1cm}
 		\begin{center}
-			\begin{tabular}{r|cc}
+			\begin{tabular}{rcc}
 				\hline
 				&	\textbf{Löwe}										& \textbf{Mensch} 						\\ \hline
-				\textbf{Gewicht des Gehirns}		&	\SI{2.2e2}{\g}										& \SI{1.35 \pm 0.15}{\kg}				\\ 
+				\textbf{Gewicht des Gehirns}		&	\SI{220}{\g}										& \SI{1.35 \pm 0.15}{\kg}				\\ 
 				\textbf{Körpertemperatur}			&	\SI{37.9}{\degreeCelsius}							& \SIrange{35.9}{38}{\degreeCelsius}	\\
-				\textbf{Atemfrequenz}				&	\SI{10}{\per \minute}								& \SI{15840}{\per\day} 					\\
-				\textbf{Maximale Geschwindigkeit}	&	\SI{20.83}{\m\per\s}								& \SI{44.46}{\km\per\hour} 				\\ 
-				\textbf{Grundstoffwechselumsatz}	&	\SI{94.58}{\kg\meter\squared\per\second\tothe{3}}	&  \SI{82.78}{\watt}\\
+				\textbf{Atemfrequenz}				&	\SI{10}{\per \minute}								& \SI{11}{\per\minute} 					\\
+				\textbf{Maximale Geschwindigkeit}	&	\SI{75}{\km\per\hour}								& \SI{44.46}{\km\per\hour} 				\\ 
+				\textbf{Grundstoffwechselumsatz}	&	\SI{94.58}{\kg\metre\squared\per\second\tothe{3}}	&  \SI{82.78}{\watt}\\
 				\hline
 			\end{tabular}
 		\end{center}
 		\vspace{-0.1cm}
 	\end{outputbox}
 
-				\begin{center}
-	\begin{tabular}{ll}
-		\toprule
-		\LaTeX\ Befehl						&	Ausgabe						\\ \midrule
-		\lstinline|\SI{10}{\per\minute} |			&	\SI{10}{\per\minute} 					\\
-		\lstinline|\SI{15840}{\per\day} |		&	\SI{15840}{\per\day} 		\\
-		\lstinline|\SI{20.83}{\m\per\s} |		&	\SI{20.83}{\m\per\s}			\\
-		\lstinline|\SI{44.46}{\km\per\hour} |		&	\SI{44.46}{\km\per\hour}			\\
-		\lstinline|\SI{94.58}{\kg\m\squared\per\s\tothe{3}} |		&	\SI{94.58}{\kg\m\squared\per\s\tothe{3}}			\\
-		\bottomrule
-	\end{tabular}
-\end{center}
+	\Code
+	\begin{lstlisting}[tabsize=1,breaklines=false]
+\SI{220}{\g}                                      & \SI{1.35 \pm 0.15}{\kg}
+\SI{37.9}{\degreeCelsius}                         & \SIrange{35.9}{38}{\degreeCelsius}
+\SI{10}{\per \minute}                             & \SI{11}{\per\minute}
+\SI{75}{\km\per\hour}                             & \SI{44.46}{\km\per\hour}
+\SI{94.58}{\kg\metre\squared\per\second\tothe{3}} & \SI{82.78}{\watt}
+	\end{lstlisting}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection{Einstellmöglichkeiten}
+\begin{frame}[c]
+	\begin{center}
+		\large Einstellmöglichkeiten
+	\end{center}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Befehle\vspace{-0.1cm}	
+	\begin{center}
+		\begin{tabular}{l >{\raggedright\arraybackslash}p{3cm} >{\raggedright\arraybackslash}p{1.5cm}}
+			\toprule
+			SIUnitX Option						&	Einstellmöglichkeiten											&	Funktion	\\ \midrule
+			\lstinline|exponent-product|		&	\lstinline|\times|,\linebreak\lstinline|\cdot|, ...						&	\num[exponent-product=\times]{1.47e5},\linebreak \num[exponent-product=\cdot]{1.47e5}\\
+			\lstinline|separate-uncertainty|	&	\lstinline|true|,\linebreak\lstinline|false|								&	\num[separate-uncertainty=true]{1.7+-0.2},\linebreak \num[separate-uncertainty=false]{1.7+-0.2}\\
+			\lstinline|multi-part-units|		&	\lstinline|brackets|,\linebreak\lstinline|repeat|,\linebreak\lstinline|single|	&	\SI[multi-part-units=brackets,separate-uncertainty=true]{3.5+-0.1}{\metre},\linebreak \SI[multi-part-units=repeat,separate-uncertainty=true]{3.5+-0.1}{\metre},\linebreak \SI[multi-part-units=single,separate-uncertainty=true]{3.5+-0.1}{\metre}\\
+			\lstinline|per-mode|				&	\lstinline|fraction|,\linebreak\lstinline|symbol|,\linebreak\lstinline|reciprocal-positive-first|,\linebreak\lstinline|repeated-symbol|,\linebreak\lstinline|symbol-or-fraction|	&	\SI[per-mode=fraction]{17}{\kg\metre\per\second\tothe{2}},\linebreak\SI[per-mode=symbol]{17}{\kg\metre\per\second\tothe{2}},\linebreak \SI[per-mode=reciprocal-positive-first]{17}{\kg\metre\per\second\tothe{2}},\linebreak\SI[per-mode=repeated-symbol]{17}{\kg\metre\per\second\tothe{2}}\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	Global:\vspace{-0.1cm}
+	\begin{lstlisting}
+\sisetup{exponent-product = \cdot}
+	\end{lstlisting}
+	\vspace{-0.2cm}Lokal:\vspace{-0.1cm}
+	\begin{lstlisting}
+\SI[exponent-product = \cdot]{1.5}{\metre}
+	\end{lstlisting}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{Aufgabe}
+		TUE ES!
+	\end{Aufgabe}
+	\btVFill\Befehle
+	\begin{center}
+		\begin{tabular}{l >{\raggedright\arraybackslash}p{5cm}}
+			\toprule
+			SIUnitX Option						&	Einstellmöglichkeiten										\\ \midrule
+			\lstinline|exponent-product|		&	\lstinline|\times|, \lstinline|\cdot|, ...					\\
+			\lstinline|separate-uncertainty|	&	\lstinline|true|, \lstinline|false|							\\
+			\lstinline|multi-part-units|		&	\lstinline|brackets|, \lstinline|repeat|, \lstinline|single|	\\
+			\lstinline|per-mode|				&	\lstinline|fraction|, \lstinline|symbol|, \lstinline|reciprocal-positive-first|, \lstinline|repeated-symbol|, \lstinline|symbol-or-fraction|	\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\vspace{0.1cm}
 \end{frame}

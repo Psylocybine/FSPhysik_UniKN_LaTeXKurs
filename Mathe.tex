@@ -1,4 +1,3 @@
-\definecolor{math-cmd}{rgb}{0.6, 0.4, 0.8} %Definiert Farbe in der ``Mathe''' in Mathe-Befehl hervorgehoben ist.
 \section{Formelsatz}
 \begin{frame}[c]
 	\begin{center}
@@ -19,14 +18,14 @@
 % -----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	Abgesetzte Formeln:
-	\begin{lstlisting}[gobble=8]
-        \begin{align}
-          ...
-        \end{align}
+	\begin{lstlisting}[gobble=4]
+    \begin{align}
+      ...
+    \end{align}
 	\end{lstlisting}
 	Formeln im Text:
-	\begin{lstlisting}[gobble=8]
-        Umgebender Text $ ... $ Umgebender Text
+	\begin{lstlisting}[gobble=4]
+    Umgebender Text $ ... $ Umgebender Text
 	\end{lstlisting}
 	
 	Die auf den folgenden Folien beschriebenen Befehle funktionieren nur innerhalb von beiden Matheumgebungen.
@@ -41,14 +40,14 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl									&	Ausgabe				\\ \midrule
-			\lstinline|\text{Beispieltext}|			&	\text{Beispieltext}	\\
-			\lstinline|Beispieltext|				&	$Beispieltext$		\\
-			\lstinline|y^{x}|						&	$y^{x}$				\\
-			\lstinline|y_{x}|						&	$y_{x}$				\\
-			\lstinline|+|	und 	\lstinline|-|	&	$+$	und $-$			\\
-			\lstinline|\pm| und \lstinline|\mp|		&	$\pm$ und $\mp$		\\
-			\lstinline|\infty|						&	$\infty$			\\
+			Befehl									&	Ausgabe					\\ \midrule
+			\lstinline|\text{Der Beispieltext}|		&	\text{Der Beispieltext}	\\
+			\lstinline|Der Beispieltext|			&	$Der Beispieltext$		\\
+			\lstinline|y^{x}|						&	$y^{x}$					\\
+			\lstinline|y_{x}|						&	$y_{x}$					\\
+			\lstinline|+|	und 	\lstinline|-|	&	$+$	und $-$				\\
+			\lstinline|\pm| und \lstinline|\mp|		&	$\pm$ und $\mp$			\\
+			\lstinline|\infty|						&	$\infty$			    \\
 			\bottomrule
 		\end{tabular}
 	\end{center}
@@ -128,7 +127,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl						&	Ausgabe						\\ \midrule
+			Befehl						&	Ausgabe						\\ \midrule
 			\lstinline|y^{x}|			&	$y^{x}$						\\
 			\lstinline|y_{x}|			&	$y_{x}$						\\
 			\lstinline|\cdot|			&	$\cdot$						\\
@@ -256,7 +255,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl													&	Ausgabe										\\ \midrule
+			Befehl													&	Ausgabe										\\ \midrule
 			\lstinline|\text{Normaler Text in Matheumgebungen}|		&	Normaler Text in Matheumgebungen			\\
 			\lstinline|\\|											&	Absatz										\\
 			\lstinline|&|											&	Ausrichten mehrerer Zeilen untereinander	\\
@@ -313,7 +312,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			Befehl							&	Ausgabe					\\ \midrule
 			\lstinline|Mathe|				&	$Mathe$					\\
 			\lstinline|\mathrm{Mathe}|		&	$\mathrm{Mathe}$		\\
 			\lstinline|\mathbf{Mathe}|		&	$\mathbf{Mathe}$		\\
@@ -408,7 +407,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			Befehl							&	Ausgabe					\\ \midrule
 			\lstinline|\imath|				&	$\imath$					\\
 			\lstinline|\int_{von}^{bis}|		&	$\int_{\mathrm{von}}^{\mathrm{bis}}$		\\ \addlinespace[0.5em]
 			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		
@@ -514,7 +513,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			Befehl							&	Ausgabe					\\ \midrule
 			\lstinline|\int_{von}^{bis}|		&	$\int_{\text{von}}^{\text{bis}}$		\\ \addlinespace[0.5em]
 			\lstinline|\lim_{Limit}|		&	$\lim_{\text{Limit}}$		\\
 			\lstinline|\mathrm{Text}|		&	$\mathrm{Text}$		
@@ -561,7 +560,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			Befehl							&	Ausgabe					\\ \midrule
 			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		\\
 			\lstinline|\partial|		&	$\partial$		
 			\\
@@ -661,7 +660,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			Befehl							&	Ausgabe					\\ \midrule
 			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		\\
 			\lstinline|\partial|		&	$\partial$		
 			\\
@@ -709,7 +708,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			Befehl							&	Ausgabe					\\ \midrule
 			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		\\
 			\lstinline|\partial|		&	$\partial$		
 			\\
@@ -758,7 +757,7 @@
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule
-			\color{math-cmd}{Mathe}\color{black}-Befehl									&	Ausgabe		\\ \midrule
+			Befehl									&	Ausgabe		\\ \midrule
 			\lstinline|\begin{cases}...\end{cases}|	&	für Fälle in Mathe Umgebungen	\\
 			\lstinline|<|							&	$<$		\\
 			\lstinline|>|							&	$>$		\\
