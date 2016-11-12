@@ -1,0 +1,149 @@
+\section{Referenzen innerhalb des Dokuments}
+\begin{frame}[c]
+	\begin{center}
+		\LARGE \textbf{Referenzen innerhalb des Dokuments}
+	\end{center}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection*{Referenzen innerhalb des Dokuments}
+%\begin{frame}
+%	\begin{center}
+%		\large Grundlagen
+%	\end{center}
+%\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Ausgabe
+	\begin{outputbox}
+		\begin{align}
+			a^2+b^2=c^2\label{eq:satzpythagoras}
+		\end{align}
+		Gleichung \eqref{eq:satzpythagoras} stellt einen sehr wichtigen mathematischer Ausdruck dar.
+	\end{outputbox}
+	
+	
+	\pause
+	\begin{lstlisting}
+\label{NAME}
+	\end{lstlisting}
+	
+	\pause
+	\Code
+	\begin{onlyenv}<3>
+		\begin{lstlisting}
+\begin{align}
+	a^2+b^2=c^2
+\end{align}
+		\end{lstlisting}
+	\end{onlyenv}
+	\begin{onlyenv}<4>
+		\begin{lstlisting}
+\begin{align}
+	a^2+b^2=c^2\label{eq:satzpythagoras}
+\end{align}
+		\end{lstlisting}
+	\end{onlyenv}
+	\begin{onlyenv}<5>
+		\begin{lstlisting}
+\begin{align}
+		a^2+b^2=c^2\label{eq:satzpythagoras}
+\end{align}
+Gleichung \eqref{eq:satzpythagoras} stellt einen sehr wichtigen mathematischer Ausdruck dar.
+		\end{lstlisting}
+	\end{onlyenv}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Code
+	\begin{lstlisting}
+\begin{figure}
+	\centering
+	\includegraphics[]{...}
+	\caption{Testabbildung mit interner Referenz}
+	\label{fig:abb1}
+\end{figure}	
+Abbildung \ref{fig:abb1} zeigt nichts.		
+	\end{lstlisting}
+
+	\Ausgabe
+	\begin{outputbox}
+		\vspace{1cm}
+		\begin{figure}
+			\centering
+			%\includegraphics[]{...}
+			\caption{Testabbildung mit interner Referenz}
+			\label{fig:abb1}
+		\end{figure}
+		\vspace{-1cm}
+		Abbildung \ref{fig:abb1} zeigt nichts.	
+	\end{outputbox}
+\note{
+- Label muss NACH der Caption stehen sonste funktioniert es nicht (oder nur fehlerhaft).+\\
+- Analoge Funktionsweise für Tabellen}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{Aufgabe}
+		Füge ein Label zu der Tabelle \qquote{Vergleich der Körpereigenschaften} hinzu.
+		
+		Schreibe dann den folgenden Satz unter Verwendung von \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\ref{}|:
+		
+		\textrm{\qquote{Wenn nicht anders angegeben sind die Daten in Tabelle 1 von der Wissensmaschine WolframAlpha.}}
+	\end{Aufgabe}
+
+	\btVFill\Befehle
+	\begin{center}
+		\begin{tabular}{lp{6cm}}
+			\toprule
+			\LaTeX\ Befehl					&	Funktion					\\ \midrule
+			\lstinline|\label{NAME}|		&	Weist einem Bestimmen Objekt (z.B. Abbildung, Tabelle, Liste oder Gleichung) einen \emph{internen} Name zu		\\
+			\lstinline|\ref{}|				&	Referenziert das gegebene Objekt								\\
+			\lstinline|\pageref{}|			&	Referenziert die Seite des Objekts								\\
+			\lstinline|\eqref{}|			&	Setzt die Referenzierung in Klammern und schreibt sie aufrecht	\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\vspace{0.1cm}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile,shrink]
+	\Losung
+	\begin{outputbox}
+		Wenn nicht anders angegeben sind die Daten in Tabelle \ref{tab:loewemensch} von der Wissensmaschine WolframAlpha.
+		\vspace{-0.5cm}
+		\begin{table}
+			\centering
+			\caption{Vergleich von Löwe und Mensch.}
+			\label{tab:loewemensch}
+			\vspace{-0.2cm}
+			\begin{tabular}{r|cc}
+				\hline
+				\textbf{Eigenschaft}														&	\textbf{Löwe}	& \textbf{Mensch} \\\hline
+				... &&
+			\end{tabular}
+		\end{table}
+	\end{outputbox}
+	
+	\Code
+	\begin{lstlisting}
+Wenn nicht anders angegeben sind die Daten in Tabelle \ref{tab:loewemensch} von der Wissensmaschine WolframAlpha.	
+\begin{table}
+	\centering
+	\caption{Vergleich von Löwe und Mensch.}
+	\label{tab:loewemensch}
+	\begin{tabular}{r|cc}
+		...
+	\end{tabular}
+\end{table}
+	\end{lstlisting}
+\end{frame}

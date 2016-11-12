@@ -1,0 +1,58 @@
+\section{Abstract}
+\begin{frame}[c]
+	\begin{center}
+		\LARGE \textbf{Abstract}
+	\end{center}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection*{Abstract}
+%\begin{frame}
+%	\begin{center}
+%		\large Grundlagen
+%	\end{center}
+%\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\vspace{-0.3cm}
+	\begin{Aufgabe}
+		Füge am Anfang des Dokuments (nach dem \lstinline[basicstyle=\normalfont\normalsize]|\maketitle| Befehl) eine Zusammenfassung mit Hilfe der \lstinline[basicstyle=\normalfont\normalsize]|\begin{abstract}...\end{abstract}|-Umgebung hinzu.
+		
+		Schreibe darin folgenden Text und benutze die  Umgebung und verwende für die Angaben von Titel, Autor und Jahr die Befehle \lstinline[basicstyle=\normalfont\normalsize]|\citetitle|, \lstinline[basicstyle=\normalfont\normalsize]|\citeauthor| und \lstinline[basicstyle=\normalfont\normalsize]|\citeyear|:
+	\end{Aufgabe}
+	\begin{outputbox}
+		Dies ist das Endprodukt des \LaTeX-Kurses der Fachschaft Physik der Universität Konstanz. Der Text basiert auf der Veröffentlichung \citetitle{Petard1938} von \citeauthor{Petard1938} aus dem Jahr \citeyear{Petard1938} \cite[29\psqq]{Weber2013} und einem Dokument von XXX, das online zu finden ist. Der Text weicht an einigen Stellen von den Originalen ab, wenn die Pädagogik es verlangte.
+	\end{outputbox}
+	\btVFill\Befehle
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\LaTeX\ Befehl							&	Funktion					\\ \midrule
+			\lstinline|\cite[]{}|					&	Zitierbefehl\\
+			\lstinline|\printbibliography|			&	Erstellen des Literaturverzeichnis\\
+			\lstinline|\citeauthor{}|				&	Zitieren des Autors \\
+			\lstinline|\citeyear{}|					&	Zitieren des Jahrs \\
+			\lstinline|\citetitle{}|				&	Zitieren des Titels \\
+			\lstinline|\psq|, \lstinline|\psqq|		&	\texttt{f} und \texttt{ff} \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\vspace{0.1cm}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		Dies ist das Endprodukt des \LaTeX-Kurses der Fachschaft Physik der Universität Konstanz. Der Text basiert auf der Veröffentlichung \citetitle{Petard1938} von \citeauthor{Petard1938} aus dem Jahr \citeyear{Petard1938} \cite[29\psqq]{Weber2013} und einem Dokument von XXX, das online zu finden ist. Der Text weicht an einigen Stellen von den Originalen ab, wenn die Pädagogik es verlangte.
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}
+Dies ist das Endprodukt des \LaTeX-Kurses der Fachschaft Physik der Universität Konstanz. Der Text basiert auf der Veröffentlichung \citetitle{Petard1938} von \citeauthor{Petard1938} aus dem Jahr \citeyear{Petard1938} \cite[29\psqq]{Weber2013} und einem Dokument von XXX, das online zu finden ist. Der Text weicht an einigen Stellen von den Originalen ab, wenn die Pädagogik es verlangte.	
+	\end{lstlisting}
+\end{frame}

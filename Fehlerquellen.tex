@@ -1,0 +1,326 @@
+\section{Fehler}
+\begin{frame}[c]
+	\begin{center}
+		\LARGE \textbf{Fehler: Wie man damit fertig wird!}
+	\end{center}
+\end{frame}
+%% -----------------------------------------------------------------------------------------------%
+%% ------------------------------------------SUBSECTION-------------------------------------------%
+%% -----------------------------------------------------------------------------------------------%
+\subsection{Fehler im Code}
+\begin{frame}[c]
+	\begin{center}
+		\large Fehler im Code
+	\end{center}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------MITTEILUNGEN--------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}{Messages: {\LaTeX}'s Art zu reden}
+    In der Regel zu finden im editoreigenen ``Message''-Fenster.\vspace{10pt}:
+    \begin{columns}
+
+      \column{0.5\textwidth}
+      {\color{blue}\textbf{Warnings}}
+      \begin{itemize}
+      \item<2-> Oft blau hinterlegt.
+        \note<2>{Zumindest weniger auffällig als rot.}
+      \item<4-> Einzeln nicht kritisch für das Dokument.
+      \item<7-> Häufungen führen zu unberechenbarem Verhalten.
+      \item<7-> Kann oft ignoriert werden.
+        \note<7>{Man darf sie aber durchaus auch fixen.}
+        \note<7>{\\Je mehr Warnungen ignoriert werden, desto schwieriger ist es Ursachen von Fehlern zu finden (messages werden unpräzieser).}
+      \end{itemize}
+
+      \column{0.5\textwidth}
+      {\color{red}\textbf{Errors}}
+      \begin{itemize}
+      \item<3-> Meist rot (auffällig) hinterlegt.
+      \item<3-> Beginnen immer mit einem: {\color{red}\texttt{!}}
+      \item<5-> Führen oft zum Abbruch der Kompilierung.
+        \uncover<6->{\\\texttt{exited with status $\langle$zahl>0$\rangle$}}
+      \item<8-> Vorsicht: Ignorieren garantiert späteren Frust.
+        \note<8>{Ausnahmen bestätigen die Regel:}
+        \note<8>{\\Durch \texttt{-interaction=nonstopmode} der meisten Editoren gibts meist doch output; ist das Dokument fertig, dann ist es halt fertig!}
+      \end{itemize}
+      
+    \end{columns}
+
+    \vspace{10pt}
+    \uncover<9->{$\ldots$ und dann ist da noch die \texttt{.log}-Datei. Hier sammeln sich alle anderen Nachrichten.}
+\end{frame}
+
+\begin{frame}[fragile,c]{Falltest: Wir machen einen Fehler.}
+
+  %\vspace{10pt}
+  \begin{outputbox}
+    Der folgende Code enthält einen Fehler:
+  \end{outputbox}
+  \vspace{8pt}
+  
+    \begin{lstlisting}
+      \documentclass{scrartcl}
+
+      \title{How to be a \LaTeX hacker}
+      \author{Inge Inkompetent \& Anton Anfänger}
+
+      \begin{document}
+
+      \date{30. Februar 2017
+
+        \maketitle
+
+      \end{document}
+    \end{lstlisting}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Aufbau einer Fehlermeldung}
+
+  \begin{columns}
+
+      \column{0.5\textwidth}
+      % \textbf{Editorausgabe}
+      \begin{block}{Editorausgabe}
+      \note<1>{Editorausgabe hängt von Editor ab (die hier gezeigte ist mit texmaker generiert, dürfte aber eine durchschnittliche sein.)}
+      \begin{lstlisting}[gobble=4]
+        @@@Runaway argument?@
+        @{11. Dezember 2013 @
+          @! Paragraph ended before \date was complete.@
+          @<to be read again> @
+          @\par @
+          @l.9@
+        \end{lstlisting}
+        \uncover<8>{
+          \begin{block}{Weiterer Blick in die \texttt{.log}-Datei}
+            \begin{tikzpicture}[baseline=(current bounding box.north)]
+              \opaqueblock{8-}{visib}{\linewidth}{
+                \texttt{I suspect you've forgotten a `\}', causing me to apply this
+                  control sequence to too much text. How can we recover?
+                  My plan is to forget the whole thing and hope for the best.}
+              }
+            \end{tikzpicture}
+          \end{block}
+        }
+        %\uncover<8>{\textbf{Weiterer Blick in die \texttt{.log}-Datei}}
+        
+      \end{block}
+
+      \column{0.5\textwidth}
+      % \textbf{Erläuterung}
+      \begin{block}{Erläuterung}
+      \begin{itemize}
+      \item<2-> \color<2>{blue!70!black}{{\LaTeX}'s eher kryptische Vermutung der Fehlerursache.}
+        \note<2>{Diese Zeile kommt aus der \texttt{.log}-Datei}
+      \item<3-> \color<3>{blue!70!black}{Zeile aus der \texttt{.tex}-Datei die den Fehler erzeugt.}
+        \note<3>{Besser: Von der \LaTeX\ denkt, dass sie den Fehler erzeugt, manchmal ist der schon früher passiert.}
+        \note<3>{\\Die Zeile ist ebenfalls aus der \texttt{.log}-Datei.}
+      \item<4-> \color<4>{blue!70!black}{Eigentliche Fehlermeldung.}
+        \note<4>{Eine neue Zeile hat nichts in einer Datumsangabe zu suchen, dass erkennt \LaTeX.}
+      \item<5-> \color<5>{blue!70!black}{Mehr Kryptisches aus der \texttt{.log}-Datei.}
+        \note<5>{Kp. ..vllt {\LaTeX}'s internes Vorgehen?}
+      \item<6-> \color<6>{blue!70!black}{\TeX-Befehl in den \texttt{\newline} intern überführt wird (Bitte Vergessen!)}
+      \item<7-> \color<7>{blue!70!black}{Zeilennummer im Quelltext (\texttt{.tex}-Datei) an der \LaTeX\ den Fehler vermutet.}
+      \end{itemize}
+      \end{block}
+      
+    \end{columns}
+    
+\end{frame}
+
+\begin{frame}{Fehler im Code}
+  \begin{block}{Häufige Fehler}
+    \note<1->{Tabelle sollte nicht detailiert durchgesprochen werden. Sie sollte nur gesehen worden sein.}
+    \colorlet{lstg}{green!70!black}
+
+    \small
+    \begin{tabular}[c]{l c r}
+\kern-1em \cellcolor{blue!15}{\emph{Fehler}}    & \cellcolor{blue!15}{\emph{Fehlermeldung}}                                                 & \cellcolor{blue!15}{\emph{Lösung}}\\
+\kern-1em Package fehlt                         & \color{red}{\texttt{! LaTeX Error: <}\textit{command}\texttt{> undefined.}}               & \texttt{$\backslash$\color{lstg}{usepackage}%
+                                                                                                                                              \color{black}{\{<}}\textit{package}\texttt{>\}}\\
+\kern-1em \cellcolor{blue!5}Verschrieben (cmd)  & \cellcolor{blue!5}\color{red}{\texttt{! LaTeX Error: <}\textit{command}\texttt{> undefined.}} & \cellcolor{blue!5}Korrektur\\
+\kern-1em Verschrieben (file)                   & \color{red}{\texttt{! LaTeX Error: File <}\textit{path}\texttt{> not found}}              & Dateipfad prüfen.\\
+\kern-1em \cellcolor{blue!5}Kein Mathe-Kontext  & \cellcolor{blue!5}\color{red}{\texttt{! Missing \$ inserted.}}                            & \cellcolor{blue!5}Ergänze \color{lstg}{\texttt{\$}}\color{black}%
+                                                                                                                                              \ oder \color{lstg}\texttt{align}\color{black}-env.\\
+\kern-1em \color{lstg} \} \color{black} fehlt od. nach Umbruch & \color{red}{\texttt{! Par. ended before macro was compl.}}                 & Makro vor "\texttt{$\backslash$\color{lstg}{end}}\color{black}"%
+                                                                                                                                              \ schließen.\\
+\kern-1em \cellcolor{blue!5}Env nicht geschl.   & \cellcolor{blue!5}\color{red}{\texttt{! Emrgncy stop err\_env-n-closed.tex}}              & \cellcolor{blue!5}\texttt{$\backslash$\color{lstg}{end}%
+                                                                                                                                              \color{black}{\{<}}\textit{env}\texttt{>\}} vor %
+                                                                                                                                              "\texttt{$\backslash$\color{lstg}{end}}\color{black}".
+    \end{tabular}
+
+    \begin{block}{Zusatz}
+      Dies Tabelle ist hoffentlich nützlich um für die häufigsten Fehler zu sensibilisieren oder Fehlermeldungen nachzuschlagen.
+      Sie zu lernen hat keinen Sinn. Einiges in der Tabelle ist abgekürzt, es ist aber hoffentlich zu erraten was jeweils gemeint ist.
+      Wenn von \textit{Makro} oder \textit{Environment} (=Umgebungen) die Rede ist, dann sind nicht etwa alle Verteter dieser Gattung gemeint,
+      jeder Befehl verhält sich anders und erzeugt den Fehler in anderen Situationen.\\
+      "\texttt{$\backslash$\color{lstg}{end}}" meint eine Instanz an der environments schließen; Häufig \texttt{$\backslash$\color{lstg}{end}\color{black}{\{document\}}} aber auch übrig gebliebene
+      \texttt{$\backslash$\color{lstg}{end}}\color{black} von gelöschten Umgebungen.
+    \end{block}
+    
+  \end{block}
+\end{frame}
+%% -----------------------------------------------------------------------------------------------%
+%% ------------------------------------------EXTERNAL ERROR---------------------------------------%
+%% -----------------------------------------------------------------------------------------------%
+\subsection{Externe Fehlerquellen}
+\begin{frame}[c]
+	\begin{center}
+		\large Externe Fehlerquellen
+	\end{center}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}{Fehler außerhalb des Codes:}
+  \begin{outputbox}
+    Diese Fehler sind schwierig ausfindig zu machen, da es \textbf{keine präzise Fehlermeldung} gibt.\\
+    Entweder beschwert sich \LaTeX über eine Stelle im Code die nicht direkt mit dem eigentlichen Fehler zu tun hat,\\
+    oder die Fehlermeldung bezieht sich auf eine der externen Dateien (mit unbekannter Syntax) und ist daher meist unverständlich.
+  \end{outputbox}
+
+  \begin{columns}
+
+    \column{0.7\textwidth}
+    \begin{block}{Problem}
+      \begin{itemize}
+      \item<2-> Encoding-Probleme
+        \begin{itemize}
+        \item<3-> Verschiedene OS's (Partner oder Wechsel)
+        \item<3-> Minderwertiges Encoding gewählt
+        \end{itemize}
+      \item<4-> Veraltete Packete
+        \begin{itemize}
+        \item<5-> {\TeX}live / Mik\TeX ( / Mac\TeX ) nicht up-to-date
+        \item<7-> Nutzung überholter Befehle
+        \end{itemize}
+      \item<9-> Bibliography
+      \end{itemize}
+    \end{block}
+    
+    \column{0.3\textwidth}
+    \begin{block}{Lösung}
+      \begin{itemize}
+      \item<4-> UTF-8 ist meißt ein guter Rat.
+      \item<6-> Update der \LaTeX-Distribution
+      \item<8-> Experimentieren mit \texttt{nag.sty}
+      \item<10-> Syntax-Check in \texttt{.bib}-Datei. 
+      \end{itemize}
+      
+    \end{block}
+    
+  \end{columns}
+  
+\end{frame}
+%% -----------------------------------------------------------------------------------------------%
+%% ------------------------------------------SECTION-------------------------------------------%
+%% -----------------------------------------------------------------------------------------------%
+\subsection{Lösungsstrategien}
+\begin{frame}[c]
+	\begin{center}
+		\large Lösungsstrategien
+	\end{center}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}{Allgemeines}
+
+    \begin{block}{Rule34 of \LaTeX}
+      \uncover<2->{Dir schwebt eine nützliche Funktion vor?}
+      \begin{itemize}
+      \item<3-> Es gibt bestimmt ein Package dafür. 
+      \end{itemize}
+    \end{block}
+
+    \uncover<4->{
+      \begin{block}{Einrückung}
+        Übersicht im Quellcode beugt Fehlern vor.
+        \begin{itemize}
+        \item<5-> Tabellen (Bsp. mit \%$\backslash$newline einfügen)
+        \item<6-> Leerzeichen an der falschen Stelle Fehlermeldungen!
+        \end{itemize}
+      \end{block}
+    }
+
+\end{frame}
+
+\begin{frame}[c]{Debug-Strategie: Seven C}
+  \begin{block}{Fehlersuche:}
+
+    \begin{outputbox}
+      Bewährtes Vorgehen, Wenn \LaTeX\ sich beschwert und die Meldung unverständlich ist:
+    \end{outputbox}
+    
+    \begin{enumerate}
+      \addtocounter{enumi}{-1}
+    \item \textbf{Compile} often.\\
+      \only<2>{(Anfangs) Fehlersuche abkürzen durch häufiges Kompilieren.}
+    \item \textbf{Check} for common errors.\\
+      \only<3>{Stehen Befehle im falschen Kontext (mathe-befehle im Text o. a. environments).}
+    \item \textbf{Control} your spelling.\\
+      \only<4>{Kontrolle der Schreibweise benutzter Makros, Dateien, etc.}
+      \note<4>{Hinweis: Viele Editoren bieten hierfür Kürzel zum Blockweisen auskommentieren.}
+    \item \textbf{Comment} recent stuff.\\
+      \only<5>{Letztverfasstes absatzweise auskommentieren bis zu erfolgreicher Kompilierung.}
+      \note<5>{Hinweis: Viele Editoren bieten hierfür Kürzel zum Blockweisen auskommentieren.}
+    \item \textbf{Cearch} via search-engines.\\
+      \only<6>{Google your error: Viele Probleme wurden schon in Foren wie \texttt{tex.stackexchange.com} behandelt.}
+      \note<6>{Blick in die .log-datei?!}
+      \note<6>{\\Datum bei Foreneinträgen beachten! (Viele überholte packages in Verkehr)}
+      \note<6>{\\Besonders bei copy-\&paste-Verfahren!}
+    \item \textbf{CTAN} consultation.\\
+      \only<7>{Wenn der Fehler eingegrenzt aber nicht verstanden ist:\\
+        Dokumentationen im \texttt{.pdf}-Format gibt es für alle packages auf dem \textit{Comprehensive \TeX\ Archive Network} (CTAN)\\
+        Oft sind diese in Unterordnern der \LaTeX- (eig. Miktex- bzw texlive-) Installation bereits vorhanden.\\
+        \textit{screenshots einfügen}}
+      \note<7>{Auf texdoc-Funktionalität hinweisen (Komandozeile \texttt{texdoc})}
+    \item \textbf{Call} for help.
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Ideen zur Partnerarbeit}
+
+  \begin{enumerate}
+    \item<1-> Verständigung über Aufteilung der Themen
+      \note<1>{Grundlagen / Auswertung ..oder thematisch... mal so mal so .. bla bla.}
+    \item<2-> Erstellen der groben Dokumentstruktur mit \lstinline|\input{}|
+    \item<4-> Dropbox (oder besseres Versions-Kontroll-System [VCS] )
+      \note<4> {Subversion, mercurial, bla ----> GIT}
+  \end{enumerate}
+
+  %\setbeamerfont{alerted txt}{series=\bfseries,family=\ttfamily}
+  %\setbeamercolor{lstlisting}{fg=black,bg=blue!10}
+  \uncover<2->{\Code}
+  % \begin{beamercolorbox}{lstlisting}
+  %   \begin{semiverbatim} \small
+  %     \uncover<2->{\color{gray}%Strukturskellet des Berichts\color{black}}
+  %     \uncover<2->{\\\color{green!70!black}input\color{black}\{gemeinsamer_header.tex\}}
+
+  %     \uncover<2->{\\\color{green!70!black}begin\color{black}\{document\}}
+        
+  %     \uncover<2->{\\\color{green!70!black}input\color{black}\{document\}}
+        
+  %   \end{semiverbatim}
+  % \end{beamercolorbox}
+  \begin{fancycolorbox}
+    \opaqueblock{3-}{visib}{\textwidth}{
+    \begin{semiverbatim} \small
+      \color{gray}\%Strukturskellet des Berichts
+      \newline\vspace{9pt}\color{black}
+      \\\color{green!70!black}input\color{black}\{gemeinsamer\_header.tex\}
+      \newline\vspace{7pt}
+      \\\color{green!70!black}begin\color{black}\{document\}
+      \newline\vspace{7pt}
+      \\\color{green!70!black}input\color{black}\{Partner1.tex\}
+      \newline\vspace{7pt}
+      \\\color{green!70!black}input\color{black}\{Partner2.tex\}
+      \newline\vspace{7pt}
+      \\\color{green!70!black}end\color{black}\{document\}
+    \end{semiverbatim}
+    }
+  \end{fancycolorbox}
+ \note<3>{header.tex ins selbe Verzeichnis (oder alternativen pfad angeben).}
+
+\end{frame}

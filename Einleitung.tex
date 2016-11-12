@@ -1,0 +1,208 @@
+%	Warum benutzen wir das, d.h. was kann LaTeX, was andere Textverarbeitungsprogramme (Word, etc.) nicht oder nicht gut können?
+%		1. Formelsatz 
+%		2. Anpassbar
+%		3. Pakete
+%		4. Layout-Automatismen?
+%		5. Strukturierung
+%		6. Zitate
+%		7. Nummerierung
+%		8. Verweise
+%
+%	Nachteile:
+%		1. Nicht intuitiv
+%		2. Inkompatibilitäten
+%		3. 
+\section{Einleitung}
+
+\begin{frame}[c]
+	\begin{center}
+		\LARGE \textbf{Einleitung}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Was ist \LaTeX?}
+
+  \vspace{-12pt}
+  \begin{columns}
+    
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.1\linewidth]{img/MSWord.png}
+        \includegraphics[width=0.1\linewidth]{img/LOWriter.png}
+        \includegraphics[width=0.1\linewidth]{img/APages.png}
+        \includegraphics[width=0.1\linewidth]{img/MSPowerPoint.png}
+        \includegraphics[width=0.1\linewidth]{img/LOImpress_svg.png}
+        \label{fig:icons}
+      \end{figure}
+    \end{column}
+    
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \resizebox{0.25\linewidth}{!}{\LaTeX}
+        \note[item]<1>{\LaTeX\ ist auf Nutzerebene ein Ersatz für die Programme links!}
+      \end{center}
+    \end{column}
+      
+  \end{columns}
+  
+  \begin{columns}[t]
+
+    \begin{column}{0.5\textwidth}
+      %\newline
+      \begin{block}{Aufgabe:}
+        Erstelle eine Dokument aus Text.
+      \end{block}
+      \begin{block}{Vorgehen:}
+          Inhalt tippen. Schimpfen.
+          \note[item]<1>{WYSIWYG erläutern. (Schimpfen meint das die Reaktion auf das Reformatieren)}
+      \end{block}
+      \begin{block}{Ergebnis:}
+        ``Meh, good enough.''
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+      %\newline
+      
+      \begin{block}{Aufgabe:}
+        Erstelle ein Dokument aus Text.
+      \end{block}
+      \begin{block}{Vorgehen:}
+          Anweisungen in {\LaTeX}'s eigener ``Sprache'' tippen. Beten.
+          \note[item]<1>{\LaTeX-Sprache:``Kommunikation'' mit \LaTeX über Befehle. (Bei Word sprecht ihr direkt mit dem Dokument, \LaTeX übersetzt für euch) }
+      \end{block}
+      \begin{block}{Ergebnis:}
+          \alert{\texttt{! LaTeX Error: Something went wrong!}}
+      \end{block}
+    \end{column}
+    
+  \end{columns}
+
+  %\transduration<3-103>{0}
+  %\multiinclude[<+->][format=png, graphics={width=\textwidth}]{animation/same_but_different}
+  %\animategraphics[loop,autoplay, width=\textwidth]{12}{animation/same_but_different-}{0}{99}
+  % last one only works for adobe reader
+  \begin{figure}
+    \centering
+    \includegraphics<1->[width=0.4\linewidth]{animation/same_but_different-10.png}
+    \hspace{40pt}\includegraphics[width=0.4\linewidth]{animation/same_but_different-52.png}
+  \end{figure}
+  
+\end{frame}
+
+
+\begin{frame}[fragile,t]{Beispiel}
+  \note[item]<1>{\LaTeX übersetzt das linke in das rechte... Genaueres ist hier nicht gefragt!}
+  \note[item]<1>{Hinweis: Viele Sonderzeichen.}
+  \begin{columns}[t]
+    \column{0.5\textwidth}
+    \begin{block}{Eingabedatei (\texttt{[\ldots].tex})}
+      \begin{lstlisting}[gobble=8]
+        \begin{align*}
+          \kappa(x_{i})  &= \frac{ \sqrt{ 2m_0 ( V(x_i) - E ) } }{ \hslash }\\
+          \Rightarrow T &= \prod\limits_{i=1}^{N} \exp \left( -2 \cdot \kappa (x_{i}) \cdot \mathrm{d}x \right)\\
+                         &= \exp \left( -2 \cdot \mathrm{d}x \cdot \sum_{i=1}^N \kappa (x_{i}) \right)\\
+          T & \overset{ N \rightarrow \infty }{ \longrightarrow } \exp \left( -\frac{2}{\hslash} \int\limits_a^a \sqrt{ 2m_0 ( V(x) - E ) } \mathrm{d}x \right)
+        \end{align*}
+      \end{lstlisting}
+    \end{block}
+    \column{0.5\textwidth}
+    \begin{block}{Ausgabedatei (\texttt{[\ldots].pdf})}
+      %\vspace{5pt}
+      \begin{outputbox}
+        \small
+        \begin{align*}
+          \kappa(x_{i})  &=\frac{ \sqrt{2m_0(V(x_i)-E)} }{\hslash}\\
+          \Rightarrow T &=\prod\limits_{i=1}^{N} \exp\left(-2\cdot\kappa(x_{i})\cdot\mathrm{d}x\right)\\
+                        &=\exp\left(-2\cdot\mathrm{d}x\cdot\sum_{i=1}^N\kappa(x_{i})\right)\\
+          T&\overset{N\rightarrow\infty}{\longrightarrow}\exp\left(-\frac{2}{\hslash}\int\limits_a^a\sqrt{2m_0(V(x)-E)}\mathrm{d}x\right)
+        \end{align*}
+        \normalsize
+      \end{outputbox}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[c]{Warum \LaTeX?}
+
+  \begin{columns}[t]
+
+    \column{0.382\textwidth}
+    \begin{figure}
+      \includegraphics[width=0.6\linewidth]{img/Texolotl.jpg}      
+      \footnotemark[1]
+      \label{fig:texolotl}
+    \end{figure}
+    \note[item]<1>{Texolotl hat nichts mit LaTeX zu tun (Oeko-tex: Schadstoffe in Kleidung)}
+
+    \column{0.618\textwidth}
+    \begin{block}{Das Konzept}
+      \begin{itemize}
+      \item<1-> Trennung von Formatierung und Inhalt.
+      \item<1-> Automatisierung der Formatierung.
+        \note[item]<1>{Trennung ermöglicht Fokus des Autors auf Inhalt.}
+      \item<1-> Qualität der Formatierung!
+        \begin{itemize}
+        \item<1-> Formelsatz
+        \item<1-> Zitationen \& Verweise 
+        \end{itemize}
+        \note[item]<1>{Formeln- und Referenzmöglichkeiten geschätzt im wissenschaftlichen Betrieb.}
+      \item<1-> Quelloffen \& Community-driven.
+        \note[item]<1>{Durch Quelloffenheit: Stetig wachsende Funktionalität und Flexibilität, z.B. :}
+        % \note[item]<4>{Brief}
+        % \note[item]<4>{Lebenslauf}
+        % \note[item]<4>{Präsentation}
+        \note[item]<1>{Brief}
+        \note[item]<1>{Lebenslauf}
+        \note[item]<1>{Präsentation}
+      \item<1-> Automatische Vorlagen mit jedem Dokument.
+        % \note[item]<5>{Befehlsstruktur ist i.d.R. wiederverwertbar}
+        \note[item]<1>{Befehlsstruktur ist i.d.R. wiederverwertbar}
+      \item<1-> Portabilität.
+        \note[item]<1>{Vgl. Word,Pages etc.}
+      \item<1-> Langlebigkeit.
+        \note[item]<1>{Wie geil sind eure Word-2007-Dokumente noch? Alte \TeX-Dokumente aus grauer Vorzeit sehen immer noch gut aus.}
+      \end{itemize}
+    \end{block}
+      \begin{block}{Der Nachteil}
+        \begin{itemize}
+        \item Nicht sehr intuitiv - flache Lernkurve.
+        \end{itemize}
+      \end{block}
+
+    \footnotetext[1]{Entnommen aus \cite{OEKOTEX}}
+  \end{columns}
+
+\end{frame}
+
+
+\begin{frame}[c]{Was dieser Kurs sein soll (...und was nicht).}
+  %\note[item]<1>{\LaTeX zu umfangreich um hier alles abzudecken.}
+
+  \begin{columns}[t]
+    \column{.5\textwidth}
+    \textbf{Was wir hier versuchen:}
+    \begin{itemize}
+    \item<1-> \alert{Anwendungsbezogenen} Überblick über die nützlichsten \LaTeX-Funktionalitäten.
+    %\item<1-> Aufmerksamkeit in der Arbeitsweise mit \LaTeX\ schulen.
+      %\note[item]<3>{Auf häufige Fehlerquellen hinweisen.}
+      %\note[item]<3>{Eure Mitarbeit: STELLT FRAGEN!}
+    %\item<1-> Top-Bottom: Jeder ist mit dabei!
+      %\note[item]<4>{STELLT FRAGEN!}
+    %\item<5-> Denkanstöße in Richtung eigener Vertiefungen.
+    %\item<6-> Spaß und Lust auf mehr. 
+    \end{itemize}
+    \column{.5\textwidth}
+    \textbf{Was euch überlassen bleibt:}
+    \begin{itemize}
+    \item<1-> Erschöpfende Übersicht über das \LaTeX-Universum
+    %\item<4-> Einblick in die innere Funktionsweise.
+      %\note[item]<4>{Fragt uns gerne!}
+    \end{itemize}
+  \end{columns}
+  
+\end{frame}

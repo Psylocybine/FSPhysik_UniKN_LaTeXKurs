@@ -1,0 +1,518 @@
+%%%%%---------------------------------------------%%%%%
+%%%%%-------------------INHALTE-------------------%%%%%
+%%%%%---------------------------------------------%%%%%
+%Titlepages
+%TikZ / PGFPlots
+%TitleSec / TitleTOC / TitlePS
+%schönere Tabellen
+%optionale Argumente (Angezeigte Kapitelnamen im TOC, Bildnamen im TOF, etc.)
+%xColor
+%enumitem
+%caption
+%Eigene Befehle
+%%%%%---------------------------------------------%%%%%
+%%%%%---------------------------------------------%%%%%
+%%%%%---------------------------------------------%%%%%
+\section{Ausblick}
+\begin{frame}[c]
+	\begin{center}
+		\LARGE \textbf{Ausblick}
+	\end{center}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection{Schönere Titelseiten}
+\begin{frame}[c]
+	\begin{center}
+		\large Schönere Titelseiten
+	\end{center}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Ausgabe
+	\begin{outputbox}
+		
+	\end{outputbox}
+
+	\pause\Code
+	\begin{lstlisting}
+a
+	\end{lstlisting}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection{Tabellen mit booktabs}
+\begin{frame}[c]
+	\begin{center}
+		\large Tabellen mit booktabs
+	\end{center}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection{Enumitem}
+\begin{frame}[c]
+	\begin{center}
+		\large Enumitem
+	\end{center}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection{Enumitem}
+\begin{frame}[c]
+	\begin{center}
+		\large Ergänzungen Matrizen  underbraces substack limits overset 
+	\end{center}
+\end{frame}
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection{Einstellmöglichkeiten}
+\begin{frame}[c]
+	\begin{center}
+		\large Einstellmöglichkeiten
+	\end{center}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]{SIUnitX}
+	\Befehle\vspace{-0.1cm}	
+	\begin{center}
+		\begin{tabular}{l >{\raggedright\arraybackslash}p{3cm} >{\raggedright\arraybackslash}p{1.5cm}}
+			\toprule
+			SIUnitX Option						&	Einstellmöglichkeiten											&	Funktion	\\ \midrule
+			\lstinline|exponent-product|		&	\lstinline|\times|,\linebreak\lstinline|\cdot|, ...						&	\num[exponent-product=\times]{1.47e5},\linebreak \num[exponent-product=\cdot]{1.47e5}\\
+			\lstinline|separate-uncertainty|	&	\lstinline|true|,\linebreak\lstinline|false|								&	\num[separate-uncertainty=true]{1.7+-0.2},\linebreak \num[separate-uncertainty=false]{1.7+-0.2}\\
+			\lstinline|multi-part-units|		&	\lstinline|brackets|,\linebreak\lstinline|repeat|,\linebreak\lstinline|single|	&	\SI[multi-part-units=brackets,separate-uncertainty=true]{3.5+-0.1}{\meter},\linebreak \SI[multi-part-units=repeat,separate-uncertainty=true]{3.5+-0.1}{\meter},\linebreak \SI[multi-part-units=single,separate-uncertainty=true]{3.5+-0.1}{\meter}\\
+			\lstinline|per-mode|				&	\lstinline|fraction|,\linebreak\lstinline|symbol|,\linebreak\lstinline|reciprocal-positive-first|,\linebreak\lstinline|repeated-symbol|,\linebreak\lstinline|symbol-or-fraction|	&	\SI[per-mode=fraction]{17}{\kg\meter\per\second\tothe{2}},\linebreak\SI[per-mode=symbol]{17}{\kg\meter\per\second\tothe{2}},\linebreak \SI[per-mode=reciprocal-positive-first]{17}{\kg\meter\per\second\tothe{2}},\linebreak\SI[per-mode=repeated-symbol]{17}{\kg\meter\per\second\tothe{2}}\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	Global:\vspace{-0.1cm}
+	\begin{lstlisting}
+	\sisetup{exponent-product = \cdot}
+	\end{lstlisting}
+	\vspace{-0.2cm}Lokal:\vspace{-0.1cm}
+	\begin{lstlisting}
+	\SI[exponent-product = \cdot]{1.5}{\meter}
+	\end{lstlisting}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]{SIUnitX}
+	\begin{Aufgabe}
+		TUE ES!
+	\end{Aufgabe}
+	\btVFill\Befehle
+	\begin{center}
+		\begin{tabular}{l >{\raggedright\arraybackslash}p{5cm}}
+			\toprule
+			SIUnitX Option						&	Einstellmöglichkeiten										\\ \midrule
+			\lstinline|exponent-product|		&	\lstinline|\times|, \lstinline|\cdot|, ...					\\
+			\lstinline|separate-uncertainty|	&	\lstinline|true|, \lstinline|false|							\\
+			\lstinline|multi-part-units|		&	\lstinline|brackets|, \lstinline|repeat|, \lstinline|single|	\\
+			\lstinline|per-mode|				&	\lstinline|fraction|, \lstinline|symbol|, \lstinline|reciprocal-positive-first|, \lstinline|repeated-symbol|, \lstinline|symbol-or-fraction|	\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\vspace{0.1cm}
+\end{frame}
+
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection{Packages}
+\begin{frame}[c]
+	\begin{center}
+		\large Packages:  Footnotes (footmisc)  
+		tikz  xcolor subfig   setspace forest
+	\end{center}
+\end{frame}
+
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsubsection{Seitenlayout}
+\begin{frame}[fragile]{geometry}
+
+\begin{columns}[c]
+
+    \column{0.6\linewidth}
+    Das Seitenlayout und die Seitenränder können mit geometry verändert werden:
+    \begin{description}  
+ \item[\texttt{a4paper}] Seitenformat 
+ \item[\texttt{left}, \texttt{right},]
+ \item[\texttt{top}, \texttt{bottom}] Ränder des 
+ Dokuments
+ \item[\texttt{twoside}] zweiseitiges Design
+  \item[\texttt{landscape}] Querformat
+      \item[\texttt{showframe}] zeigt Einstellungen im Dokument 
+    \end{description}
+Es lässt sich ein neues Seitenlayout mitten im Dokument wählen und anschließend das alte wieder zurückholen:
+\begin{description}
+       \item[\texttt{\textbackslash newgeometry\{\}}]  neues Seitenlayout
+        \item[\texttt{\textbackslash restoregeometry}]  wieder altes Seitenlayout
+\end{description}
+
+    \column{0.4\linewidth}
+
+\begin{lstlisting}[]
+...
+\usepackage[ 
+a4paper, 
+left=2cm, 
+right=0.5\textwidth, 
+top=5cm, 
+bottom=0.5\textheight,
+twoside, 
+landscape, 
+showframe
+]{geometry}
+...
+\begin{document}
+...
+\newgeometry{left=5cm}
+...
+\restoregeometry 
+...
+\end{document}
+\end{lstlisting}
+
+    
+  \end{columns}
+
+
+\end{frame}
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsubsection{Bildunterschriften}
+\begin{frame}[fragile]{caption}
+
+\begin{columns}[c]
+
+    \column{0.5\linewidth}
+    Mit diesem Paket lassen sich Bildunter- wie Tabellenüberschriften anpassen:
+\vspace{\baselineskip}\linebreak
+
+    \begin{outputbox}
+\textbf{Tab. 1} Die ist eine Tabellenüberschrift, \\
+\hspace{6ex}bei der 'Tabelle' in 'Tab.' geändert \\
+\hspace{6ex}wurde. Zusätzlich sind die Label \\
+\hspace{6ex}global fett formatiert.  
+\vspace{\baselineskip}\linebreak 
+\textbf{Abb. 1} Die ist eine Bildunterschrift, bei der 'Abbildung' in 'Abb.' geändert 
+wurde. Zusätzlich sind die Label global fett formatiert und die Bildunterschrift reicht von ganz links nach ganz rechts.
+\end{outputbox}
+
+
+    \column{0.5\linewidth}
+
+\begin{lstlisting}[]
+...
+\usepackage[labelfont=bf]{caption}
+\captionsetup[table]{name=Tab.}  
+\captionsetup[figure]{name=Abb., format=plain}
+...
+\begin{document}
+...
+\begin{table}
+...
+  \caption{Die ist eine Tabellenüberschrift, bei...}
+\end{table} 
+... 
+\begin{figure}
+...
+  \caption{Die ist eine Bildunterschrift, bei...}
+\end{figure} 
+...
+\end{document}
+\end{lstlisting}
+
+    
+  \end{columns}
+
+
+\end{frame}
+
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsubsection{Hyperlinks}
+\begin{frame}[fragile]{hyperref}
+
+\begin{columns}[c]
+
+    \column{0.45\linewidth}
+    Hyperref regelt Verlinkungen innerhalb des Dokuments wie
+    \begin{itemize}
+      \item  \texttt{\textbackslash label} und \texttt{\textbackslash ref}
+      \item Überschriften und Inhaltsverzeichnis
+      \item Zitierungen und Literaturverzeichnis
+    \end{itemize}
+     Außerdem sorgt es für die Funktionalität der Hyperlinks nach außen.
+     \vspace{\baselineskip}\linebreak  
+     Diese Paket sollte immer als letztes eingebunden werden.
+
+
+
+
+    \column{0.55\linewidth}
+
+\begin{lstlisting}[]
+...
+\usepackage[urlcolor=black]{hyperref}
+\hypersetup{backref, pdfpagemode=FullScreen, colorlinks=true}
+
+\begin{document}
+...
+\url{http://wolframalpha.com}
+...
+\href{http://wolframalpha.com}{WolframAlpha} 
+...
+\end{document}
+
+\end{lstlisting}
+
+    \begin{outputbox}
+\url{http://wolframalpha.com} 
+\vspace{\baselineskip}\linebreak 
+\href{http://wolframalpha.com}{Wolfram|Alpha}  
+\end{outputbox}
+    
+  \end{columns}
+
+
+\end{frame}
+
+
+
+
+
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsubsection{Abkürzungsverzeichnis}
+\begin{frame}[fragile]{acro}
+
+\begin{columns}[c]
+
+    \column{0.5\linewidth}
+    Eine zum ersten Mal verwendete Abküzung wird vollständig ausgeführt, danach nur noch die Kurzform. Anschließend wird ein Abkürzungsverzeichnis erstellt:
+\vspace{\baselineskip}\linebreak
+
+\begin{outputbox}
+\textbf{1. Mal:} \ac{D}, \textbf{2. Mal:} \ac{D} \\
+\textbf{Kurzform:} \acs{D}, \textbf{Plural:} \acsp{D} \\
+\textbf{Langform:} \acl{D}, \textbf{Plural:} \aclp{D} 
+\vspace{\baselineskip}\linebreak 
+\vspace{\baselineskip}\linebreak 
+{ \large\textbf{4 Abkürzungen}}
+\vspace{\baselineskip}\linebreak
+{\scshape\textbf{D}} \hspace{0.3ex} Wüste \hspace{0.3ex} (Desert)
+\end{outputbox}
+{\tiny (Zur Kennlichmachung wurde der Text zusätzlich fett formatiert.)}
+
+    \column{0.5\linewidth}
+
+\begin{lstlisting}[]
+...
+\usepackage{acro}
+...
+\DeclareAcronym{D}{
+      short = D ,
+      long = Wüste ,
+      long-plural = n ,
+      foreign = Desert ,
+      short-format = \scshape 
+      }
+...
+\begin{document}
+...
+1. Mal: \ac{D}, 2. Mal: \ac{D} \\
+Kurzform: \acs{D}, Plural: \acsp{D} \\
+Langform: \acl{D}, Plural: \aclp{D} 
+...
+\acsetup{list-heading=section}
+\printacronyms
+...
+\end{document}
+\end{lstlisting}
+
+    
+  \end{columns}
+
+
+\end{frame}
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsubsection{Indexverzeichnis}
+\begin{frame}[fragile]{imakeidx}
+
+\begin{columns}[c]
+
+    \column{0.5\linewidth}
+    Das Indexverzeichnis listet markierte Begriffe alphabetisch mit der zugehörigen 
+Seite:
+\vspace{\baselineskip}\linebreak
+
+    \begin{outputbox}
+{ \large\textbf{5 Indexverzeichnis}}
+\vspace{\baselineskip}\linebreak
+Löwe, 1, 2, 3, 4, 5
+\vspace{\baselineskip}\linebreak
+Methode \\
+\hspace{3ex}Diktatorisch, 4 \\
+\hspace{3ex}Heisenberg, 2
+\end{outputbox}
+
+
+    \column{0.5\linewidth}
+
+\begin{lstlisting}[]
+...
+\usepackage{imakeidx}
+...
+\makeindex[title=Indexverzeichnis]
+\indexsetup{level=\section, toclevel=section}
+...
+\begin{document}
+...
+... Löwe \index{Löwe}...
+...
+Bei der \textsc{Heisenberg}-Methode \index{Methode!Heisenberg}...
+...
+\subsubsection{Diktatorische Methode} \index{Methode!Diktatorisch}
+...
+\printindex
+...
+\end{document}
+\end{lstlisting}
+
+    
+  \end{columns}
+
+
+\end{frame}
+
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsubsection{Blindtext}
+\begin{frame}[fragile]{blindtext}
+	\begin{columns}[c]
+		\column{0.5\linewidth}
+			Blindtext erzeugt einen Testtext mit der im Header gewählten Sprache. 
+			Zusätzlich bietet das Packet unter anderem 
+			\begin{itemize}
+				\item \texttt{\textbackslash blinditemize}
+				\item \texttt{\textbackslash blindenumerate[1]}
+				\item \texttt{\textbackslash blinddescription[2]}
+			\end{itemize}
+			verschiedene Testlisten oder mit \texttt{\textbackslash blinddocument[1]} ein 
+			ganzes Testdokument. Mit Hilfe der Option [x] kann die jeweilge Anzahl gewählt 
+			werden.
+		\column{0.5\linewidth}
+			%\vspace{\baselineskip}\linebreak
+			\begin{lstlisting}[gobble=16]
+				...
+				\usepackage{blindtext}
+				...
+				\begin{document}
+				...
+				\blindtext[1]
+				...
+				\end{document}
+			\end{lstlisting}
+			\begin{outputbox}
+				Dies hier ist ein Blindtext zum Testen von Textausgaben. Wer diesen Text liest, ist selbst schuld. Der Text gibt lediglich den Grauwert der Schrift an. Ist das wirklich so? Ist es gleichgültig,...% ob ich schreibe: „Dies ist ein Blindtext“ oder „Huardest gefburn“? Kjift – mitnichten! Ein Blindtext bietet mir wichtige Informationen...
+			\end{outputbox}
+	\end{columns}
+\end{frame}
+
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsubsection{Chemie}
+\begin{frame}[fragile]{chemmacros}
+
+\begin{columns}[c]
+
+    \column{0.5\linewidth}
+    Chemmacros vereinigt verschiedene Chemie-Pakete mit derer Hilfe sich auch chemische Dinge in {\LaTeX} schreiben lassen:
+%\vspace{\baselineskip}\linebreak
+
+    \begin{outputbox}
+\begin{centering}
+\vspace{8px}
+A\pch\ B\mch[3] C\fpch[2] D\fmch \\
+\vspace{8px}
+\NMR{13,C} \hspace{12px}\iupac{3\hydrogen-pyrrole}\\ 
+\vspace{1px}
+\isotope{14,C} \orbital[angle=35]{sp3} \ch{H2O "\lqd[\SI{5}{\celsius}]"}
+\vspace{2px}
+ \begin{reaction}[Autoprotolyse] 
+ 2 H2O <<=> H3O+ + OH-
+ \end{reaction}
+\vspace{1px}
+\begin{flushleft}
+{\large\textbf{Reaktionsverzeichnis}}\\
+\vspace{8px}
+Reaktion \{1\}: Autoprotolyse . . . . . . . . . . .   1
+\end{flushleft}
+\end{centering}
+\end{outputbox}
+
+
+    \column{0.5\linewidth}
+
+\begin{lstlisting}[]
+...
+\usepackage{chemmacros}
+\usechemmodule{all} 
+...
+\begin{document}
+...
+A\pch\ B\mch[3] C\fpch[2] D\fmch
+...
+\NMR{13,C} 
+\iupac{3\hydrogen-pyrrole}
+...
+\isotope{14,C} 
+\orbital[angle=35]{sp3}
+\ch{H2O "\lqd[\SI{5}{\celsius}]"}
+...
+\begin{reaction}[Autoprotolyse] 
+2 H2O <<=> H3O+ + OH-
+\end{reaction}
+...
+\listofreactions
+...
+\end{document}
+\end{lstlisting}
+
+    
+  \end{columns}
+
+
+\end{frame}
+
+
+
+ \end{document}

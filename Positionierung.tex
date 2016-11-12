@@ -1,0 +1,60 @@
+\section{Positionierung von Abbildungen und Tabellen}
+\begin{frame}[c]
+	\begin{center}
+		\LARGE \textbf{Positionierung von Abbildungen und Tabellen}
+	\end{center}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection*{Positionierung}
+%\begin{frame}
+%	\begin{center}
+%		\large Grundlagen
+%	\end{center}
+%\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	
+\vspace{0.1cm}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{lstlisting}
+\begin{figure}[(!)h/b/t/p]
+	\centering
+	\includegraphics[]{}
+	...
+\end{figure}
+\end{lstlisting}
+	\column{0.5\linewidth}
+	\begin{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{}
+	...
+\end{figure}
+	\end{lstlisting}
+\end{columns}	
+\vspace{-0.1cm}
+%	\btVFill\Befehle
+	\begin{center}
+		\begin{tabular}{rl|  p{6.5cm} }
+			\toprule
+			Argument		&&	Positionierung																			\\ \midrule
+		\rule{0pt}{9pt}	 \texttt{[h]}	& \textit{here} &	ungefähr (!) an der Stelle im Code 			\\
+		\rule{0pt}{9pt}	 \texttt{[t]}	& \textit{top} &	am Anfang der Seite 																\\
+		\rule{0pt}{9pt}	 \texttt{[b]}	& \textit{bottom}&	am Ende der Seite 																\\
+		\rule{0pt}{9pt}	 \texttt{[p]}	& \textit{page}&	auf einer Extraseite für Abbildungen / Tabellen 									\\
+		\rule{0pt}{9pt}	 \texttt{[!]}	&&	überschreibt interne Regeln für die Positionierung								\\
+		\rule{0pt}{9pt}	 \texttt{[H]}	 & \textit{HERE} &	Platzierung an \emph{exakt} der Stelle im Code \\
+			&&(benötigt das \texttt{float}-Package)	\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\vspace{0.1cm}
+\note{
+- mehrere Argumente möglich\\
+- Reihenfolge in der LaTeX prüft: !, h, t, b (p ist extra)}
+\end{frame}

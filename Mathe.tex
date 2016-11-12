@@ -1,0 +1,807 @@
+\definecolor{math-cmd}{rgb}{0.6, 0.4, 0.8} %Definiert Farbe in der ``Mathe''' in Mathe-Befehl hervorgehoben ist.
+\section{Formelsatz}
+\begin{frame}[c]
+	\begin{center}
+		\LARGE \textbf{Formelsatz}
+	\end{center}
+\end{frame}
+% -----------------------------------------------------------------------------------------------%
+% ------------------------------------------SUBSECTION-------------------------------------------%
+% -----------------------------------------------------------------------------------------------%
+\subsection{Grundlagen}
+\begin{frame}[c]
+	\begin{center}
+		\large Grundlagen
+	\end{center}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	Abgesetzte Formeln:
+	\begin{lstlisting}[gobble=8]
+        \begin{align}
+          ...
+        \end{align}
+	\end{lstlisting}
+	Formeln im Text:
+	\begin{lstlisting}[gobble=8]
+        Umgebender Text $ ... $ Umgebender Text
+	\end{lstlisting}
+	
+	Die auf den folgenden Folien beschriebenen Befehle funktionieren nur innerhalb von beiden Matheumgebungen.
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+  % \begin{picture}%
+  %   \put(120,20){\fbox{A LOGO HERE}}%
+  % \end{picture}
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl									&	Ausgabe				\\ \midrule
+			\lstinline|\text{Beispieltext}|			&	\text{Beispieltext}	\\
+			\lstinline|Beispieltext|				&	$Beispieltext$		\\
+			\lstinline|y^{x}|						&	$y^{x}$				\\
+			\lstinline|y_{x}|						&	$y_{x}$				\\
+			\lstinline|+|	und 	\lstinline|-|	&	$+$	und $-$			\\
+			\lstinline|\pm| und \lstinline|\mp|		&	$\pm$ und $\mp$		\\
+			\lstinline|\infty|						&	$\infty$			\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+		Schreibe den zur Überschrift \qquote{\textsc{Wiener-Tauber}-Methode} gehörende Text:
+	\begin{outputbox}
+		Wir beschaffen uns einen zahmen Löwen, $L_0$, aus der Klasse $L(- \infty, \infty)$, dessen \textsc{Fourier}transformierte nirgends verschwindet und setzen ihn in der Wüste aus. $L_0$ konvergiert dann gegen unseren Käfig. Aufgrund des allgemeinen \textsc{Wiener-Tauber}-Theorems wird dann jeder andere Löwe $L$ gegen denselben Käfig konvergieren.
+	\end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+\note{\large
+- Hoch und Tiefstellen geht auch ohne Klammern (dann nur erstes Zeichen)\\
+- Leerzeichen in Mathe werden ignoriert}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		Wir beschaffen uns einen zahmen Löwen, $L_0$, aus der Klasse $L(- \infty, \infty)$, dessen \textsc{Fourier}transformierte nirgends verschwindet und setzen ihn in der Wüste aus. $L_0$ konvergiert dann gegen unseren Käfig. Aufgrund des allgemeinen \textsc{Wiener-Tauber}-Theorems wird dann jeder andere Löwe $L$ gegen denselben Käfig konvergieren.
+	\end{outputbox}
+
+    \colorlet{lstg}{green!70!black}
+	\Code
+	\begin{lstlisting}[gobble=4]
+    Wir beschaffen uns einen zahmen Löwen, $L_0$, aus der Klasse $L(- \infty, \infty)$, dessen \textsc{Fourier}transformierte nirgends verschwindet und setzen ihn in der Wüste aus. $L_0$ konvergiert dann gegen unseren Käfig. Aufgrund des allgemeinen \textsc{Wiener-Tauber}-Theorems wird dann jeder andere Löwe $L$ gegen denselben Käfig konvergieren.
+	\end{lstlisting}
+  \note[item]<1->{Tiefgestellt im inline-math-mode}
+  \note[item]<1->{Symbole benötigen math-mode}
+  \note[item]<1->{Kapitälchien mit $\backslash$textsc}
+  \note[item]<1->{Konsistenz: Auch einzelnes L kursiv. Hinweis: Schriftartunterschied von $\backslash$textit und \$\$}
+  \note[item]<1->{Ist jeder mitgekommen? -> Kontrolle}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Aufgabee
+  Schreibe den Text und die Überschrift
+
+  \textrm{\qquote{Ausnutzung von \textsc{Coulomb}-Kräften}}
+
+  anschließend an den Abschnitt \qquote{Die \textsc{Heisenberg}-Methode}, aber vor der Überschrift \qquote{Mathematische Methoden}.
+
+  Kompiliere zweimal und beobachte das Inhaltsverzeichnis:
+  
+	\begin{outputbox}
+		{ \large\textbf{1.1.2 Ausnutzung von \textSC{Coulomb}-Kräften}}
+		
+		Der Löwe wird beim Sonnenbad durch Reibung am Sand elektrostatisch aufgeladen. Installiert man einen hinreichend großen Plattenkondensator an gegenüberliegenden Enden der Wüste und legt eine ausreichend große Spannung an, so wird der Löwe durch das entstehende E-Feld an eine der beiden Platten gezogen. Dabei wirkt folgende Kraft: 
+	\end{outputbox}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		{ \large\textbf{1.1.2 Ausnutzung von \textSC{Coulomb}-Kräften}}
+		
+		Der Löwe wird beim Sonnenbad durch Reibung am Sand elektrostatisch aufgeladen. Installiert man einen hinreichend großen Plattenkondensator an gegenüberliegenden Enden der Wüste und legt eine ausreichend große Spannung an, so wird der Löwe durch das entstehende E-Feld an eine der beiden Platten gezogen. Dabei wirkt folgende Kraft: 
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[ gobble=4]
+	\subsubsection{Ausnutzung von \textSC{Coulomb}-Kräften}
+	    Der Löwe wird beim Sonnenbad durch Reibung am Sand elektrostatisch aufgeladen. Installiert man einen hinreichend großen Plattenkondensator an gegenüberliegenden Enden der Wüste und legt eine ausreichend große Spannung an, so wird der Löwe durch das entstehende E-Feld an eine der beiden Platten gezogen. Dabei wirkt folgende Kraft: 
+	\end{lstlisting}
+  \note[item]<1->{$\backslash$textSC statt $\backslash$textsc für Überschrift (siehe Header)}
+  \note[item]<1->{Beobachtung: Inhaltsverzeichnis wird nach dem 2. Kompilieren upgedated (nicht früher)}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl						&	Ausgabe						\\ \midrule
+			\lstinline|y^{x}|			&	$y^{x}$						\\
+			\lstinline|y_{x}|			&	$y_{x}$						\\
+			\lstinline|\cdot|			&	$\cdot$						\\
+			\lstinline|\frac{x}{y}|		&	$\frac{x}{y}$				\\ \addlinespace[0.5em]
+			\lstinline|( )|				&	$( )$						\\
+			\lstinline|\left( \right)|	&	$( ) \cdots \bigg( \bigg)$	\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+	Setze die folgende Formel in den soeben gesetzten, neuen Abschnitt \qquote{Ausnutzung von \textSC{Coulomb}-Kräften}:
+	\begin{outputbox}
+		Dabei wirkt folgende Kraft:
+		\begin{align}
+			F = U \cdot d^{-1} \cdot q = \left( \frac{U \cdot q}{d} \right) 
+		\end{align}
+	\end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		Dabei wirkt folgende Kraft:
+		\begin{align}
+			F = U \cdot d^{-1} \cdot q = \left( \frac{U \cdot q}{d} \right) 
+		\end{align}
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    Dabei wirkt folgende Kraft:
+    \begin{align}
+	    F = U \cdot d^{-1} \cdot q = \left( \frac{U \cdot q}{d} \right) 
+    \end{align}
+	\end{lstlisting}
+  \note[item]<1->{align als mathe-Umgebung über mehrere Zeilen (selbst wenn im Code einzeilig verwendet).}
+  \note[item]<1->{Hinweis: Ausrichtung im Quelldokument bleibt euch überlassen (Es lohnt sich aber sich Gedanken zu machen). Bedenke evtl editoreinstellungen (doppelter Zeilenumbruch)}
+  \note[item]<1->{$\backslash$cdot ``center dot'' als Multiplikations-Symbol (hat jemand \texttt{*} benutzt?)}
+  \note[item]<1->{\{\} um sowohl ``-'' als auch ``1'' hochzustellen}
+  \note[item]<1->{$\backslash$left( $\backslash$right) haben dynamische Größe (Achtung: Klammer von right ist geschlossen)}
+  \note[item]<1->{$\backslash$frac vorstellen}
+  \note[item]<1->{Für später: d als Variable nicht als Operator}
+\end{frame}
+% -----------------------------------------------------------------------------------------------%
+% ------------------------------------------SUBSECTION-------------------------------------------%
+% -----------------------------------------------------------------------------------------------%
+\subsection{Griechische Buchstaben}
+\begin{frame}[c]
+	\begin{center}
+		\large Griechische Buchstaben
+	\end{center}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{lllll}
+			\toprule
+			Buchstabe			&	Aussehen (klein)	&	\LaTeX\ Code			&	Aussehen (groß)		&	\LaTeX\ Code			\\ \midrule
+			alpha				&	$\alpha$			&	\lstinline|\alpha|		&	A					&	A						\\
+			beta				&	$\beta$				&	\lstinline|\beta|		&	B					&	B						\\
+			gamma				&	$\gamma$			&	\lstinline|\gamma|		&	$\Gamma$			&	\lstinline|\Gamma|		\\
+			delta				&	$\delta$			&	\lstinline|\delta|		&	$\Delta$			&	\lstinline|\Delta|		\\
+			epsilon				&	$\epsilon$			&	\lstinline|\epsilon|	&	E					&	E						\\
+			theta				&	$\theta$			&	\lstinline|\theta|		&	$\Theta$			&	\lstinline|\Theta|		\\
+			pi					&	$\pi$				&	\lstinline|\pi|			&	$\Pi$				&	\lstinline|\Pi|			\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+	Weiter im Abschnitt \qquote{\textsc{Wiener}-\textsc{Tauber}-Methode}:
+	\begin{outputbox}
+		Installiert man alternativ eine hinreichend große Ladung, so gilt:
+		\begin{align}
+			F = \left( \frac{1}{4 \pi \epsilon_0 \epsilon_r} \right) \cdot \frac{Q_1 Q_2}{r^2}
+		\end{align}
+		Es ist leicht, den Löwen von einer der Platten abzukratzen.
+	\end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+\note{\large
+- Erwähne varphi, varepsilon}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		Installiert man alternativ eine hinreichend große Ladung, so gilt:
+		\begin{align}
+			F = \left( \frac{1}{4 \pi \epsilon_0 \epsilon_r} \right) \cdot \frac{Q_1 Q_2}{r^2}
+		\end{align}
+		Es ist leicht, den Löwen von einer der Platten abzukratzen.
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    Installiert man alternativ eine hinreichend große Ladung, so gilt:
+    \begin{align}
+	    F = \left( \frac{1}{4 \pi \epsilon_0 \epsilon_r} \right) \cdot \frac{Q_1 Q_2}{r^2}
+    \end{align}
+    Es ist leicht, den Löwen von einer der Platten abzukratzen.
+	\end{lstlisting}
+  \note[item]<1->{Auch an griechischen Buchstaben funktionieren Indices (sogar an leeren Zeichen).}
+\end{frame}
+% -----------------------------------------------------------------------------------------------%
+% ------------------------------------------SUBSECTION-------------------------------------------%
+% -----------------------------------------------------------------------------------------------%
+\subsection{Schriftartmodifikatoren und Ausrichten}
+\begin{frame}[c]
+	\begin{center}
+		\large Schriftartmodifikatoren und Ausrichten
+	\end{center}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl													&	Ausgabe										\\ \midrule
+			\lstinline|\text{Normaler Text in Matheumgebungen}|		&	Normaler Text in Matheumgebungen			\\
+			\lstinline|\\|											&	Absatz										\\
+			\lstinline|&|											&	Ausrichten mehrerer Zeilen untereinander	\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+	Neuer Abschnitt anschließend an \qquote{\textsc{Wiener}-\textsc{Tauber}-Methode}:
+	\begin{outputbox}
+		{\large\textbf{2.2.2 Die \textSC{Banach}sche- oder iterative Methode}}
+		
+		Es sei $f$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
+		\begin{align}
+		    W_0 	&= \text{Wüste} \\
+	        W_{n+1} &= f(W_n)
+		\end{align}
+	\end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		{ \large\textbf{2.2.2 Die \textSC{Banach}sche- oder iterative Methode}}
+		
+		Es sei $f$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
+		\begin{align}
+			W_0 	&= \text{Wüste} \\
+			W_{n+1} &= f(W_n)
+		\end{align}
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    \subsubsection{Die \textSC{Banach}sche- oder iterative Methode}
+	    Es sei $f$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
+	    \begin{align}
+		    W_0 	&= \text{Wüste} \\
+		    W_{n+1} &= f(W_n)
+	    \end{align}
+	\end{lstlisting}
+  \note[item]<1->{ausrichtendes \&}
+  \note[item]<1->{$\backslash$text als umgebung in der umgebung}
+  \note[item]<1->{$\backslash\backslash$ Absatz auch in mathe-umgebung}
+  \note[item]<1->{Hinweis: Die Ausrichtung im Quelldokument bleibt euch überlassen (Es lohnt sich aber sich Gedanken zu machen)}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			\lstinline|Mathe|				&	$Mathe$					\\
+			\lstinline|\mathrm{Mathe}|		&	$\mathrm{Mathe}$		\\
+			\lstinline|\mathbf{Mathe}|		&	$\mathbf{Mathe}$		\\
+			\lstinline|\mathit{Mathe}|		&	$\mathit{Mathe}$		\\
+			\lstinline|\mathbb{MATHE}|					&	$\mathbb{MATHE}$		\\
+			\lstinline|\ldots| und \lstinline|\cdots|	&	$\ldots$ und $\cdots$	\\
+			\lstinline|\in| und \lstinline|\notin|		&	$\in$ und $\notin$		\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+	Weiter im Abschnitt \qquote{\textSC{Banach}sche- oder iterative Methode}:
+	\begin{outputbox}
+		wird die Wüste auf den Fixpunkt zusammengezogen (mit $n \in \mathbb{N}_0$ bzw. $n=0,1,2,\ldots$). So gelangt der Löwe in den Käfig.
+	\end{outputbox}
+	\vspace{1.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		wird die Wüste auf den Fixpunkt zusammengezogen (mit $n \in \mathbb{N}_0$ bzw. $n=0,1,2,\ldots$). So gelangt der Löwe in den Käfig.
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    wird die Wüste auf den Fixpunkt zusammengezogen (mit $n \in \mathbb{N}_0$ bzw. $n=0,1,2,\ldots$). So gelangt der Löwe in den Käfig.
+	\end{lstlisting}
+  \note[item]<1->{$\backslash$in}
+  \note[item]<1->{$\backslash$mathbb, Achtung: ``\_0'' außerhalb}
+  \note[item]<1->{$\backslash$ldots ``line-dots''}
+\end{frame}
+% -----------------------------------------------------------------------------------------------%
+% ------------------------------------------SUBSECTION-------------------------------------------%
+% -----------------------------------------------------------------------------------------------%
+\subsection{Fortgeschrittene Funktionen}
+\begin{frame}[c]
+	\begin{center}
+		\large Fortgeschrittene Funktionen
+	\end{center}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Aufgabee
+		Erstelle eine neue subsubsection
+		
+		\textrm{\qquote{Die \textSC{Cauchy}sche oder funktionentheoretische Methode}}
+		
+		mit folgendem Text anschließend an
+		
+		\textrm{\qquote{\textSC{Banach}sche- oder iterative Methode}}:
+	\begin{outputbox}
+		{ \large\textbf{2.123. Die  \textSC{Cauchy}sche oder funktionentheoretische Methode}}
+		
+		Wir betrachten eine analytische löwenwertige Funktion $\mathrm{f}(z)$. Es sei $\zeta$ der Käfig. Betrachten wir das Integral
+		
+	    wobei $C$ die Grenze der Wüste bedeutet. Sein Wert ist $\mathrm{f}(\zeta)$, d. h., ein Löwe ist im Käfig.		
+	\end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		{ \large\textbf{2.2.3. Die  \textSC{Cauchy}sche oder funktionentheoretische Methode}}
+		
+		Wir betrachten eine analytische löwenwertige Funktion $\mathrm{f}(z)$. Es sei $\zeta$ der Käfig. Betrachten wir das Integral
+		
+	    wobei $C$ die Grenze der Wüste bedeutet. Sein Wert ist $\mathrm{f}(\zeta)$, d. h., ein Löwe ist im Käfig.
+    \end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    \subsubsection{Die \textSC{Cauchy}sche oder funktionentheoretische Methode}}
+		Wir betrachten eine analytische löwenwertige Funktion $\mathrm{f}(z)$. Es sei $\zeta$ der Käfig. Betrachten wir das Integral
+		
+		wobei $C$ die Grenze der Wüste bedeutet. Sein Wert ist $\mathrm{f}(\zeta)$, d. h., ein Löwe ist im Käfig.
+	\end{lstlisting}
+\note[item]<1->{$\backslash$zeta}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			\lstinline|\imath|				&	$\imath$					\\
+			\lstinline|\int_{von}^{bis}|		&	$\int_{\mathrm{von}}^{\mathrm{bis}}$		\\ \addlinespace[0.5em]
+			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		
+		    \\ 			
+		    \lstinline|\quad|		&	$\quad$		
+	        \\ 
+			\lstinline|\qquad|		&	$\qquad$		
+			\\
+			\lstinline|\,|					&	$\,$		\\
+			\lstinline|\!|					&	$\!$		\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+		Füge zwischen \qquote{Integral} und \qquote{wobei} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+	\begin{outputbox}
+	    \begin{align}
+		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta
+	    \end{align}	
+	\end{outputbox}
+	\vspace{0.2cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+	    \begin{align}
+		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta
+	    \end{align}
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    \begin{align}
+		\frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta
+    \end{align}
+	\end{lstlisting}
+    \note[item]<1->{$\backslash$imath}
+    \note[item]<1->{$\backslash$mathrm{d}}
+\end{frame}
+
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Aufgabee
+		Anschließend neue \lstinline[basicstyle=\normalfont\normalsize]|\subsection|
+		
+		\textrm{\qquote{Sonstige Methoden}}
+		
+		mit \lstinline[basicstyle=\normalfont\normalsize]|\subsubsection|
+		
+		\textrm{\qquote{Ausnutzen des Fortpflanzungsverhaltens}}:
+	\begin{outputbox}
+    { \Large\textbf{2.3. Sonstige Methoden}}
+		
+    { \large\textbf{2.3.1. Ausnutzen des Fortpflanzungsverhaltens} } 
+
+    Man setze eine Löwin in der Wüste aus. Nach $t$ Jahren befinden sich dann etwa $\mathrm{Fib}(t)$ Löwen in der Wüste. Da $\mathrm{Fib}(t)$ stark wächst, ist die Wüste mit Löwen überbevölkert, d.h.
+
+    da gilt auf jeden Fall
+
+    folgt daraus, dass die Löwen auch den Käfig bevölkern werden.
+    \end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\vspace{-0.2cm}\Losung
+	\begin{outputbox}
+	    { \Large\textbf{2.3. Sonstige Methoden}}
+			
+	    { \large\textbf{2.3.1. Ausnutzen des Fortpflanzungsverhaltens}}  
+	
+	    Man setze eine Löwin in der Wüste aus. Nach $t$ Jahren befinden sich dann etwa $\mathrm{Fib}(t)$ Löwen in der Wüste. Da $\mathrm{Fib}(t)$ stark wächst, ist die Wüste mit Löwen überbevölkert, d.h.
+	
+	    da gilt auf jeden Fall
+	
+	    folgt daraus, dass die Löwen auch den Käfig bevölkern werden.
+		   \vspace{-0.1cm}
+	\end{outputbox}
+
+	\vspace{-0.2cm}\Code
+	\begin{lstlisting}[gobble=4]
+    \subsection{Sonstige Methoden}
+	    \subsubsection{Ausnutzen des Fortpflanzungsverhaltens}
+			Man setze eine Löwin in der Wüste aus. Nach $t$ Jahren befinden sich dann etwa $\mathrm{Fib}(t)$ Löwen in der Wüste. Da $\mathrm{Fib}(t)$ stark wächst, ist die Wüste mit Löwen überbevölkert, d.h.
+
+		    da gilt auf jeden Fall
+
+		    folgt daraus, dass die Löwen auch den Käfig bevölkern werden.
+	\end{lstlisting}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			\lstinline|\int_{von}^{bis}|		&	$\int_{\text{von}}^{\text{bis}}$		\\ \addlinespace[0.5em]
+			\lstinline|\lim_{Limit}|		&	$\lim_{\text{Limit}}$		\\
+			\lstinline|\mathrm{Text}|		&	$\mathrm{Text}$		
+      \\
+			\lstinline|\text{Text}|		&	$\text{Text}$		
+			\\
+			\lstinline|\to|					&	$\to$		\\
+			\lstinline|\infty|					&	$\infty$		\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+		Füge zwischen \qquote{d.h.} und \qquote{da} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+	\begin{outputbox}
+	    \begin{align}
+		    \lim_{t \to \infty} \left( \frac{\text{Fläche der Wüste}}{\text{Zahl der Löwen}} \right) = 0
+	    \end{align}	
+    \end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+	    \begin{align}
+	      \lim_{t \to \infty} \left( \frac{\text{Fläche der Wüste}}{\text{Zahl der Löwen}} \right) = 0
+	    \end{align}
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    \begin{align}
+        \lim_{t \to \infty} \left( \frac{\text{Fläche der Wüste}}{\text{Zahl der Löwen}} \right) = 0
+    \end{align}
+	\end{lstlisting}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		\\
+			\lstinline|\partial|		&	$\partial$		
+			\\
+			\lstinline|=|		&	$=$		
+      \\
+			\lstinline|\approx|		&	$\approx$		
+			\\
+			\lstinline|\neq|					&	$\neq$		\\
+	        \lstinline|\propto|					&	$\propto$		\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+		Füge zwischen \qquote{Fall} und \qquote{folgt} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+	\begin{outputbox}
+	    \begin{align}
+		    \frac{\partial}{\partial t} \, \left( \text{Fläche der Wüste} \right) \approx 0
+		    \quad \text{und} \quad
+		      \frac{\partial}{\partial t} \, \left( \text{Zahl der Löwen} \right) \neq 0
+		\end{align}	
+    \end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+	    \begin{align}
+	        \frac{\partial}{\partial t} \, \left( \text{Fläche der Wüste} \right) \approx 0
+	        \quad \text{und} \quad
+	        \frac{\partial}{\partial t} \, \left( \text{Zahl der Löwen} \right) \neq 0
+	    \end{align}
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    \begin{align}
+        \frac{\partial}{\partial t} \, \left( \text{Fläche der Wüste} \right) \approx 0
+        \quad \text{und} \quad
+        \frac{\partial}{\partial t} \, \left( \text{Zahl der Löwen} \right) \neq 0
+    \end{align}
+	\end{lstlisting}
+\end{frame}
+
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Aufgabee
+		Erstelle folgende neue \lstinline[basicstyle=\normalfont\normalsize]|\subsubsection|:
+	\begin{outputbox}
+	    { \large\textbf{2.3.2. Ausnutzen des Fortpflanzungsverhaltens} } 
+	
+	    Wir bestrahlen die Wüste mit langsamen Neutronen. Der Löwe $L$ wird radioaktiv und ein Zerfalisprozess setzt ein. Wenn der Zerfall hinreichend weit fortgeschritten ist, wird der Löwe $L$ nicht mehr imstande sein, Widerstand zu leisten. Wobei beim exponentiellen Zerfall gilt:
+	
+	    weiterhin gilt mit dem Proportionalitätskonstanten $\tau$
+	
+	    darüberhinaus gilt zu jeder Zeit	
+    \end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\vspace{-0.2cm}\Losung
+	\begin{outputbox}
+	    { \large\textbf{2.3.2. Ausnutzen des Fortpflanzungsverhaltens} } 
+	
+	    Wir bestrahlen die Wüste mit langsamen Neutronen. Der Löwe $L$ wird radioaktiv und
+	    ein Zerfalisprozess setzt ein. Wenn der Zerfall hinreichend weit fortgeschritten ist, wird der Löwe $L$ nicht mehr imstande sein, Widerstand zu leisten. Wobei beim exponentiellen Zerfall gilt:
+	
+	    weiterhin gilt mit dem Proportionalitätskonstanten $\tau$
+	
+	    darüberhinaus gilt zu jeder Zeit
+	    \vspace{-0.1cm}
+	\end{outputbox}
+
+	\vspace{-0.1cm}\Code
+	\begin{lstlisting}[gobble=4]
+    \textSC{Ausnutzen des Fortpflanzungsverhaltens}  
+	    Wir bestrahlen die Wüste mit langsamen Neutronen. Der Löwe $L$ wird radioaktiv und ein Zerfalisprozess setzt ein. Wenn der Zerfall hinreichend weit fortgeschritten ist, wird der Löwe $L$ nicht mehr imstande sein, Widerstand zu leisten. Wobei beim exponentiellen Zerfall gilt:
+
+	    weiterhin gilt mit dem Proportionalitätskonstanten $\tau$
+
+	    darüberhinaus gilt zu jeder Zeit
+	\end{lstlisting}
+\end{frame}
+
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		\\
+			\lstinline|\partial|		&	$\partial$		
+			\\
+			\lstinline|=|		&	$=$		
+      \\
+			\lstinline|\approx|		&	$\approx$		
+			\\
+			\lstinline|\neq|					&	$\neq$		\\
+      \lstinline|\propto|					&	$\propto$		\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+	Füge zwischen \qquote{gilt:} und \qquote{weiterhin} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+	\begin{outputbox}
+	    \begin{align}
+	        \frac{\text{d} L}{\text{d} t} \propto L 
+	    \end{align}	
+    \end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+    \begin{align}
+      \frac{\text{d} L}{\text{d} t} \propto L 
+    \end{align}
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    \begin{align}
+        \frac{\text{d} L}{\text{d} t} \propto L 
+    \end{align}
+	\end{lstlisting}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl							&	Ausgabe					\\ \midrule
+			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		\\
+			\lstinline|\partial|		&	$\partial$		
+			\\
+			\lstinline|\leftrightarrow|		&	$\leftrightarrow$		
+      \\
+			\lstinline|\Leftrightarrow|		&	$\Leftrightarrow$		
+			\\
+			\lstinline|\exp|					&	$\exp$		\\
+      \lstinline|\mathrm{e}|		& $\mathrm{e}$		\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+	Füge zwischen \qquote{$\tau$} und \qquote{darüberhinaus} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+	\begin{outputbox}
+	    \begin{align}
+	      - \tau \cdot \frac{\text{d} L}{\text{d} t} = L \Leftrightarrow L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
+	    \end{align}	
+    \end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+	    \begin{align}
+	        - \tau \cdot \frac{\text{d} L}{\text{d} t} = L \Leftrightarrow L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
+	    \end{align}
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+    \begin{align}
+        - \tau \cdot \frac{\text{d} L}{\text{d} t} = L \Leftrightarrow L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
+    \end{align}
+	\end{lstlisting}
+\end{frame}
+
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\color{math-cmd}{Mathe}\color{black}-Befehl									&	Ausgabe		\\ \midrule
+			\lstinline|\begin{cases}...\end{cases}|	&	für Fälle in Mathe Umgebungen	\\
+			\lstinline|<|							&	$<$		\\
+			\lstinline|>|							&	$>$		\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\pause\btVFill
+	\Aufgabee
+	Füge nach \qquote{Zeit} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+	\begin{outputbox}
+	    \begin{align}
+	      L(t) \,
+	      \begin{cases}
+	        = L_0 & \text{für} \, t=0 \\
+	        < L_0 & \text{für} \, t>0
+	      \end{cases}
+	    \end{align}
+    \end{outputbox}
+	\vspace{0.3cm}
+\end{frame}
+% -----------------------------------------------------------------------------------%
+% ---------------------------------------FRAME---------------------------------------%
+% -----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+	    \begin{align}
+			L(t) \,
+			\begin{cases}
+				= L_0 & \text{für} \, t=0 \\
+				< L_0 & \text{für} \, t>0
+			\end{cases}
+	    \end{align}
+	\end{outputbox}
+
+	\Code
+	\begin{lstlisting}[gobble=4]
+	\begin{align}
+		L(t) \,
+		\begin{cases}
+			= L_0 & \text{für} \, t=0 \\
+			< L_0 & \text{für} \, t>0
+		\end{cases}
+	\end{align}
+	\end{lstlisting}
+\end{frame}

@@ -1,0 +1,92 @@
+\section{Titelseiten}
+\begin{frame}[c]
+	\begin{center}
+		\LARGE \textbf{Titelseiten}
+	\end{center}
+\end{frame}
+%%-----------------------------------------------------------------------------------------------%
+%%------------------------------------------SUBSECTION-------------------------------------------%
+%%-----------------------------------------------------------------------------------------------%
+\subsection*{Titelseiten}
+%\begin{frame}
+%	\begin{center}
+%		\large Grundlagen
+%	\end{center}
+%\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	Befehle, die für das einfache Erstellen von Titelseiten gedacht sind:
+	\begin{itemize}
+		\item[-]<1->
+			\lstinline|\title{Titel}|
+		\item[-]<2->
+			\lstinline|\author{Autor}|
+		\item[-]<3->
+			\lstinline|\date{Datum}|
+		\item[-]<4->
+			\lstinline|\maketitle|
+	\end{itemize}
+
+	\Code
+	\begin{lstlisting}
+\title{\LaTeX\ Kurs}
+\author{Eure Tutoren}
+\date{\today}
+\maketitle
+	\end{lstlisting}
+\end{frame}
+\note{\large- Es gibt auch noch eine Titlepage-Umgebung, wenn man MEHR will - das hier ist nur das Minimalbeispiel und sollte für AP vollkommen ausreichend sein\\- weitere Titlepages evtl am 4. Termin}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{Aufgabe}
+		Erstelle eine Titelseite:
+		\begin{center}
+			\begin{tabular}{ll}
+				Titel	&	\qquote{Das Fangen von Löwen}													\\
+				Autor	&	dein Name																		\\
+				Datum	&	\qquote{Konstanz, den XX} (setze das heutige Datum mit \lstinline[basicstyle=\normalfont\normalsize]|\today|)	\\
+			\end{tabular}
+		\end{center}
+	\end{Aufgabe}
+	\btVFill\Befehle
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\LaTeX\ Befehl									&	Funktion					\\ \midrule
+			\lstinline|\title{}|	&	\\
+			\lstinline|\author{}|	&	\\
+			\lstinline|\date{}|		&	\\
+			\lstinline|\today|		&	\\
+			\lstinline|\maketitle|	&	\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\vspace{0.1cm}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Losung
+	\begin{outputbox}
+		\begin{center}
+			\textsf{{\LARGE Das Fangen von Löwen}
+			\\\vspace{0.5cm}
+			Teil N. Ehmer
+			\\\vspace{0.2cm}
+			Konstanz, den XX. November 2016}
+		\end{center}
+	\end{outputbox}
+		
+	\Code
+	\begin{lstlisting}
+\title{Das Fangen von Löwen}
+\author{Teil N. Ehmer}
+\date{Konstanz, den \today}
+\maketitle
+	\end{lstlisting}
+\end{frame}

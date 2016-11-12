@@ -1,0 +1,312 @@
+\documentclass[xcolor=table,dvipsnames,8pt,t]{beamer}
+
+\newcommand\hmmax{0}		%	damit ein son dummer Fehler nicht kommt :D
+\newcommand\bmmax{0}
+
+%--------------------------!-------------------------------------%
+%--------------------------Notizen im PDF------------------------%
+%----------------------------------------------------------------%
+
+\setbeamertemplate{note page}[plain]										% Notizenseiten nur mit gesetztem Text
+\AtBeginNote{\let\enumerate\itemize\let\endenumerate\enditemize\LARGE\par}	% Itemize in Notizen mit "Bullet", und \LARGE
+\AtEndNote{\par}
+
+%\setbeameroption{hide notes} % Only slides
+%\setbeameroption{show only notes} % Only notes
+
+%\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen=bottom} % Both
+
+\makeatletter																% Zu jeder Slide eine Notizenseite
+\def\beamer@framenotesbegin{% at beginning of slide
+	\gdef\beamer@noteitems{}%
+	\gdef\beamer@notes{{}}% used to be totally empty.
+}
+\makeatother
+
+%--------------------------!-------------------------------------%
+%--------------------------Schriftart----------------------------%
+%----------------------------------------------------------------%
+
+%\usepackage{mathptmx}
+\usepackage{helvet}
+
+%--------------------------!-------------------------------------%
+%--------------------------Beamer Einstellungen------------------%
+%----------------------------------------------------------------%
+
+\usetheme{Dresden}
+\usecolortheme{beaver}
+
+\setbeamertemplate{section in toc}	[sections numbered]
+\setbeamertemplate{theorems}		[numbered]
+
+\setbeamertemplate{itemize items}	[-]
+
+\setbeamertemplate{caption}			[numbered]
+
+%--------------------------!-------------------------------------%
+%--------------------------Encoding------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage[ngerman]{babel}			%	Einstellen der Sprache
+\usepackage[T1]		{fontenc}		%	Wie wird Text ausgegeben, d.h. im PDF
+\usepackage[utf8]	{inputenc}		%	Welche Zeichen 'versteht' LaTeX bei der Eingabe?
+									%	Die beiden Pakete fontenc und inputenc gehören zwar nicht zusammen aber es wird empfohlen erst fontenc und dann inputenc zu laden
+									%	http://tex.stackexchange.com/questions/44694/fontenc-vs-inputenc
+
+%--------------------------!-------------------------------------%
+%--------------------------Mathe---------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage[fleqn]{mathtools}		%	Erweiterung von AMSMath, lädt automatisch AMSMath - für viele Mathe-Werkzeuge, fleqn ist für Mathe linksbündig
+\usepackage{amssymb}				%	Für eine Vielzahl an mathematischen Symbolen
+
+%--------------------------!-------------------------------------%
+%--------------------------Listings------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage{listings}
+	\lstset{
+		language		= [LaTeX]TeX,									%	[dialect]language
+		extendedchars	= true,
+		inputencoding	= utf8,
+		upquote			= false,										%	benötigt textcomp bei true
+		%
+		backgroundcolor	= \color{blue!10},
+		%
+		basicstyle		= \ttfamily\footnotesize,
+		identifierstyle	= ,
+		commentstyle	= \color{gray},
+		stringstyle		= \color{black},
+		keywordstyle	= \color{green!70!black},						%	[] optional argument for level it applies to
+		%directivestyle	= \normalfont\color{green},
+		%
+		showstringspaces= false,
+		showspaces		= false,
+		showtabs		= false,
+		tab				= \rightarrowfill,
+		tabsize			= 4,
+		%
+		linewidth			= \linewidth,
+		breaklines			= true,
+		breakautoindent		= true,
+		breakindent			= 0pt,
+		postbreak			= ,
+		breakatwhitespace	= true,
+		%
+		%makemacrouse	= false,
+		%
+		aboveskip		= 0.2cm,
+		belowskip		= 0.2cm,
+		xleftmargin		= 0.1cm,
+		xrightmargin	= 0.1cm,
+		%
+		frame			= single,									%	 none, leftline, topline, bottomline, lines (top and bottom), single, shadowbox ODER t,r,b,l
+		%frameround		= ,
+		framesep		= 0.20cm,
+		rulesep			= 0.02cm,
+		framerule		= 0.0cm,
+%		framexleftmargin	= ,
+%		framexrightmargin	= ,
+%		framextopmargin		= ,
+%		framexbottommargin	= ,
+%		rulecolor		= ,
+%		fillcolor		= ,
+%		rulesepcolor	= ,	
+		%
+		columns			= fixed,
+		fontadjust		= false,
+		%
+		%morestring		= [d][]$,										%	d - double, b - backslash
+		morecomment		= [s][\color{orange}]{$}{$},					%	l - line, s - open and close,n - nested open and close, i - invisible
+%		
+		literate		= {Ö}{{\"O}}1
+						  {Ä}{{\"A}}1
+						  {Ü}{{\"U}}1
+						  {ß}{{\ss}}1
+						  {ü}{{\"u}}1
+						  {ä}{{\"a}}1
+						  {ö}{{\"o}}1
+						  {\&}{{{\color{blue}{\&}}}}{1},
+%
+		morekeywords	= {part,chapter,section,subsection,subsubsection,paragraph},
+		morekeywords	= {tableofcontents,listoffigures,listoftables},
+		morekeywords	= {includegraphics,textSC,text,mathbb,eqref},,
+		morekeywords	= {SI,SIrange,SIlist,num,per,tothe,metre,second,kilogram},
+		morekeywords	= {printbibliography,citeauthor,citeyear,citetitle,psq,psqq},
+		morekeywords	= {align},
+		moredelim		= **[is][\only<+>{\color{red}}]{@}{@}
+	}
+
+%--------------------------!-------------------------------------%
+%--------------------------SIUNITX-------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage{siunitx}
+	\sisetup{detect-all					= false}		%	Passt die Schriftart der gesetzen Einheiten / Zahlen an
+	
+	%\sisetup{detect-display-math		= true}
+	%\sisetup{detect-family				= true}
+	%\sisetup{detect-shape				= true}
+	%\sisetup{detect-weight				= true}
+	
+	\sisetup{group-separator			=	\,}			%	Zeichen Zwischen Dreiergruppen in langen Zahlen (1.000.000,5)
+	
+	\sisetup{separate-uncertainty		=	false}		%	Unsicherheiten mit +- (true) oder mit anderen Zeichen (false)
+	\sisetup{uncertainty-separator		=	\,}			%	Zeichen zwischen Zahl und Unsicherheit bei seperate uncertainty=false
+	\sisetup{output-open-uncertainty	=	(}			%	Zeichen vor Unsicherheit bei seperate uncertainty=false
+	\sisetup{output-close-uncertainty	=	)}			%	Zeichen nach Unsicherheit bei seperate uncertainty=false
+	
+	\sisetup{list-final-separator	=	{ und }}		%	Finales Trennzeichen bei Listen
+	\sisetup{list-pair-separator	=	{ und }}		%	Trennzeichen bei Listen bestehend aus zwei Teilen
+	\sisetup{list-separator			=	{, }}			%	Trennzeichen bei Listen aus 3 oder mehr Teilen
+	\sisetup{range-phrase			=	{ bis }}		%	Text zur angabe von Bereichen (500nm bis 700nm)
+	
+	\sisetup{inter-unit-product	=	\ensuremath{\,}}	%	Zeichen zwischen Einheitenzeichen
+	
+	\sisetup{per-mode					=	reciprocal-positive-first}	%	Ausgabe von Einheiten (symbol-or-fraction, fraction, symbol, reciprocal-positive-first, repeated-symbol)
+	\sisetup{per-symbol					=	/}			%	Zeichen zwischen Zähler und Nenner bei Option \symbol
+	\sisetup{bracket-unit-denominator	=	false}		%	Klammern um Zähler und Nenner oder nicht
+	
+	\sisetup{number-unit-product=	\ensuremath{\,}}	%	Symbol zwischen Zahl und Einheit
+	
+	\sisetup{multi-part-units			=	brackets}	%	Angabe der Einheit bei Zahlen mit Unsicherheit (z.B. mit '+') (brackets, repeat, single)
+	\sisetup{product-units				=	repeat}		%	Angabe der Einheit bei Produkten (Eingabe mit 'x' oder '/') (brackets, repeat, single)
+	\sisetup{list-units					=	repeat}		%	Angabe der Einheit bei Listen
+	\sisetup{range-units				=	repeat}		%	Angabe der Einheit bei Bereichen 
+		
+	\sisetup{exponent-product			=	\cdot}		%	Zeichen bei 1*10^5 zwischen Zahl und 10^5
+	
+	%\sisetup{locale = DE}								%	Automatische Einstellung der Ausgabe für bestimmte Regionen (UK, US, DE, FR, ZA)
+	%\sisetup{strict = true}							%	Überschreibt alle manuell gesetzten Einstellungen und benutzt nur die durch 'locale' gesetzen Werte
+
+%--------------------------!-------------------------------------%
+%--------------------------Abstände------------------------------%
+%----------------------------------------------------------------%
+
+\setlength{\parindent}				{0cm}							%	Längenangabe für die Einrückung der ersten Zeile eines neuen Absatzes.
+\setlength{\parskip}				{2mm plus 1mm minus 1mm}		%	Längenangabe für den Abstand zwischen zwei Absätzen.
+
+%--------------------------!-------------------------------------%
+%--------------------------Color---------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage{color}
+
+%--------------------------!-------------------------------------%
+%--------------------------TikZ----------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage{tikz} % needed for opaqueblock-definition needed for hiding colorboxes
+
+% \usepackage[table]{xcolor} %needed for command cellcolor %moved into beamer-option
+
+\tikzset{visib/.style={rectangle,color=blue,fill=blue!10,text=black,text opacity=1, text width=#1,align=flush center}}
+\tikzset{invisib/.style={rectangle,color=white,fill=white,text=black,text opacity=0, text width=#1,align=flush center}}
+
+\newenvironment{fancycolorbox}{\begin{center}
+\begin{tikzpicture}}{\end{tikzpicture}
+\end{center}}
+
+\newcommand{\opaqueblock}[4]{
+\node<#1>[#2=#3] (X) {#4};
+}
+
+%--------------------------!-------------------------------------%
+%--------------------------Chemisches Zeug-----------------------%
+%----------------------------------------------------------------%
+
+\usepackage{chemmacros}
+\usechemmodule{all}
+
+%--------------------------!-------------------------------------%
+%--------------------------Akronyme------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage{acro} 
+
+\DeclareAcronym{D}{
+      short = D ,
+      long = Wüste ,
+      long-plural = n ,
+      foreign = Desert ,
+      short-format = \scshape 
+      } 
+
+%--------------------------!-------------------------------------%
+%--------------------------Picture Stuff-------------------------%
+%----------------------------------------------------------------%
+
+%for watermarks (distinguish between math and text)
+  
+%\usepackage[left=1in,right=1in]{geometry}
+%\usepackage{xcolor,rotating,picture}
+
+%--------------------------!-------------------------------------%
+%--------------------------Tabellen------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage{booktabs}
+
+%--------------------------!-------------------------------------%
+%--------------------------Tabellen------------------------------%
+%----------------------------------------------------------------%
+
+\usepackage{eqlist}
+
+%--------------------------!-------------------------------------%
+%--------------------------Literatur-----------------------------%
+%----------------------------------------------------------------%
+
+\usepackage{csquotes}									%	Wird von BibLaTeX benötigt
+\usepackage[backend=biber,style=numeric]{biblatex}		%	Für die Literaturverwaltung
+	\addbibresource{Literaturverzeichnis.bib}			%	Laden eures Literaturverzeichnisses
+
+\setbeamertemplate{bibliography item}[text]
+
+%--------------------------!-------------------------------------%
+%--------------------------Newcommands---------------------------%
+%----------------------------------------------------------------%
+
+%\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\textSC}[1]{{\normalfont  \textsc{#1}}} 
+\renewcommand{\quote}[1]{\glq{#1}\grq}        			%	Um Worte EINFACH in Anführungszeichen zu setzen
+\newcommand{\qquote}[1]{\glqq{#1}\grqq}  				%	Um Worte EINFACH in doppelte Anführungszeichen zu setzen
+
+\newcounter{AufgCounter}
+\setcounter{AufgCounter}{1}
+\numberwithin{AufgCounter}{section}
+\resetcounteronoverlays{AufgCounter}
+
+\definecolor{AufgColor}{HTML}{52B0E3}
+
+\newcommand{\Aufgabee}	{\refstepcounter{AufgCounter}	\textbf{{\large 	 \color{AufgColor} Aufgabe 		\theAufgCounter:}}\vspace{0.1cm}\newline}
+\newcommand{\Losung}	{								\textbf{{\normalsize \color{AufgColor} L{\"o}sung 	\theAufgCounter:}}\vspace{-0.3cm}\newline}
+\newcommand{\Code}		{								\textbf{{\normalsize \color{AufgColor} Code 		\theAufgCounter:}}\vspace{-0.4cm}\newline}
+
+\newcommand{\Ausgabe}	{\textbf{Ausgabe:}\vspace{0.1cm}\newline}
+\newcommand{\Befehle}	{\textbf{Befehle:}\vspace{-0.3cm}}
+
+\newcommand{\btVFill}{\vskip0pt plus 1filll}			%	Um Sachen ans Ende der Folie zu schreiben
+
+\newcommand{\linebreakrule}{\vspace{-0.35cm}\makebox[\textwidth]{\rule{\textwidth}{0.2mm}}}
+
+%\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+%--------------------------!-------------------------------------%
+%--------------------------Newenvironment------------------------%
+%----------------------------------------------------------------%
+
+\newtheorem{thmex}	{Aufgabe}	[section]
+
+\newenvironment{Aufgabe}
+	{\begin{thmex}\vspace{-0.1cm}}
+	{\end{thmex}}
+
+\setbeamercolor{block body example}	{bg=yellow!10}
+\setbeamercolor{postit}				{fg=black,bg=yellow!10}
+
+\newenvironment{outputbox}
+	{\vspace{0.3cm}\ \\\begin{beamercolorbox}[sep=0cm,colsep=0.1cm,colsep*=0.1cm,wd=\textwidth]{postit}\vspace{-0.3cm}\\\normalfont}
+	{\end{beamercolorbox}}
