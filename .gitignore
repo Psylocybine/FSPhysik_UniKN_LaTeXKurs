@@ -13,7 +13,8 @@
 *.pdf
 *.ps
 *.dvi
+*.fls
 .latexmkrc
 *.fdb_latexmk
 .texnicle
-
+auto
