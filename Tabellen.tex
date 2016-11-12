@@ -155,31 +155,32 @@
 %%---------------------------------------FRAME---------------------------------------%
 %%-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\vspace{-0.3cm}
-	\begin{Aufgabe}
-		\vspace{-0.1cm}
-		Füge die erstellte Tabelle als Inhalt von einer neuen, ersten \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\section| \textrm{\qquote{Vergleich der Körpereigenschaften}} ein.
-	\end{Aufgabe}
+	\Aufgabee
+		Füge die erstellte Tabelle als Inhalt von einer neuen, ersten \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\section|
+        
+        \textrm{\qquote{Vergleich der Körpereigenschaften}}
+        
+        ein.
 	\begin{outputbox}
 		{\LARGE \textbf{1 Vergleich der Körpereigenschaften}}
 		\vspace{-0.3cm}
 		\begin{center}
-\begin{table}[htbp] 
-	\caption{}
-	\centering
-	\begin{tabular}{|r|c|c|}
-		\hline 
-		\textbf{} & \textbf{Löwe} & \textbf{Mensch} \\ \hline 
-		\textbf{Gewicht des Gehirns} & 1 & 2 \\ \hline 
-		\textbf{Körpertemperatur} & 3 & 4 \\ \hline 
-		\textbf{Atemfrequenz} & 5 & 6 \\ \hline 
-		\textbf{Maximale Geschwindigkeit} & 7 & 8 \\ \hline 
-		\textbf{Grundstoffwechselumsatz} & 9 & 10 \\ \hline
-	\end{tabular} 
-	\label{}
-\end{table}
+            \begin{table}[htbp] 
+                \centering
+            	\caption{Vergleich von Löwe und Mensch}
+                \vspace{-0.4cm}
+            	\begin{tabular}{|r|c|c|}
+            		\hline 
+            		\textbf{}                         & \textbf{Löwe} & \textbf{Mensch}  \\ \hline 
+            		\textbf{Gewicht des Gehirns}      & 1             & 2                \\ \hline 
+            		\textbf{Körpertemperatur}         & 3             & 4                \\ \hline 
+            		\textbf{Atemfrequenz}             & 5             & 6                \\ \hline 
+            		\textbf{Maximale Geschwindigkeit} & 7             & 8                \\ \hline 
+            		\textbf{Grundstoffwechselumsatz}  & 9             & 10               \\ \hline
+            	\end{tabular} 
+            	\label{}
+            \end{table}
 		\end{center}
-		\vspace{-0.4cm}
 	\end{outputbox}
 
 %	\btVFill\Befehle
@@ -200,111 +201,77 @@
 %%---------------------------------------FRAME---------------------------------------%
 %%-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
+    \vspace{-0.2cm}
+    \Losung
+    \vspace{-0.1cm}
 	\begin{outputbox}
-		\vspace{-0.8cm}
+        \vspace{-0.4cm}
 		\begin{center}
-\begin{table}[htbp] 
-	\caption{}
-	\centering
-\begin{tabular}{|r|c|c|}
-	\hline 
-	\textbf{} & \textbf{Löwe} & \textbf{Mensch} \\ \hline 
-	\textbf{Gewicht des Gehirns} & 1 & 2 \\ \hline 
-	\textbf{Körpertemperatur} & 3 & 4 \\ \hline 
-	\textbf{Atemfrequenz} & 5 & 6 \\ \hline 
-	\textbf{Maximale Geschwindigkeit} & 7 & 8 \\ \hline 
-	\textbf{Grundstoffwechselumsatz} & 9 & 10 \\ \hline
-\end{tabular} 
-\label{}
-\end{table}
-
+            \begin{table}[htbp] 
+                \centering
+                \caption{Vergleich von Löwe und Mensch}
+                \vspace{-0.4cm}
+                \begin{tabular}{|r|c|c|}
+                    \hline 
+                    \textbf{}                         & \textbf{Löwe} & \textbf{Mensch}  \\ \hline 
+                    \textbf{Gewicht des Gehirns}      & 1             & 2                \\ \hline 
+                    \textbf{Körpertemperatur}         & 3             & 4                \\ \hline 
+                    \textbf{Atemfrequenz}             & 5             & 6                \\ \hline 
+                    \textbf{Maximale Geschwindigkeit} & 7             & 8                \\ \hline 
+                    \textbf{Grundstoffwechselumsatz}  & 9             & 10               \\ \hline
+                \end{tabular} 
+                \label{}
+            \end{table}
 		\end{center}
-		
+        \vspace{-0.4cm}
 	\end{outputbox}
-	\vspace{-0.4cm}
-	\begin{lstlisting}
-\begin{table}[htbp]
-\caption{}
-\centering
-\begin{tabular}{|r|c|c|}
-\hline 
-\textbf{} & \textbf{Löwe} & \textbf{Mensch} \\ \hline 
-\textbf{Gewicht des Gehirns} & 1 & 2 \\ \hline 
-\textbf{Körpertemperatur} & 3 & 4 \\ \hline 
-\textbf{Atemfrequenz} & 5 & 6 \\ \hline 
-\textbf{Maximale Geschwindigkeit} & 7 & 8 \\ \hline 
-\textbf{Grundstoffwechselumsatz} & 9 & 10 \\ \hline
-\end{tabular} 
-\label{}
-\end{table}
+    \vspace{-0.2cm}
+    \Code
+    \vspace{-0.1cm}
+	\begin{lstlisting}[gobble=8]
+        \begin{table}[htbp]
+          \centering
+          \caption{Vergleich von Löwe und Mensch}
+          \begin{tabular}{|r|c|c|}
+            \hline 
+            \textbf{}                    & \textbf{Löwe} & \textbf{Mensch}  \\ \hline 
+            \textbf{Gewicht des Gehirns}      & 1             & 2           \\ \hline 
+            \textbf{Körpertemperatur}         & 3             & 4           \\ \hline 
+            \textbf{Atemfrequenz}             & 5             & 6           \\ \hline 
+            \textbf{Maximale Geschwindigkeit} & 7             & 8           \\ \hline 
+            \textbf{Grundstoffwechselumsatz}  & 9             & 10          \\ \hline
+          \end{tabular} 
+          \label{}
+        \end{table}
 	\end{lstlisting}
 \end{frame}
 %%-----------------------------------------------------------------------------------%
 %%---------------------------------------FRAME---------------------------------------%
 %%-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-		\begin{outputbox}
-			\vspace{-0.8cm}
-		\begin{center}
-			\begin{tabular}{|r|c|c|}
-				\hline
-				&	\textbf{Löwe}				& \textbf{Mensch} 	\\ 	\hline
-				\textbf{Gewicht des Gehirns}		&			1					& 		2			\\ 	\hline
-				\textbf{Körpertemperatur}			&			3					& 		4			\\	\hline
-				\textbf{Atemfrequenz}				&			5					& 		6			\\	\hline
-				\textbf{Maximale Geschwindigkeit}	&			7					& 		8			\\ 	\hline
-				\textbf{Grundstoffwechselumsatz}	&			9					& 		10			\\	\hline
-			\end{tabular}
-		\end{center}
-	
-	\end{outputbox}
-	\vspace{-0.4cm}
-	\begin{lstlisting}
-\begin{tabular}{
-|				r				|		c		|		c		  |}
-\hline
-\textbf{}						& \textbf{Löwe}	& \textbf{Mensch} \\ 
-\hline
-\textbf{Gewicht des Gehirns}	&		1		& 		2	      \\ 
-\hline
-\textbf{Körpertemperatur}		&		3		& 		4		  \\ 
-\hline
-\textbf{Atemfrequenz}			&		5		& 		6	      \\ 
-\hline
-\textbf{Max. Geschwindigkeit}	&		7		& 		8		  \\ 
-\hline
-\textbf{Grundstoffwechselumsatz}&		9		& 		10	      \\ 
-\hline
-\end{tabular}
-\end{lstlisting}
-\end{frame}
-
-%%-----------------------------------------------------------------------------------%
-%%---------------------------------------FRAME---------------------------------------%
-%%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\begin{Aufgabe}
-		Füge die folgenden Trennstriche in die Tabelle ein und gib der Tabelle ein \textbf{Über}schrift \textrm{\qquote{Vergleich von Löwe und Mensch.}}.
-	\end{Aufgabe}
+	\Aufgabee
+		Füge die folgenden Trennstriche in die Tabelle ein und gib der Tabelle ein \textbf{Über}schrift
+        
+        \textrm{\qquote{Vergleich von Löwe und Mensch.}}.
 	\begin{outputbox}
-		\vspace{-0.5cm}
+		\vspace{-0.4cm}
 		\begin{center}
-\begin{table}[htbp]
-	\caption{Vergleich von Löwe und Mensch.}
-	\centering
-	\begin{tabular}{r|cc}
-		\hline 
-		\textbf{} & \textbf{Löwe} & \textbf{Mensch} \\ \hline  
-		\textbf{Gewicht des Gehirns} & 1 & 2 \\  
-		\textbf{Körpertemperatur} & 3 & 4 \\  
-		\textbf{Atemfrequenz} & 5 & 6 \\ 
-		\textbf{Maximale Geschwindigkeit} & 7 & 8 \\  
-		\textbf{Grundstoffwechselumsatz} & 9 & 10 \\ \hline
-	\end{tabular} 
-	\label{}
-\end{table}
+            \begin{table}[htbp]
+                \centering
+            	\caption{Vergleich von Löwe und Mensch.}
+                \vspace{-0.4cm}
+            	\begin{tabular}{r|cc}
+            		\hline 
+            		\textbf{} & \textbf{Löwe} & \textbf{Mensch} \\ \hline  
+            		\textbf{Gewicht des Gehirns} & 1 & 2 \\  
+            		\textbf{Körpertemperatur} & 3 & 4 \\  
+            		\textbf{Atemfrequenz} & 5 & 6 \\ 
+            		\textbf{Maximale Geschwindigkeit} & 7 & 8 \\  
+            		\textbf{Grundstoffwechselumsatz} & 9 & 10 \\ \hline
+            	\end{tabular} 
+            	\label{}
+            \end{table}
 		\end{center}
-
 		\vspace{-0.2cm}
 	\end{outputbox}
 	
@@ -313,8 +280,8 @@
 		\begin{tabular}{ll}
 			\toprule
 			\LaTeX\ Befehl								&	Funktion								\\ \midrule
-			\lstinline|\hline|							&	Horizontaler Trennstrich von Zeilen				\\
-			\lstinline/{|Spalte|Spalte|}/								&	Vertikaler Trennstrich von Spalten					\\
+			\lstinline|\hline|							&	Horizontaler Trennstrich				\\
+			\lstinline/{|Spalte|Spalte|}/				&	Vertikaler Trennstrich    				\\
 			\bottomrule
 		\end{tabular}
 	\end{center}
@@ -325,23 +292,21 @@
 %%-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	\Code
-	\begin{lstlisting}
-\begin{table}[htbp]
-\caption{Vergleich von Löwe und Mensch.}
-\centering
-\begin{tabular}{r|cc}
-\hline 
-\textbf{}							& \textbf{Löwe} & \textbf{Mensch} 	\\  
-\hline 
-\textbf{Gewicht des Gehirns}		& 1 			& 2 				\\  
-\textbf{Körpertemperatur}			& 3				& 4 				\\  
-\textbf{Atemfrequenz}				& 5				& 6 				\\ 
-\textbf{Maximale Geschwindigkeit}	& 7 			& 8 				\\  
-\textbf{Grundstoffwechselumsatz}	& 9 			& 10 				\\ 
-\hline
-\end{tabular} 
-\label{}
-\end{table}
+	\begin{lstlisting}[gobble=8]
+        \begin{table}[htbp]
+          \centering
+          \caption{Vergleich von Löwe und Mensch}
+          \begin{tabular}{|r|c|c|}
+            \hline 
+            \textbf{}                    & \textbf{Löwe} & \textbf{Mensch}  \\ \hline 
+            \textbf{Gewicht des Gehirns}      & 1             & 2           \\
+            \textbf{Körpertemperatur}         & 3             & 4           \\
+            \textbf{Atemfrequenz}             & 5             & 6           \\
+            \textbf{Maximale Geschwindigkeit} & 7             & 8           \\ 
+            \textbf{Grundstoffwechselumsatz}  & 9             & 10          \\ \hline 
+          \end{tabular} 
+          \label{}
+        \end{table}
 	\end{lstlisting}
 \end{frame}
 %%%-----------------------------------------------------------------------------------------------%
