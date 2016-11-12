@@ -18,14 +18,14 @@
 % -----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	Abgesetzte Formeln:
-	\begin{lstlisting}[gobble=4]
-    \begin{align}
-      ...
-    \end{align}
+	\begin{lstlisting}[gobble=8]
+	    \begin{align}
+		    ...
+	    \end{align}
 	\end{lstlisting}
 	Formeln im Text:
-	\begin{lstlisting}[gobble=4]
-    Umgebender Text $ ... $ Umgebender Text
+	\begin{lstlisting}[gobble=8]
+	    Umgebender Text $ ... $ Umgebender Text
 	\end{lstlisting}
 	
 	Die auf den folgenden Folien beschriebenen Befehle funktionieren nur innerhalb von beiden Matheumgebungen.
@@ -55,7 +55,7 @@
 	\Aufgabee
 		Schreibe den zur Überschrift \qquote{\textsc{Wiener-Tauber}-Methode} gehörende Text:
 	\begin{outputbox}
-		Wir beschaffen uns einen zahmen Löwen, $L_0$, aus der Klasse $L(- \infty, \infty)$, dessen \textsc{Fourier}transformierte nirgends verschwindet und setzen ihn in der Wüste aus. $L_0$ konvergiert dann gegen unseren Käfig. Aufgrund des allgemeinen \textsc{Wiener-Tauber}-Theorems wird dann jeder andere Löwe $L$ gegen denselben Käfig konvergieren.
+		Wir beschaffen uns einen zahmen Löwen, $L_0$, aus der Klasse $L(- \infty, \infty)$, dessen \textsc{Fourier}transformierte nirgends verschwindet und setzen ihn in der Wüste aus. $L_0$ konvergiert dann gegen unseren Käfig. Aufgrund des allgemeinen \textsc{Wiener}-\textsc{Tauber}-Theorems wird dann jeder andere Löwe $L$ gegen denselben Käfig konvergieren.
 	\end{outputbox}
 	\vspace{0.3cm}
 \end{frame}
@@ -268,10 +268,10 @@
 	\begin{outputbox}
 		{\large\textbf{2.2.2 Die \textSC{Banach}sche- oder iterative Methode}}
 		
-		Es sei $f$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
+		Es sei $\mathrm{f}$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
 		\begin{align}
-		    W_0 	&= \text{Wüste} \\
-	        W_{n+1} &= f(W_n)
+		    D_0 	&= \text{Desert} \\
+	        D_{n+1} &= \mathrm{f}(W_n)
 		\end{align}
 	\end{outputbox}
 	\vspace{0.3cm}
@@ -284,20 +284,20 @@
 	\begin{outputbox}
 		{ \large\textbf{2.2.2 Die \textSC{Banach}sche- oder iterative Methode}}
 		
-		Es sei $f$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
+		Es sei $\mathrm{f}$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
 		\begin{align}
-			W_0 	&= \text{Wüste} \\
-			W_{n+1} &= f(W_n)
+			D_0 	&= \text{Desert} \\
+			D_{n+1} &= \mathrm{f}(D_n)
 		\end{align}
 	\end{outputbox}
 
 	\Code
 	\begin{lstlisting}[gobble=4]
     \subsubsection{Die \textSC{Banach}sche- oder iterative Methode}
-	    Es sei $f$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
+	    Es sei $\mathrm{f}$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
 	    \begin{align}
-		    W_0 	&= \text{Wüste} \\
-		    W_{n+1} &= f(W_n)
+		    D_0 	&= \text{Desert} \\
+		    D_{n+1} &= \mathrm{f}(D_n)
 	    \end{align}
 	\end{lstlisting}
   \note[item]<1->{ausrichtendes \&}
@@ -726,7 +726,7 @@
 	Füge zwischen \qquote{$\tau$} und \qquote{darüberhinaus} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
 	\begin{outputbox}
 	    \begin{align}
-	      - \tau \cdot \frac{\text{d} L}{\text{d} t} = L \Leftrightarrow L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
+	      - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
 	    \end{align}	
     \end{outputbox}
 	\vspace{0.3cm}
@@ -738,14 +738,14 @@
 	\Losung
 	\begin{outputbox}
 	    \begin{align}
-	        - \tau \cdot \frac{\text{d} L}{\text{d} t} = L \Leftrightarrow L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
+	        - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
 	    \end{align}
 	\end{outputbox}
 
 	\Code
 	\begin{lstlisting}[gobble=4]
     \begin{align}
-        - \tau \cdot \frac{\text{d} L}{\text{d} t} = L \Leftrightarrow L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
+        - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
     \end{align}
 	\end{lstlisting}
 \end{frame}
