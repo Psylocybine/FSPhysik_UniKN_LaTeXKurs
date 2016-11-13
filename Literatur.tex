@@ -18,8 +18,53 @@
 	\end{center}
 \end{frame}
 %-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
+%---------------------------------------Einleitung----------------------------------%
 %-----------------------------------------------------------------------------------%
+\begin{frame}[c,fragile]
+
+  \begin{center}
+    \resizebox{0.2\textwidth}{!}{\hologo{BibTeX}}
+  \end{center}
+  
+  \begin{columns}[c]
+    \column{0.5\textwidth}
+    \begin{center}
+      \begin{block}{Anforderung}
+        \begin{itemize}
+        \item Konsistent
+        \item Effizient
+        \item Automatisiert
+        \end{itemize}
+      \end{block}
+    \end{center}
+
+    \column{0.5\textwidth}
+    \begin{center}
+      \begin{block}{Realisierung}
+        \begin{itemize}
+        \item Schlüsselwort - Formalismus
+        \item Bekannt von \lstinline[basicstyle=\ttfamily\normalsize]|\label|-\lstinline[basicstyle=\ttfamily\normalsize]|\ref|
+        \end{itemize}
+      \end{block}
+    \end{center}
+  \end{columns}
+
+  \begin{center}
+    \begin{tabular}{r | l}
+      \toprule
+      \lstinline[basicstyle=\ttfamily\normalsize]|\label|-\lstinline[basicstyle=\ttfamily\normalsize]|\ref| - Formalismus & \hologo{BibTeX} - Formalismus \\
+      \midrule
+      \only<1>{\texttt{\textbackslash \color{green!70!black}{label}\color{black}{\{}}\textit{\small{<label-keyword>}}\texttt{\}}}%
+      \only<2>{\textit{\small{<Quellcode-Dateiname>}}\texttt{.aux}}
+      & \textit{\small{<Bibliotheks-Dateiname>}}\texttt{.bib} \\
+      \texttt{\textbackslash \color{green!70!black}ref\color{black}\{}\textit{\small{<label-keyword>}}\texttt{\}} & \texttt{\textbackslash \color{green!70!black}cite\color{black}\{}\textit{\small{<bib-keyword>}}\texttt{\}}\\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  
+\end{frame}
+
+
 \begin{frame}[fragile]
 	\begin{onlyenv}<1,2>
 		\Ausgabe
