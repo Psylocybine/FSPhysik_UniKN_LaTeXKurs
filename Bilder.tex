@@ -52,13 +52,13 @@
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\begin{Aufgabe}
+	\Aufgabee
 		Füge einen neuen Abschnitt \textrm{\qquote{Diktatorische Methode}} als \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\subsubsection| der Section \textrm{\qquote{Sonstige Methoden}} ein und schreibe folgenden Text:
 		
 		\textrm{\qquote{Man fange was man finde und prügele es so lange, bis es zugibt, ein Löwe zu sein, der in der Wüste gefangen wurde.}}
 		
 		Füge dann danach die Grafik \qquote{loewenjagd.png} mithilfe von \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\begin{figure}...\end{figure}|, \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\centering| und \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\includegraphics[]{}| ein.
-	\end{Aufgabe}
+	
 
 	\btVFill\Befehle
 	\begin{center}
@@ -117,9 +117,10 @@
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\begin{lstlisting}
-\includegraphics[width=0.2\textwidth]{meinbild.jpg}
+	\begin{lstlisting}[gobble=8]
+        \includegraphics[width=0.2\textwidth]{meinbild.jpg}
 	\end{lstlisting}
+    \vspace{-0.3cm}
 	\pause
 	\begin{outputbox}
 		\begin{figure}[H]
@@ -129,9 +130,10 @@
 	\end{outputbox}
 	
 	\pause
-	\begin{lstlisting}
-\includegraphics[width=0.4\textwidth]{meinbild.jpg}
+	\begin{lstlisting}[gobble=8]
+        \includegraphics[width=0.4\textwidth]{meinbild.jpg}
 	\end{lstlisting}
+    \vspace{-0.3cm}
 	\pause
 	\begin{outputbox}
 		\begin{figure}[H]
@@ -144,10 +146,8 @@
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\begin{Aufgabe}
+	\Aufgabee
 		Verkleinere die soeben eingefügte Grafik auf die Hälfte der Textbreite.
-	\end{Aufgabe}
-	
 	\btVFill\Befehle
 	\begin{center}
 		\begin{tabular}{ll}
@@ -177,12 +177,12 @@
 	\end{outputbox}
 	
 	\Code
-	\begin{lstlisting}
-Man fange was man finde und prügele sie solange, bis sie zugibt, ein Löwe zu sein, der in der Wüste gefangen wurde.
-\begin{figure}
-	\centering
-	\includegraphics[width=0.5\textwidth]{img/loewenjagd.png}
-\end{figure}
+	\begin{lstlisting}[gobble=8]
+        Man fange was man finde und prügele sie solange, bis sie zugibt, ein Löwe zu sein, der in der Wüste gefangen wurde.
+        \begin{figure}
+        	\centering
+        	\includegraphics[width=0.5\textwidth]{img/loewenjagd.png}
+        \end{figure}
 	\end{lstlisting}
 \end{frame}
 %%-----------------------------------------------------------------------------------------------%
@@ -198,13 +198,13 @@ Man fange was man finde und prügele sie solange, bis sie zugibt, ein Löwe zu s
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\begin{Aufgabe}
+	\Aufgabee
 		Füge eine Bild\textbf{unter}schrift mit dem Text
 		
 		\textrm{\qquote{Vergleich verschiedener Dienste bei der Löwenjagd.}}
 		
 		ein.
-	\end{Aufgabe}
+	
 
 	\btVFill\Befehle
 	\begin{center}
@@ -242,7 +242,7 @@ Man fange was man finde und prügele sie solange, bis sie zugibt, ein Löwe zu s
 Man fange was man finde und prügele sie solange, bis sie zugibt, ein Löwe zu sein, der in der Wüste gefangen wurde.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.1\textwidth]{img/loewenjagd.png}
+	\includegraphics[width=0.5\textwidth]{img/loewenjagd.png}
 	\caption{Vergleich verschiedener Dienste bei der Löwenjagd.}
 \end{figure}
 	\end{lstlisting}
