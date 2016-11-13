@@ -82,11 +82,11 @@
 	\begin{lstlisting}[gobble=8]
 	    Wir beschaffen uns einen zahmen Löwen, $L_0$, aus der Klasse $L(- \infty, \infty)$, dessen \textsc{Fourier}transformierte nirgends verschwindet und setzen ihn in der Wüste aus. $L_0$ konvergiert dann gegen unseren Käfig. Aufgrund des allgemeinen \textsc{Wiener}-\textsc{Tauber}-Theorems wird dann jeder andere Löwe $L$ gegen denselben Käfig konvergieren.
 	\end{lstlisting}
-  \note[item]<1->{Tiefgestellt im inline-math-mode}
-  \note[item]<1->{Symbole benötigen math-mode}
-  \note[item]<1->{Kapitälchien mit $\backslash$textsc}
-  \note[item]<1->{Konsistenz: Auch einzelnes L kursiv. Hinweis: Schriftartunterschied von $\backslash$textit und \$\$}
-  \note[item]<1->{Ist jeder mitgekommen? -> Kontrolle}
+\note[item]<1->{Tiefgestellt im inline-math-mode}
+\note[item]<1->{Symbole benötigen math-mode}
+\note[item]<1->{Kapitälchien mit $\backslash$textsc}
+\note[item]<1->{Konsistenz: Auch einzelnes L kursiv. Hinweis: Schriftartunterschied von $\backslash$textit und \$\$}
+\note[item]<1->{Ist jeder mitgekommen? -> Kontrolle}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -150,7 +150,7 @@
 	\begin{outputbox}
 		Dabei wirkt folgende Kraft:
 		\begin{align}
-			F = U \cdot d^{-1} \cdot q = \left( \frac{U \cdot q}{d} \right) 
+			F = U \cdot d^{-1} \cdot q = \left( \frac{U \cdot q}{d} \right)\tag{1}
 		\end{align}
 	\end{outputbox}
 	\vspace{0.3cm}
@@ -163,7 +163,7 @@
 	\begin{outputbox}
 		Dabei wirkt folgende Kraft:
 		\begin{align}
-			F = U \cdot d^{-1} \cdot q = \left( \frac{U \cdot q}{d} \right) 
+			F = U \cdot d^{-1} \cdot q = \left( \frac{U \cdot q}{d} \right) \tag{1}
 		\end{align}
 	\end{outputbox}
 
@@ -215,7 +215,7 @@
 	\begin{outputbox}
 		Installiert man alternativ eine hinreichend große Ladung, so gilt:
 		\begin{align}
-			F = \left( \frac{1}{4 \pi \epsilon_0 \epsilon_r} \right) \cdot \frac{Q_1 Q_2}{r^2}
+			F = \left( \frac{1}{4 \pi \epsilon_0 \epsilon_r} \right) \cdot \frac{Q_1 Q_2}{r^2}\tag{2}
 		\end{align}
 		Es ist leicht, den Löwen von einer der Platten abzukratzen.
 	\end{outputbox}
@@ -231,7 +231,7 @@
 	\begin{outputbox}
 		Installiert man alternativ eine hinreichend große Ladung, so gilt:
 		\begin{align}
-			F = \left( \frac{1}{4 \pi \epsilon_0 \epsilon_r} \right) \cdot \frac{Q_1 Q_2}{r^2}
+			F = \left( \frac{1}{4 \pi \epsilon_0 \epsilon_r} \right) \cdot \frac{Q_1 Q_2}{r^2}\tag{2}
 		\end{align}
 		Es ist leicht, den Löwen von einer der Platten abzukratzen.
 	\end{outputbox}
@@ -277,8 +277,8 @@
 		
 		Es sei $\mathrm{f}$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
 		\begin{align}
-		    D_0 	&= \text{Desert} \\
-	        D_{n+1} &= \mathrm{f}(W_n)
+		    D_0 	&= \text{Desert}   \tag{3} \\
+	        D_{n+1} &= \mathrm{f}(W_n) \tag{4}
 		\end{align}
 	\end{outputbox}
 	\vspace{0.3cm}
@@ -293,8 +293,8 @@
 		
 		Es sei $\mathrm{f}$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
 		\begin{align}
-			D_0 	&= \text{Desert} \\
-			D_{n+1} &= \mathrm{f}(D_n)
+			D_0 	&= \text{Desert}   \tag{3} \\ 
+			D_{n+1} &= \mathrm{f}(D_n) \tag{4}
 		\end{align}
 	\end{outputbox}
 
@@ -351,9 +351,9 @@
 	\begin{lstlisting}[gobble=4]
     wird die Wüste auf den Fixpunkt zusammengezogen (mit $n \in \mathbb{N}_0$ bzw. $n=0,1,2,\ldots$). So gelangt der Löwe in den Käfig.
 	\end{lstlisting}
-  \note[item]<1->{$\backslash$in}
-  \note[item]<1->{$\backslash$mathbb, Achtung: ``\_0'' außerhalb}
-  \note[item]<1->{$\backslash$ldots ``line-dots''}
+\note[item]<1->{$\backslash$in}
+\note[item]<1->{$\backslash$mathbb, Achtung: ``\_0'' außerhalb}
+\note[item]<1->{$\backslash$ldots ``line-dots''}
 \end{frame}
 % -----------------------------------------------------------------------------------------------%
 % ------------------------------------------SUBSECTION-------------------------------------------%
@@ -433,7 +433,7 @@
 		Füge zwischen \qquote{Integral} und \qquote{wobei} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
 	\begin{outputbox}
 	    \begin{align}
-		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta
+		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta \tag{5}
 	    \end{align}	
 	\end{outputbox}
 	\vspace{0.2cm}
@@ -445,7 +445,7 @@
 	\Losung
 	\begin{outputbox}
 	    \begin{align}
-		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta
+		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta \tag{5}
 	    \end{align}
 	\end{outputbox}
 
@@ -537,7 +537,7 @@
 		Füge zwischen \qquote{d.h.} und \qquote{da} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
 	\begin{outputbox}
 	    \begin{align}
-		    \lim_{t \to \infty} \left( \frac{\text{Fläche der Wüste}}{\text{Zahl der Löwen}} \right) = 0
+		    \lim_{t \to \infty} \left( \frac{\text{Fläche der Wüste}}{\text{Zahl der Löwen}} \right) = 0 \tag{6}
 	    \end{align}	
     \end{outputbox}
 	\vspace{0.3cm}
@@ -549,7 +549,7 @@
 	\Losung
 	\begin{outputbox}
 	    \begin{align}
-	      \lim_{t \to \infty} \left( \frac{\text{Fläche der Wüste}}{\text{Zahl der Löwen}} \right) = 0
+	      \lim_{t \to \infty} \left( \frac{\text{Fläche der Wüste}}{\text{Zahl der Löwen}} \right) = 0 \tag{6}
 	    \end{align}
 	\end{outputbox}
 
@@ -587,7 +587,7 @@
 	    \begin{align}
 		    \frac{\partial}{\partial t} \, \left( \text{Fläche der Wüste} \right) \approx 0
 		    \quad \text{und} \quad
-		      \frac{\partial}{\partial t} \, \left( \text{Zahl der Löwen} \right) \neq 0
+		      \frac{\partial}{\partial t} \, \left( \text{Zahl der Löwen} \right) \neq 0 \tag{7}
 		\end{align}	
     \end{outputbox}
 	\vspace{0.3cm}
@@ -601,7 +601,7 @@
 	    \begin{align}
 	        \frac{\partial}{\partial t} \, \left( \text{Fläche der Wüste} \right) \approx 0
 	        \quad \text{und} \quad
-	        \frac{\partial}{\partial t} \, \left( \text{Zahl der Löwen} \right) \neq 0
+	        \frac{\partial}{\partial t} \, \left( \text{Zahl der Löwen} \right) \neq 0 \tag{7}
 	    \end{align}
 	\end{outputbox}
 
@@ -685,7 +685,7 @@
 	Füge zwischen \qquote{gilt:} und \qquote{weiterhin} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
 	\begin{outputbox}
 	    \begin{align}
-	        \frac{\text{d} L}{\text{d} t} \propto L 
+	        \frac{\text{d} L}{\text{d} t} \propto L \tag{3}
 	    \end{align}	
     \end{outputbox}
 	\vspace{0.3cm}
@@ -695,18 +695,17 @@
 % -----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	\Losung
-	\begin{outputbox}
-    \begin{align}
-      \frac{\text{d} L}{\text{d} t} \propto L 
-    \end{align}
-	\end{outputbox}
-
+		\begin{outputbox}
+		    \begin{align}
+		      \frac{\text{d} L}{\text{d} t} \propto L  \tag{3}
+		    \end{align}
+		\end{outputbox}
 	\Code
-	\begin{lstlisting}[gobble=4]
-    \begin{align}
-        \frac{\text{d} L}{\text{d} t} \propto L 
-    \end{align}
-	\end{lstlisting}
+		\begin{lstlisting}[gobble=12]
+		    \begin{align}
+		        \frac{\text{d} L}{\text{d} t} \propto L 
+		    \end{align}
+		\end{lstlisting}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -730,12 +729,12 @@
 	\end{center}
 	\pause\btVFill
 	\Aufgabee
-	Füge zwischen \qquote{$\tau$} und \qquote{darüberhinaus} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
-	\begin{outputbox}
-	    \begin{align}
-	      - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
-	    \end{align}	
-    \end{outputbox}
+		Füge zwischen \qquote{$\tau$} und \qquote{darüberhinaus} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+		\begin{outputbox}
+		    \begin{align}
+		      - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}} \tag{4}
+		    \end{align}	
+	    \end{outputbox}
 	\vspace{0.3cm}
 \end{frame}
 % -----------------------------------------------------------------------------------%
@@ -743,18 +742,18 @@
 % -----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	\Losung
-	\begin{outputbox}
-	    \begin{align}
-	        - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
-	    \end{align}
-	\end{outputbox}
+		\begin{outputbox}
+		    \begin{align}
+		        - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}} \tag{4}
+		    \end{align}
+		\end{outputbox}
 
 	\Code
-	\begin{lstlisting}[gobble=4]
-    \begin{align}
-        - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
-    \end{align}
-	\end{lstlisting}
+		\begin{lstlisting}[gobble=12]
+		    \begin{align}
+		        - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
+		    \end{align}
+		\end{lstlisting}
 \end{frame}
 
 % -----------------------------------------------------------------------------------%
@@ -773,16 +772,16 @@
 	\end{center}
 	\pause\btVFill
 	\Aufgabee
-	Füge nach \qquote{Zeit} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
-	\begin{outputbox}
-	    \begin{align}
-	      L(t) \,
-	      \begin{cases}
-	        = L_0 & \text{für} \, t=0 \\
-	        < L_0 & \text{für} \, t>0
-	      \end{cases}
-	    \end{align}
-    \end{outputbox}
+		Füge nach \qquote{Zeit} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+		\begin{outputbox}
+		    \begin{align}
+		      L(t) \,
+		      \begin{cases}
+		        = L_0 & \text{für} \, t=0 \\
+		        < L_0 & \text{für} \, t>0
+		      \end{cases} \tag{X}
+		    \end{align}
+	    \end{outputbox}
 	\vspace{0.3cm}
 \end{frame}
 % -----------------------------------------------------------------------------------%
@@ -790,26 +789,25 @@
 % -----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	\Losung
-	\begin{outputbox}
-	    \begin{align}
-			L(t) \,
-			\begin{cases}
-				= L_0 & \text{für} \, t=0 \\
-				< L_0 & \text{für} \, t>0
-			\end{cases}
-	    \end{align}
-	\end{outputbox}
-
+		\begin{outputbox}
+		    \begin{align}
+				L(t) \,
+				\begin{cases}
+					= L_0 & \text{für} \, t=0 \\
+					< L_0 & \text{für} \, t>0
+				\end{cases} \tag{X}
+		    \end{align}
+		\end{outputbox}
 	\Code
-	\begin{lstlisting}[gobble=4]
-	\begin{align}
-		L(t) \,
-		\begin{cases}
-			= L_0 & \text{für} \, t=0 \\
-			< L_0 & \text{für} \, t>0
-		\end{cases}
-	\end{align}
-	\end{lstlisting}
+		\begin{lstlisting}[gobble=12]
+			\begin{align}
+				L(t) \,
+				\begin{cases}
+					= L_0 & \text{für} \, t=0 \\
+					< L_0 & \text{für} \, t>0
+				\end{cases}
+			\end{align}
+		\end{lstlisting}
 \end{frame}
 
 
