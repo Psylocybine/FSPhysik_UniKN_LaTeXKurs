@@ -266,6 +266,8 @@
 %--------------------------Newcommands---------------------------%
 %----------------------------------------------------------------%
 
+\usepackage{suffix}
+
 %\renewcommand{\epsilon}{\varepsilon}
 \newcommand{\textSC}[1]{{\normalfont  \textsc{#1}}} 
 \renewcommand{\quote}[1]{\glq{#1}\grq}        			%	Um Worte EINFACH in Anführungszeichen zu setzen
@@ -281,6 +283,10 @@
 \newcommand{\Aufgabee}	{\refstepcounter{AufgCounter}	\textbf{{\large 	 \color{AufgColor} Aufgabe 		\theAufgCounter:}}\vspace{0.1cm}\newline}
 \newcommand{\Losung}	{								\textbf{{\normalsize \color{AufgColor} L{\"o}sung 	\theAufgCounter:}}\vspace{-0.3cm}\newline}
 \newcommand{\Code}		{								\textbf{{\normalsize \color{AufgColor} Code 		\theAufgCounter:}}\vspace{-0.4cm}\newline}
+
+\WithSuffix\newcommand\Aufgabee*	{\textbf{{\large 	  \color{AufgColor} Aufgabe:}}		\vspace{0.1cm}\newline}
+\WithSuffix\newcommand\Losung*		{\textbf{{\normalsize \color{AufgColor} L{\"o}sung:}}	\vspace{-0.3cm}\newline}
+\WithSuffix\newcommand\Code*		{\textbf{{\normalsize \color{AufgColor} Code:}}			\vspace{-0.4cm}\newline}
 
 \newcommand{\Ausgabe}	{\textbf{Ausgabe:}\vspace{0.1cm}\newline}
 \newcommand{\Befehle}	{\textbf{Befehle:}\vspace{-0.3cm}}
