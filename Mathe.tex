@@ -198,7 +198,7 @@
 	\begin{center}
 		\begin{tabular}{lllll}
 			\toprule
-			Buchstabe			&	Aussehen (klein)	&	\LaTeX\ Code			&	Aussehen (groß)		&	\LaTeX\ Code			\\ \midrule
+			Buchstabe			&	Aussehen (klein)	&	\color{math-cmd}{Mathe}\color{black}{-Befehl}			&	Aussehen (groß)		&	\color{math-cmd}{Mathe}\color{black}{-Befehl}			\\ \midrule
 			alpha				&	$\alpha$			&	\lstinline|\alpha|		&	A					&	A						\\
 			beta				&	$\beta$				&	\lstinline|\beta|		&	B					&	B						\\
 			gamma				&	$\gamma$			&	\lstinline|\gamma|		&	$\Gamma$			&	\lstinline|\Gamma|		\\
@@ -220,9 +220,9 @@
 		Es ist leicht, den Löwen von einer der Platten abzukratzen.
 	\end{outputbox}
 	\vspace{0.3cm}
+\note[item]<1->{Erwähne VAR Versionen (varphi, varepsilon)}
+\note[item]<1->{Große Versionen existieren nicht für alle}
 \end{frame}
-\note{\large
-- Erwähne varphi, varepsilon}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
 % -----------------------------------------------------------------------------------%
@@ -273,7 +273,7 @@
 	\Aufgabee
 	Neuer Abschnitt anschließend an \qquote{\textsc{Wiener}-\textsc{Tauber}-Methode}:
 	\begin{outputbox}
-		{\large\textbf{2.2.2 Die \textSC{Banach}sche- oder iterative Methode}}
+		{\large\textbf{1.2.2 Die \textSC{Banach}sche- oder iterative Methode}}
 		
 		Es sei $\mathrm{f}$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
 		\begin{align}
@@ -282,6 +282,7 @@
 		\end{align}
 	\end{outputbox}
 	\vspace{0.3cm}
+\note[item]<1->{Text hat i.A. andere Schriftart}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -289,7 +290,7 @@
 \begin{frame}[fragile]
 	\Losung
 	\begin{outputbox}
-		{ \large\textbf{2.2.2 Die \textSC{Banach}sche- oder iterative Methode}}
+		{ \large\textbf{1.2.2 Die \textSC{Banach}sche- oder iterative Methode}}
 		
 		Es sei $\mathrm{f}$ eine Kontraktion der Wüste in sich, $x_0$ sei ihr Fixpunkt. Auf diesen Fixpunkt stellen wir den Käfig. Durch sukzessive Iteration
 		\begin{align}
@@ -307,10 +308,10 @@
 		    D_{n+1} &= \mathrm{f}(D_n)
 	    \end{align}
 	\end{lstlisting}
-  \note[item]<1->{ausrichtendes \&}
-  \note[item]<1->{$\backslash$text als umgebung in der umgebung}
-  \note[item]<1->{$\backslash\backslash$ Absatz auch in mathe-umgebung}
-  \note[item]<1->{Hinweis: Die Ausrichtung im Quelldokument bleibt euch überlassen (Es lohnt sich aber sich Gedanken zu machen)}
+\note[item]<1->{ausrichtendes \&}
+\note[item]<1->{$\backslash$text als umgebung in der umgebung}
+\note[item]<1->{$\backslash\backslash$ Absatz auch in mathe-umgebung}
+\note[item]<1->{Hinweis: Die Ausrichtung im Quelldokument bleibt euch überlassen (Es lohnt sich aber sich Gedanken zu machen)}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -337,6 +338,8 @@
 		wird die Wüste auf den Fixpunkt zusammengezogen (mit $n \in \mathbb{N}_0$ bzw. $n=0,1,2,\ldots$). So gelangt der Löwe in den Käfig.
 	\end{outputbox}
 	\vspace{1.3cm}
+\note[item]<1->{Schriftartmodifikation in Mathe analog zu Text}
+\note[item]<1->{keine Leerzeichen in Mathe}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -377,7 +380,7 @@
 		
 		\textrm{\qquote{\textSC{Banach}sche- oder iterative Methode}}:
 	\begin{outputbox}
-		{ \large\textbf{2.123. Die  \textSC{Cauchy}sche oder funktionentheoretische Methode}}
+		{ \large\textbf{1.2.3 Die  \textSC{Cauchy}sche oder funktionentheoretische Methode}}
 		
 		Wir betrachten eine analytische löwenwertige Funktion $\mathrm{f}(z)$. Es sei $\zeta$ der Käfig. Betrachten wir das Integral
 		
@@ -391,7 +394,7 @@
 \begin{frame}[fragile]
 	\Losung
 	\begin{outputbox}
-		{ \large\textbf{2.2.3. Die  \textSC{Cauchy}sche oder funktionentheoretische Methode}}
+		{ \large\textbf{1.2.3 Die  \textSC{Cauchy}sche oder funktionentheoretische Methode}}
 		
 		Wir betrachten eine analytische löwenwertige Funktion $\mathrm{f}(z)$. Es sei $\zeta$ der Käfig. Betrachten wir das Integral
 		
@@ -400,7 +403,7 @@
 
 	\Code
 	\begin{lstlisting}[gobble=4]
-    \subsubsection{Die \textSC{Cauchy}sche oder funktionentheoretische Methode}}
+    \subsubsection{Die \textSC{Cauchy}sche oder funktionentheoretische Methode}
 		Wir betrachten eine analytische löwenwertige Funktion $\mathrm{f}(z)$. Es sei $\zeta$ der Käfig. Betrachten wir das Integral
 		
 		wobei $C$ die Grenze der Wüste bedeutet. Sein Wert ist $\mathrm{f}(\zeta)$, d. h., ein Löwe ist im Käfig.
@@ -416,15 +419,12 @@
 			\toprule
 			\color{math-cmd}{Mathe}\color{black}{-Befehl}							&	Ausgabe					\\ \midrule
 			\lstinline|\imath|				&	$\imath$					\\
-			\lstinline|\int_{von}^{bis}|		&	$\int_{\mathrm{von}}^{\mathrm{bis}}$		\\ \addlinespace[0.5em]
-			\lstinline|\mathrm{d}|		&	$\mathrm{d}$		
-		    \\ 			
-		    \lstinline|\quad|		&	$\quad$		
-	        \\ 
-			\lstinline|\qquad|		&	$\qquad$		
-			\\
-			\lstinline|\,|					&	$\,$		\\
-			\lstinline|\!|					&	$\!$		\\
+			\lstinline|\int_{von}^{bis}|	&	$\int_{\mathrm{von}}^{\mathrm{bis}}$		\\ \addlinespace[0.5em]
+			\lstinline|\mathrm{d}|			&	$\mathrm{d}$		\\ 			
+		    \lstinline|\quad|				&	Abstand: \num{1}$\,\mathrm{em}$		\\ 
+			\lstinline|\qquad|				&	Abstand: \num{2}$\,\mathrm{em}$		\\
+			\lstinline|\,|					&	Abstand: kleines Leerzeichen		\\
+			\lstinline|\!|					&	Abstand: negatives kleines Leerzeichen		\\
 			\bottomrule
 		\end{tabular}
 	\end{center}
@@ -433,10 +433,11 @@
 		Füge zwischen \qquote{Integral} und \qquote{wobei} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
 	\begin{outputbox}
 	    \begin{align}
-		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta \tag{5}
+		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \, \mathrm{d} \zeta \tag{5}
 	    \end{align}	
 	\end{outputbox}
-	\vspace{0.2cm}
+	\vspace{1.3cm}
+\note[item]{The "em" is a font depending length, frequently as wide as a capital M in the current font.}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -445,18 +446,19 @@
 	\Losung
 	\begin{outputbox}
 	    \begin{align}
-		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta \tag{5}
+		    \frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \, \mathrm{d} \zeta \tag{5}
 	    \end{align}
 	\end{outputbox}
 
 	\Code
 	\begin{lstlisting}[gobble=4]
     \begin{align}
-		\frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \quad \! \! \mathrm{d} \zeta
+		\frac{1}{2 \pi \imath} \int_C \frac{\mathrm{f}(z)}{z - \zeta} \, \mathrm{d} \zeta
     \end{align}
 	\end{lstlisting}
-    \note[item]<1->{$\backslash$imath}
-    \note[item]<1->{$\backslash$mathrm{d}}
+\note[item]<1->{$\backslash$imath}
+\note[item]<1->{$\backslash$mathrm{d}}
+\note[item]<1->{Abstand vor dem $\mathrm{d}$}
 \end{frame}
 
 % -----------------------------------------------------------------------------------%
@@ -483,6 +485,7 @@
     folgt daraus, dass die Löwen auch den Käfig bevölkern werden.
     \end{outputbox}
 	\vspace{0.3cm}
+\note[item]<1->{benutzt nur eine leere Zeile statt par oder zeilenumbruch, weil später ein Align eingefügt wird}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -540,7 +543,7 @@
 		    \lim_{t \to \infty} \left( \frac{\text{Fläche der Wüste}}{\text{Zahl der Löwen}} \right) = 0 \tag{6}
 	    \end{align}	
     \end{outputbox}
-	\vspace{0.3cm}
+	\vspace{1.3cm}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -620,9 +623,9 @@
 % -----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	\Aufgabee
-		Erstelle folgende neue \lstinline[basicstyle=\normalfont\normalsize]|\subsubsection|:
+		Erstelle folgende neue \lstinline[basicstyle=\normalfont\normalsize]|\subsubsection| über dem Abschnitt \qquote{Mathematische Methoden}:
 	\begin{outputbox}
-	    { \large\textbf{2.3.2. Ausnutzen des Fortpflanzungsverhaltens} } 
+	    { \large\textbf{1.1.3 Ausnutzen des Fortpflanzungsverhaltens} } 
 	
 	    Wir bestrahlen die Wüste mit langsamen Neutronen. Der Löwe $L$ wird radioaktiv und ein Zerfalisprozess setzt ein. Wenn der Zerfall hinreichend weit fortgeschritten ist, wird der Löwe $L$ nicht mehr imstande sein, Widerstand zu leisten. Wobei beim exponentiellen Zerfall gilt:
 	
@@ -638,7 +641,7 @@
 \begin{frame}[fragile]
 	\vspace{-0.2cm}\Losung
 	\begin{outputbox}
-	    { \large\textbf{2.3.2. Ausnutzen des Fortpflanzungsverhaltens} } 
+	    { \large\textbf{1.1.3 Ausnutzen des Fortpflanzungsverhaltens} } 
 	
 	    Wir bestrahlen die Wüste mit langsamen Neutronen. Der Löwe $L$ wird radioaktiv und
 	    ein Zerfalisprozess setzt ein. Wenn der Zerfall hinreichend weit fortgeschritten ist, wird der Löwe $L$ nicht mehr imstande sein, Widerstand zu leisten. Wobei beim exponentiellen Zerfall gilt:
@@ -651,7 +654,7 @@
 
 	\vspace{-0.1cm}\Code
 	\begin{lstlisting}[gobble=4]
-    \textSC{Ausnutzen des Fortpflanzungsverhaltens}  
+    \subsubsection{Ausnutzen des Fortpflanzungsverhaltens}  
 	    Wir bestrahlen die Wüste mit langsamen Neutronen. Der Löwe $L$ wird radioaktiv und ein Zerfalisprozess setzt ein. Wenn der Zerfall hinreichend weit fortgeschritten ist, wird der Löwe $L$ nicht mehr imstande sein, Widerstand zu leisten. Wobei beim exponentiellen Zerfall gilt:
 
 	    weiterhin gilt mit dem Proportionalitätskonstanten $\tau$
@@ -685,10 +688,10 @@
 	Füge zwischen \qquote{gilt:} und \qquote{weiterhin} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
 	\begin{outputbox}
 	    \begin{align}
-	        \frac{\text{d} L}{\text{d} t} \propto L \tag{3}
+	        \frac{\mathrm{d} L}{\mathrm{d} t} \propto L \tag{3}
 	    \end{align}	
     \end{outputbox}
-	\vspace{0.3cm}
+	\vspace{1.3cm}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -697,15 +700,16 @@
 	\Losung
 		\begin{outputbox}
 		    \begin{align}
-		      \frac{\text{d} L}{\text{d} t} \propto L  \tag{3}
+		      \frac{\mathrm{d} L}{\mathrm{d} t} \propto L  \tag{3}
 		    \end{align}
 		\end{outputbox}
 	\Code
 		\begin{lstlisting}[gobble=12]
 		    \begin{align}
-		        \frac{\text{d} L}{\text{d} t} \propto L 
+		        \frac{\mathrm{d} L}{\mathrm{d} t} \propto L 
 		    \end{align}
 		\end{lstlisting}
+\note[item]<1->{benutze MATHRM!! für das "d"}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -729,13 +733,13 @@
 	\end{center}
 	\pause\btVFill
 	\Aufgabee
-		Füge zwischen \qquote{$\tau$} und \qquote{darüberhinaus} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
+		Füge zwischen \qquote{$\tau$} und \qquote{darüber hinaus} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
 		\begin{outputbox}
 		    \begin{align}
 		      - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}} \tag{4}
 		    \end{align}	
 	    \end{outputbox}
-	\vspace{0.3cm}
+	\vspace{1.3cm}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -754,6 +758,7 @@
 		        - \tau \cdot \frac{\mathrm{d} L}{\mathrm{d} t} = L \quad\Leftrightarrow\quad L(t) = L_0 \cdot \exp \left(- \frac{t}{\tau} \right) = L_0 \cdot \mathrm{e}^{- \frac{t}{\tau}}
 		    \end{align}
 		\end{lstlisting}
+\note[item]{quad ist nicht notwendig, hilft aber zur Übersichtlichkeit}
 \end{frame}
 
 % -----------------------------------------------------------------------------------%
@@ -775,14 +780,14 @@
 		Füge nach \qquote{Zeit} folgende \lstinline[basicstyle=\normalfont\normalsize]|align|-Umgebung ein:
 		\begin{outputbox}
 		    \begin{align}
-		      L(t) \,
+		      \mathrm{L}(t) \,
 		      \begin{cases}
 		        = L_0 & \text{für} \, t=0 \\
 		        < L_0 & \text{für} \, t>0
 		      \end{cases} \tag{X}
 		    \end{align}
 	    \end{outputbox}
-	\vspace{0.3cm}
+	\vspace{1.3cm}
 \end{frame}
 % -----------------------------------------------------------------------------------%
 % ---------------------------------------FRAME---------------------------------------%
@@ -791,7 +796,7 @@
 	\Losung
 		\begin{outputbox}
 		    \begin{align}
-				L(t) \,
+				\mathrm{L}(t) \,
 				\begin{cases}
 					= L_0 & \text{für} \, t=0 \\
 					< L_0 & \text{für} \, t>0
@@ -801,7 +806,7 @@
 	\Code
 		\begin{lstlisting}[gobble=12]
 			\begin{align}
-				L(t) \,
+				\mathrm{L}(t) \,
 				\begin{cases}
 					= L_0 & \text{für} \, t=0 \\
 					< L_0 & \text{für} \, t>0
