@@ -21,358 +21,467 @@
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\begin{onlyenv}<1>
-		\Code
-		\begin{lstlisting}
-\begin{itemize}
-
-\end{itemize}
-		\end{lstlisting}
-	\end{onlyenv}
-	\begin{onlyenv}<2>
-		\Code
-		\begin{lstlisting}
-\begin{itemize}
-	\item
-\end{itemize}
-		\end{lstlisting}
-		
-		\Ausgabe
-		\begin{outputbox}
-			\begin{itemize}
-				\item[-]
-			\end{itemize}
-		\end{outputbox}
-	\end{onlyenv}
-	\begin{onlyenv}<3>
-		\Code
-		\begin{lstlisting}
-\begin{itemize}
-	\item
-		Punkt 1
-\end{itemize}
-		\end{lstlisting}
-		
-		\Ausgabe
-		\begin{outputbox}
-			\begin{itemize}
-				\item[-]
-					Punkt 1
-			\end{itemize}
-		\end{outputbox}
-	\end{onlyenv}
-	\begin{onlyenv}<4>
-		\Code
-		\begin{lstlisting}
-\begin{itemize}
-	\item
-		Punkt 1
-	\item
-		Punkt 2
-	\item
-		Punkt 3
-\end{itemize}
-		\end{lstlisting}
-		
-		\Ausgabe
-		\begin{outputbox}
-			\begin{itemize}
-				\item[-]
-					Punkt 1
-				\item[-]
-					Punkt 2
-				\item[-]
-					Punkt 3
-			\end{itemize}
-		\end{outputbox}
-	\end{onlyenv}
-	\begin{onlyenv}<5>
-		\Code
-		\begin{lstlisting}
-\begin{itemize}
-	\item[1.]
-		Punkt 1
-	\item
-		Punkt 2
-	\item
-		Punkt 3
-\end{itemize}
-		\end{lstlisting}
-		
-		\Ausgabe
-		\begin{outputbox}
-			\begin{itemize}
-				\item[1.]
-					Punkt 1
-				\item[-]
-					Punkt 2
-				\item[-]
-					Punkt 3
-			\end{itemize}
-		\end{outputbox}
-	\end{onlyenv}
+    \textbf{\large einfache Listen:}\vspace{0.1cm}
+    \begin{columns}[t]
+        \column{0.45\textwidth} 
+            \Code*
+                \begin{lstlisting}[gobble=20]
+                    \begin{itemize}
+                        \item
+                            Punkt 1
+                        \item
+                            Punkt 2
+                        \item
+                            Punkt 3
+                    \end{itemize}
+                \end{lstlisting}
+            \Ausgabe\vspace{-0.2cm}
+                \begin{outputbox}
+                    \begin{itemize}
+                        \item[-]
+                            Punkt 1
+                        \item[-]
+                            Punkt 2
+                        \item[-]
+                            Punkt 3
+                    \end{itemize}
+                \end{outputbox}
+        \column{0.45\textwidth} 
+            \Code*
+                \begin{lstlisting}[gobble=20]
+                    \begin{itemize}
+                        \item[*]
+                            Punkt 1
+                        \item[1.]
+                            Punkt 2
+                        \item[Text]
+                            Punkt 3
+                    \end{itemize}
+                \end{lstlisting}
+            \Ausgabe\vspace{-0.2cm}
+                \begin{outputbox}
+                    \begin{itemize}
+                        \item[*]
+                            Punkt 1
+                        \item[1.]
+                            Punkt 2
+                        \item[Text]
+                            Punkt 3
+                    \end{itemize}
+                \end{outputbox}
+    \end{columns}
 \end{frame}
 %-----------------------------------------------------------------------------------%
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\Code
-	\begin{lstlisting}
-\begin{enumerate}
-	\item
-		Punkt 1
-	\item
-		Punkt 2
-	\item
-		Punkt 3
-\end{enumerate}
-	\end{lstlisting}
-	
-	\Ausgabe
-	\begin{outputbox}
-		\begin{enumerate}
-			\item
-				Punkt 1
-			\item
-				Punkt 2
-			\item
-				Punkt 3
-		\end{enumerate}
-	\end{outputbox}
+    \textbf{\large{zählende Listen:}}\newline
+    \Code*
+        \begin{lstlisting}[gobble=12]
+            \begin{enumerate}
+                \item
+                    Punkt 1
+                \item
+                    Punkt 2
+                \item
+                    Punkt 3
+            \end{enumerate}
+        \end{lstlisting}
+    \Ausgabe
+        \begin{outputbox}
+            \begin{enumerate}
+                \item
+                    Punkt 1
+                \item
+                    Punkt 2
+                \item
+                    Punkt 3
+            \end{enumerate}
+        \end{outputbox}
 \end{frame}
 %-----------------------------------------------------------------------------------%
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\Code
-	\begin{lstlisting}
-\begin{description}
-	\item[Titel 1]
-		Punkt 1
-	\item[Titel 2]
-		Punkt 2
-	\item[Titel 3]
-		Punkt 3
-\end{description}
-	\end{lstlisting}
-	
-	\Ausgabe
-	\begin{outputbox}
-		\begin{description}
-			\item[Titel 1]
-				Punkt 1
-			\item[Titel 2]
-				Punkt 2
-			\item[Titel 3]
-				Punkt 3
-		\end{description}
-	\end{outputbox}
+    \textbf{\large{beschreibende Listen:}}\newline
+    \Code*\vspace{-0.1cm}
+        \begin{lstlisting}[gobble=12]
+            \begin{eqlist}
+                \item[Label 1]
+                    Determine which behaviour is what and define your command accordingly. If you cannot categorize either behaviour as alternative, then it might be better to have two different commands altogether.
+                \item[Label 2]
+                    Determine which behaviour is what and define your command accordingly. If you cannot categorize either behaviour as alternative, then it might be better to have two different commands altogether.
+            \end{eqlist}
+        \end{lstlisting}
+    \vspace{-0.3cm}
+    \Ausgabe
+        \begin{outputbox}
+            \vspace{-0.2cm}
+            \begin{eqlist}
+                \item[Label 1]
+                    Determine which behaviour is what and define your command accordingly. If you cannot categorize either behaviour as alternative, then it might be better to have two different commands altogether.
+                \item[Label 2]
+                    Determine which behaviour is what and define your command accordingly. If you cannot categorize either behaviour as alternative, then it might be better to have two different commands altogether.
+            \end{eqlist}
+            \vspace{-0.2cm}
+        \end{outputbox}
 \end{frame}
 %-----------------------------------------------------------------------------------%
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
+%\begin{frame}[fragile]
+%	\begin{onlyenv}<1>
+%		\Code
+%		\begin{lstlisting}
+%\begin{itemize}
+%
+%\end{itemize}
+%		\end{lstlisting}
+%	\end{onlyenv}
+%	\begin{onlyenv}<2>
+%		\Code
+%		\begin{lstlisting}
+%\begin{itemize}
+%	\item
+%\end{itemize}
+%		\end{lstlisting}
+%		
+%		\Ausgabe
+%		\begin{outputbox}
+%			\begin{itemize}
+%				\item[-]
+%			\end{itemize}
+%		\end{outputbox}
+%	\end{onlyenv}
+%	\begin{onlyenv}<3>
+%		\Code
+%		\begin{lstlisting}
+%\begin{itemize}
+%	\item
+%		Punkt 1
+%\end{itemize}
+%		\end{lstlisting}
+%		
+%		\Ausgabe
+%		\begin{outputbox}
+%			\begin{itemize}
+%				\item[-]
+%					Punkt 1
+%			\end{itemize}
+%		\end{outputbox}
+%	\end{onlyenv}
+%	\begin{onlyenv}<4>
+%		\Code
+%		\begin{lstlisting}
+%\begin{itemize}
+%	\item
+%		Punkt 1
+%	\item
+%		Punkt 2
+%	\item
+%		Punkt 3
+%\end{itemize}
+%		\end{lstlisting}
+%		
+%		\Ausgabe
+%		\begin{outputbox}
+%			\begin{itemize}
+%				\item[-]
+%					Punkt 1
+%				\item[-]
+%					Punkt 2
+%				\item[-]
+%					Punkt 3
+%			\end{itemize}
+%		\end{outputbox}
+%	\end{onlyenv}
+%	\begin{onlyenv}<5>
+%		\Code
+%		\begin{lstlisting}
+%\begin{itemize}
+%	\item[1.]
+%		Punkt 1
+%	\item
+%		Punkt 2
+%	\item
+%		Punkt 3
+%\end{itemize}
+%		\end{lstlisting}
+%		
+%		\Ausgabe
+%		\begin{outputbox}
+%			\begin{itemize}
+%				\item[1.]
+%					Punkt 1
+%				\item[-]
+%					Punkt 2
+%				\item[-]
+%					Punkt 3
+%			\end{itemize}
+%		\end{outputbox}
+%	\end{onlyenv}
+%\end{frame}
+%%-----------------------------------------------------------------------------------%
+%%---------------------------------------FRAME---------------------------------------%
+%%-----------------------------------------------------------------------------------%
+%\begin{frame}[fragile]
+%	\Code
+%	\begin{lstlisting}
+%\begin{enumerate}
+%	\item
+%		Punkt 1
+%	\item
+%		Punkt 2
+%	\item
+%		Punkt 3
+%\end{enumerate}
+%	\end{lstlisting}
+%	
+%	\Ausgabe
+%	\begin{outputbox}
+%		\begin{enumerate}
+%			\item
+%				Punkt 1
+%			\item
+%				Punkt 2
+%			\item
+%				Punkt 3
+%		\end{enumerate}
+%	\end{outputbox}
+%\end{frame}
+%%-----------------------------------------------------------------------------------%
+%%---------------------------------------FRAME---------------------------------------%
+%%-----------------------------------------------------------------------------------%
+%\begin{frame}[fragile]
+%	\Code
+%	\begin{lstlisting}
+%\begin{description}
+%	\item[Titel 1]
+%		Punkt 1
+%	\item[Titel 2]
+%		Punkt 2
+%	\item[Titel 3]
+%		Punkt 3
+%\end{description}
+%	\end{lstlisting}
+%	
+%	\Ausgabe
+%	\begin{outputbox}
+%		\begin{description}
+%			\item[Titel 1]
+%				Punkt 1
+%			\item[Titel 2]
+%				Punkt 2
+%			\item[Titel 3]
+%				Punkt 3
+%		\end{description}
+%	\end{outputbox}
+%\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\vspace{-0.3cm}
-	\begin{Aufgabe}
+	\vspace{-0.1cm}
+	\Aufgabee
 		Erstelle eine neue Überschrift als \lstinline[basicstyle=\normalfont\normalsize]|\subsubsection| nach \qquote{Die \textSC{Cauchy}sche oder funktionentheoretische Methode}
 		
 		\textrm{\qquote{Die geometrische Methode}}
 		
-		setze den Text:	\textrm{Man stelle einen zylindrischen Käfig in die Wüste.}	und erstelle dann die folgende Tabelle:
-	\end{Aufgabe}
-	\begin{outputbox}
-		\vspace{-0.2cm}
-		\begin{itemize}
-			\item[-]
-				1. Fall: Der Löwe ist im Käfig. Dieser Fall ist trivial.
-			\item[-]
-				2. Fall: Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
-		\end{itemize}
-		\vspace{-0.2cm}
-	\end{outputbox}
-	\btVFill\Befehle
-	\begin{center}
-		\begin{tabular}{ll}
-			\toprule
-			\LaTeX\ Befehl										&	Funktion									\\ \midrule
-			\lstinline|\begin{itemize}...\end{itemize}|			&	einfache Listen								\\
-			\lstinline|\begin{enumerate}...\end{enumerate}|		&	durchnummerierte Aufzählungen				\\
-			\lstinline|\begin{description}...\end{description}|	&	Erklärungen / Beschreibungen				\\
-			\lstinline|\item[LABEL]|							&	steht vor der einzelnen Punkten der Liste	\\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-	\vspace{0.1cm}
-\end{frame}
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\vspace{-0.2cm}
-	\Losung
-	\begin{outputbox}
-		{\large\textbf{2.2.4 Die geometrische Methode}}
+		setze den Text:
 		
-		Man stelle einen zylindrischen Käfig in die Wüste.
-		\begin{itemize}
-			\item[-]
-			1. Fall: Der Löwe ist im Käfig. Dieser Fall ist trivial.
-			\item[-]
-			2. Fall: Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
-		\end{itemize}
-		\vspace{-0.2cm}
-	\end{outputbox}
-
-	\Code
-	\vspace{-0.1cm}
-	\begin{lstlisting}
-\subsubsection{Die geometrische Methode}
-	Man stelle einen zylindrischen Käfig in die Wüste.
-	\begin{itemize}
-		\item
-			1. Fall: Der Löwe ist im Käfig. Dieser Fall ist trivial.
-		\item
-			2. Fall: Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
-	\end{itemize}
-	\end{lstlisting}
+		\textrm{\qquote{Man stelle einen zylindrischen Käfig in die Wüste.}}
+		
+		Erstelle dann die folgende Liste:\vspace{-0.1cm}
+		\begin{outputbox}
+			\vspace{-0.3cm}
+			\begin{itemize}
+				\item[-]
+					\textbf{1. Fall:} Der Löwe ist im Käfig. Dieser Fall ist trivial.
+				\item[-]
+					\textbf{2. Fall:} Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
+			\end{itemize}
+			\vspace{-0.3cm}
+		\end{outputbox}
+	\btVFill
+	\Befehle
+		\vspace{0.1cm}
+		\begin{center}
+			\begin{tabular}{ll}
+				\toprule
+				\LaTeX\ Befehl										&	Funktion									\\ \midrule
+				\lstinline|\begin{itemize}...\end{itemize}|			&	einfache Listen								\\
+				\lstinline|\begin{enumerate}...\end{enumerate}|		&	durchnummerierte Aufzählungen				\\
+				\lstinline|\begin{eqlist}...\end{eqlist}|			&	Erklärungen / Beschreibungen				\\
+				\lstinline|\item[LABEL]|							&	steht vor der einzelnen Punkten der Liste	\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\vspace{0.1cm}
 \end{frame}
 %-----------------------------------------------------------------------------------%
 %---------------------------------------FRAME---------------------------------------%
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
-	\vspace{-0.3cm}
-	\begin{Aufgabe}
+	\Losung
+		\begin{outputbox}
+			{\large\textbf{2.2.4 Die geometrische Methode}}
+			
+			Man stelle einen zylindrischen Käfig in die Wüste.\vspace{-0.1cm}
+			\begin{itemize}
+				\item[-]
+					\textbf{1. Fall:} Der Löwe ist im Käfig. Dieser Fall ist trivial.
+				\item[-]
+					\textbf{2. Fall:} Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
+			\end{itemize}
+			\vspace{-0.2cm}
+		\end{outputbox}
+	\Code
+		\begin{lstlisting}[gobble=12]
+			\subsubsection{Die geometrische Methode}
+				Man stelle einen zylindrischen Käfig in die Wüste.
+				\begin{itemize}
+					\item
+						\textbf{1. Fall:} Der Löwe ist im Käfig. Dieser Fall ist trivial.
+					\item
+						\textbf{2. Fall:} Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
+				\end{itemize}
+		\end{lstlisting}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\Aufgabee
 		Ändere die Aufzählungszeichen der Liste, sodass du folgendes Ergebnis erhälst und ergänze den Text:
-	\end{Aufgabe}
-	\begin{outputbox}
-		\vspace{-0.2cm}
-		\begin{itemize}
-			\item[1. Fall]
-				Der Löwe ist im Käfig. Dieser Fall ist trivial.
-			\item[2. Fall]
-				Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
-		\end{itemize}
-		\vspace{-0.2cm}
-		\textbf{Bemerkung:}
-		Bei Anwendung dieser Methode ist dringend darauf zu achten, dass man sich nicht auf den Mittelpunkt des Käfigbodens stellt, da man sonst im Unendlichen verschwindet.
-	\end{outputbox}
+		\begin{outputbox}
+			\vspace{-0.2cm}
+			\begin{itemize}
+				\item[{\normalcolor\textbf{1. Fall:}}]
+					Der Löwe ist im Käfig. Dieser Fall ist trivial.
+				\item[{\normalcolor\textbf{2. Fall:}}]
+					Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
+			\end{itemize}
+			\vspace{-0.2cm}
+			\textbf{Bemerkung:}
+			Bei Anwendung dieser Methode ist dringend darauf zu achten, dass man sich nicht auf den Mittelpunkt des Käfigbodens stellt, da man sonst im Unendlichen verschwindet.
+		\end{outputbox}
 	\btVFill\Befehle
-	\begin{center}
-		\begin{tabular}{ll}
-			\toprule
-			\LaTeX\ Befehl										&	Funktion									\\ \midrule
-			\lstinline|\begin{itemize}...\end{itemize}|			&	einfache Listen								\\
-			\lstinline|\begin{enumerate}...\end{enumerate}|		&	durchnummerierte Aufzählungen				\\
-			\lstinline|\begin{description}...\end{description}|	&	Erklärungen / Beschreibungen				\\
-			\lstinline|\item[LABEL]|							&	steht vor der einzelnen Punkten der Liste	\\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-	\vspace{0.1cm}
+		\begin{center}
+			\begin{tabular}{ll}
+				\toprule
+				\LaTeX\ Befehl										&	Funktion									\\ \midrule
+				\lstinline|\begin{itemize}...\end{itemize}|			&	einfache Listen								\\
+				\lstinline|\begin{enumerate}...\end{enumerate}|		&	durchnummerierte Aufzählungen				\\
+				\lstinline|\begin{description}...\end{description}|	&	Erklärungen / Beschreibungen				\\
+				\lstinline|\item[LABEL]|							&	steht vor der einzelnen Punkten der Liste	\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\vspace{0.1cm}
 \end{frame}
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\vspace{-0.2cm}
-	\Losung
-	\begin{outputbox}
-		\vspace{-0.2cm}
-		\begin{itemize}
-			\item[1. Fall]
-				Der Löwe ist im Käfig. Dieser Fall ist trivial.
-			\item[2. Fall]
-				Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
-		\end{itemize}
-		\vspace{-0.2cm}
-		\textbf{Bemerkung:}
-		Bei Anwendung dieser Methode ist dringend darauf zu achten, dass man sich nicht auf den Mittelpunkt des Käfigbodens stellt, da man sonst im Unendlichen verschwindet.
-	\end{outputbox}
-	
-	\Code
-	\vspace{-0.1cm}
-	\begin{lstlisting}
-\begin{itemize}
-	\item[1. Fall]
-		Der Löwe ist im Käfig. Dieser Fall ist trivial.
-	\item[2. Fall]
-		Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
-\end{itemize}
-\textbf{Bemerkung:}
-Bei Anwendung dieser Methode ist dringend darauf zu achten, dass man sich nicht auf den Mittelpunkt des Käfigbodens stellt, da man sonst im Unendlichen verschwindet.
-	\end{lstlisting}
-\end{frame}
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\vspace{-0.3cm}
-	\begin{Aufgabe}
-		Erstelle die folgende Beschreibende Auflistung innerhalb einer neuen \lstinline[basicstyle=\normalfont\normalsize]|\subsubsection| \textrm{\qquote{Die \textSC{Hilbert}sche (axiomatische) Methode}} im Abschnitt \textrm{\qquote{Mathematische Methoden}}:
-	\end{Aufgabe}
-	\begin{outputbox}
-		\vspace{-0.2cm}
-		\begin{description}
-			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Axiom 1:}}]
-				Die Menge der Löwen in der Wüste Sahara ist nicht leer.
-			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Axiom 2:}}]
-				Wenn es einen Löwen in der Sahara gibt, dann gibt es einen Löwen im Käfig.
-			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Verfahrensvorschrift:}}]\ \newline
-				Wenn $P$ ein Theorem ist, und wenn weiterhin gilt: \qquote{Aus $P$ folgt $Q$}, dann ist auch $Q$ ein Theorem.
-			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Theorem 1:}}]
-				Es gibt einen Löwen im Käfig.
-		\end{description}
-		\vspace{-0.2cm}
-	\end{outputbox}
-	\btVFill\Befehle
-	\begin{center}
-		\begin{tabular}{ll}
-			\toprule
-			\LaTeX\ Befehl										&	Funktion									\\ \midrule
-			\lstinline|\begin{itemize}...\end{itemize}|			&	einfache Listen								\\
-			\lstinline|\begin{enumerate}...\end{enumerate}|		&	durchnummerierte Aufzählungen				\\
-			\lstinline|\begin{description}...\end{description}|	&	Erklärungen / Beschreibungen				\\
-			\lstinline|\item[LABEL]|							&	steht vor der einzelnen Punkten der Liste	\\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-	\vspace{0.1cm}
-\end{frame}
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\vspace{-0.2cm}
-	\Losung
-	\begin{outputbox}
-		\vspace{-0.2cm}
-		\begin{description}
-			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Axiom 1:}}]
-				Die Menge der Löwen in der Wüste Sahara ist nicht leer.
-			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Axiom 2:}}]
-				Wenn es einen Löwen in der Sahara gibt, dann gibt es einen Löwen im Käfig.
-			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Verfahrensvorschrift:}}]\ \newline
-				Wenn $P$ ein Theorem ist, und wenn weiterhin gilt: \qquote{Aus $P$ folgt $Q$}, dann ist auch $Q$ ein Theorem.
-			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Theorem 1:}}]
-				Es gibt einen Löwen im Käfig.
-		\end{description}
-		\vspace{-0.2cm}
-	\end{outputbox}
-	
-	\Code
-	\vspace{-0.1cm}
-	\begin{lstlisting}
-\begin{description}
-	\item[Axiom 1]
-		Die Menge der Löwen in der Wüste Sahara ist nicht leer.
-	\item[Axiom 2]
-		Wenn es einen Löwen in der Sahara gibt, dann gibt es einen Löwen im Käfig.
-	\item[Verfahrensvorschrift]
-		Wenn $P$ ein Theorem ist, und wenn weiterhin gilt: \qquote{Aus $P$ folgt $Q$}, dann ist auch $Q$ ein Theorem.
-	\item[Theorem 1]
-		Es gibt einen Löwen im Käfig.
-\end{description}
-	\end{lstlisting}
-\end{frame}
+%%-----------------------------------------------------------------------------------%
+%%---------------------------------------FRAME---------------------------------------%
+%%-----------------------------------------------------------------------------------%
+%\begin{frame}[fragile]
+%	\vspace{-0.2cm}
+%	\Losung
+%	\begin{outputbox}
+%		\vspace{-0.2cm}
+%		\begin{itemize}
+%			\item[1. Fall]
+%				Der Löwe ist im Käfig. Dieser Fall ist trivial.
+%			\item[2. Fall]
+%				Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
+%		\end{itemize}
+%		\vspace{-0.2cm}
+%		\textbf{Bemerkung:}
+%		Bei Anwendung dieser Methode ist dringend darauf zu achten, dass man sich nicht auf den Mittelpunkt des Käfigbodens stellt, da man sonst im Unendlichen verschwindet.
+%	\end{outputbox}
+%	
+%	\Code
+%	\vspace{-0.1cm}
+%	\begin{lstlisting}
+%\begin{itemize}
+%	\item[1. Fall]
+%		Der Löwe ist im Käfig. Dieser Fall ist trivial.
+%	\item[2. Fall]
+%		Der Löwe ist außerhalb des Käfigs. Dann stelle man sich in den Käfig und mache eine Inversion an den Käfigwänden. Auf diese Weise gelangt der Löwe in den Käfig und man selbst nach draußen.
+%\end{itemize}
+%\textbf{Bemerkung:}
+%Bei Anwendung dieser Methode ist dringend darauf zu achten, dass man sich nicht auf den Mittelpunkt des Käfigbodens stellt, da man sonst im Unendlichen verschwindet.
+%	\end{lstlisting}
+%\end{frame}
+%%-----------------------------------------------------------------------------------%
+%%---------------------------------------FRAME---------------------------------------%
+%%-----------------------------------------------------------------------------------%
+%\begin{frame}[fragile]
+%	\vspace{-0.3cm}
+%	\begin{Aufgabe}
+%		Erstelle die folgende Beschreibende Auflistung innerhalb einer neuen \lstinline[basicstyle=\normalfont\normalsize]|\subsubsection| \textrm{\qquote{Die \textSC{Hilbert}sche (axiomatische) Methode}} im Abschnitt \textrm{\qquote{Mathematische Methoden}}:
+%	\end{Aufgabe}
+%	\begin{outputbox}
+%		\vspace{-0.2cm}
+%		\begin{description}
+%			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Axiom 1:}}]
+%				Die Menge der Löwen in der Wüste Sahara ist nicht leer.
+%			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Axiom 2:}}]
+%				Wenn es einen Löwen in der Sahara gibt, dann gibt es einen Löwen im Käfig.
+%			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Verfahrensvorschrift:}}]\ \newline
+%				Wenn $P$ ein Theorem ist, und wenn weiterhin gilt: \qquote{Aus $P$ folgt $Q$}, dann ist auch $Q$ ein Theorem.
+%			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Theorem 1:}}]
+%				Es gibt einen Löwen im Käfig.
+%		\end{description}
+%		\vspace{-0.2cm}
+%	\end{outputbox}
+%	\btVFill\Befehle
+%	\begin{center}
+%		\begin{tabular}{ll}
+%			\toprule
+%			\LaTeX\ Befehl										&	Funktion									\\ \midrule
+%			\lstinline|\begin{itemize}...\end{itemize}|			&	einfache Listen								\\
+%			\lstinline|\begin{enumerate}...\end{enumerate}|		&	durchnummerierte Aufzählungen				\\
+%			\lstinline|\begin{description}...\end{description}|	&	Erklärungen / Beschreibungen				\\
+%			\lstinline|\item[LABEL]|							&	steht vor der einzelnen Punkten der Liste	\\
+%			\bottomrule
+%		\end{tabular}
+%	\end{center}
+%	\vspace{0.1cm}
+%\end{frame}
+%%-----------------------------------------------------------------------------------%
+%%---------------------------------------FRAME---------------------------------------%
+%%-----------------------------------------------------------------------------------%
+%\begin{frame}[fragile]
+%	\vspace{-0.2cm}
+%	\Losung
+%	\begin{outputbox}
+%		\vspace{-0.2cm}
+%		\begin{description}
+%			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Axiom 1:}}]
+%				Die Menge der Löwen in der Wüste Sahara ist nicht leer.
+%			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Axiom 2:}}]
+%				Wenn es einen Löwen in der Sahara gibt, dann gibt es einen Löwen im Käfig.
+%			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Verfahrensvorschrift:}}]\ \newline
+%				Wenn $P$ ein Theorem ist, und wenn weiterhin gilt: \qquote{Aus $P$ folgt $Q$}, dann ist auch $Q$ ein Theorem.
+%			\item[{\makebox[0.5cm]{}\makebox[1.5cm][l]{Theorem 1:}}]
+%				Es gibt einen Löwen im Käfig.
+%		\end{description}
+%		\vspace{-0.2cm}
+%	\end{outputbox}
+%	
+%	\Code
+%	\vspace{-0.1cm}
+%	\begin{lstlisting}
+%\begin{description}
+%	\item[Axiom 1]
+%		Die Menge der Löwen in der Wüste Sahara ist nicht leer.
+%	\item[Axiom 2]
+%		Wenn es einen Löwen in der Sahara gibt, dann gibt es einen Löwen im Käfig.
+%	\item[Verfahrensvorschrift]
+%		Wenn $P$ ein Theorem ist, und wenn weiterhin gilt: \qquote{Aus $P$ folgt $Q$}, dann ist auch $Q$ ein Theorem.
+%	\item[Theorem 1]
+%		Es gibt einen Löwen im Käfig.
+%\end{description}
+%	\end{lstlisting}
+%\end{frame}
 
 \end{document}
