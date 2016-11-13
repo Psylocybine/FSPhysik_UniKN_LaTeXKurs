@@ -22,14 +22,15 @@
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	\Ausgabe
-	\begin{outputbox}
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.3\textwidth]{img/loewenjagd}
-		\end{figure}
-	\end{outputbox}
-
-	\pause\Code
+		\begin{outputbox}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.3\textwidth]{img/loewenjagd}
+			\end{figure}
+			\vspace{-0.1cm}
+		\end{outputbox}
+	\pause
+	\Code*
 	\begin{lstlisting}
 \begin{figure}
 	\centering
@@ -37,13 +38,16 @@
 \end{figure}
 	\end{lstlisting}
 
-	\pause\textbf{Dateitypen:}\vspace{-0.2cm}
-	\begin{itemize}
-		\item *.png
-		\item *.eps
-		\item *.jpg
-		\item *.pdf mit \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\includepdf{}|
-	\end{itemize}
+	\pause
+	\vspace{-0.1cm}
+	\textbf{Dateitypen:}
+	\vspace{-0.2cm}
+		\begin{itemize}
+			\item *.png
+			\item *.eps
+			\item *.jpg
+			\item *.pdf mit \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\includepdf{}|
+		\end{itemize}
 \note[item]<1>{1}
 \note[item]<1>{1}
 \note[item]<2>{2}
@@ -53,13 +57,15 @@
 %-----------------------------------------------------------------------------------%
 \begin{frame}[fragile]
 	\Aufgabee
-		Füge einen neuen Abschnitt \textrm{\qquote{Diktatorische Methode}} als \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\subsubsection| der Section \textrm{\qquote{Sonstige Methoden}} ein und schreibe folgenden Text:
+		Füge einen neuen Abschnitt
+		
+		\textrm{\qquote{Diktatorische Methode}}
+		
+		als \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\subsubsection| der Section \qquote{Sonstige Methoden} ein und schreibe folgenden Text:
 		
 		\textrm{\qquote{Man fange was man finde und prügele es so lange, bis es zugibt, ein Löwe zu sein, der in der Wüste gefangen wurde.}}
 		
 		Füge dann danach die Grafik \qquote{loewenjagd.png} mithilfe von \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\begin{figure}...\end{figure}|, \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\centering| und \lstinline[basicstyle=\normalfont\ttfamily\normalsize]|\includegraphics[]{}| ein.
-	
-
 	\btVFill\Befehle
 	\begin{center}
 		\begin{tabular}{ll}
