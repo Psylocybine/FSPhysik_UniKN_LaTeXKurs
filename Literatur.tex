@@ -20,6 +20,34 @@
 %-----------------------------------------------------------------------------------%
 %---------------------------------------Einleitung----------------------------------%
 %-----------------------------------------------------------------------------------%
+\begin{frame}[c]
+
+  \begin{columns}[c]
+    \column{0.5\textwidth}
+    \begin{block}{How to:}
+      \begin{itemize}
+      \item Es gibt keinen 100\%ig einheitlichen Stil! Aber grob:
+      \item Bezeichner im Text
+      \item Verzeichnis im Anhang
+      \end{itemize}
+    \end{block}
+    
+    \column{0.5\textwidth}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\linewidth]{img/BiblatexExample.png}
+      \label{fig:BiblatexExample}
+    \end{figure}
+    $^[$\footnotemark$^]$ %caption prints ``Abbildung 1:'' which is annoying
+  \end{columns}
+  \footnotetext{Entnommen aus \cite{ShLaTeX}}
+  
+\end{frame}
+
+
+\subsection{\hologo{BibTeX}}
+
+
 \begin{frame}[c,fragile]
 
   \begin{center}
@@ -55,15 +83,46 @@
       \lstinline[basicstyle=\ttfamily\normalsize]|\label|-\lstinline[basicstyle=\ttfamily\normalsize]|\ref| - Formalismus & \hologo{BibTeX} - Formalismus \\
       \midrule
       \only<1>{\texttt{\textbackslash \color{green!70!black}{label}\color{black}{\{}}\textit{\small{<label-keyword>}}\texttt{\}}}%
-      \only<2>{\textit{\small{<Quellcode-Dateiname>}}\texttt{.aux}}
-      & \textit{\small{<Bibliotheks-Dateiname>}}\texttt{.bib} \\
+      \only<2>{\textit{\small{<Quellcode-Dateiname>}}\texttt{\color{teal}{.aux}}}
+      & \textit{\small{<Bibliotheks-Dateiname>}}\texttt{\color{teal}{.bib}} \\
       \texttt{\textbackslash \color{green!70!black}ref\color{black}\{}\textit{\small{<label-keyword>}}\texttt{\}} & \texttt{\textbackslash \color{green!70!black}cite\color{black}\{}\textit{\small{<bib-keyword>}}\texttt{\}}\\
       \bottomrule
     \end{tabular}
     \note[item]<1->{Quelle des keywords ist \lstinline|\label| bzw \texttt{.bib}-Datei.}
-    \note[item]<1->{Lüften das Geheimnis der \texttt{.aux}-Datei: Sie ist die eigentliche Quelle, hier notiert sich \LaTeX, was es beim nächsten mal kompilieren wissen muss.}
+    \note[item]<1->{Lüften das Geheimnis der \texttt{\color{teal}{.aux}}-Datei: Sie ist die eigentliche Quelle, hier notiert sich \LaTeX, was es beim nächsten mal kompilieren wissen muss.}
   \end{center}
   
+\end{frame}
+
+%-----------------------------------------------------------------------------------%
+%---------------------------------------FRAME---------------------------------------%
+%-----------------------------------------------------------------------------------%
+\begin{frame}[fragile]
+	\begin{Aufgabe}
+		Füge in die Bildunterschrift zur Löwenjagd eine Referenz auf \textrm{bear} ein und schreibe in das optionale Argument des \lstinline[basicstyle=\normalfont\normalsize]|\cite|-Befehls den Text \textrm{\qquote{bearbeitet}}:
+	\end{Aufgabe}
+	\begin{outputbox}
+		\vspace{-0.3cm}
+		\begin{center}
+			\textbf{Abbildung 1} - \textit{Vergleich verschiedener Dienste bei der Löwenjagd. [1, bearbeitet]}
+		\end{center}
+		\vspace{-0.3cm}
+	\end{outputbox}
+	\btVFill\Befehle
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule
+			\LaTeX\ Befehl							&	Funktion					\\ \midrule
+			\lstinline|\cite[]{}|					&	Zitierbefehl\\
+			\lstinline|\printbibliography|			&	Erstellen des Literaturverzeichnis\\
+			\lstinline|\citeauthor{}|				&	Zitieren des Autors \\
+			\lstinline|\citeyear{}|					&	Zitieren des Jahrs \\
+			\lstinline|\citetitle{}|				&	Zitieren des Titels \\
+			\lstinline|\psq|, \lstinline|\psqq|		&	\texttt{f} und \texttt{ff} \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\vspace{0.1cm}
 \end{frame}
 
 
@@ -210,36 +269,6 @@ Grundstoffwechselumsatz
 & \SI{94.58}{\kg\metre\tothe{2}\per\second\tothe{3}} \cite{HAGRLowe}
 & \SI{82.78}{\watt} \cite{HAGRMensch}
 	\end{lstlisting}
-\end{frame}
-%-----------------------------------------------------------------------------------%
-%---------------------------------------FRAME---------------------------------------%
-%-----------------------------------------------------------------------------------%
-\begin{frame}[fragile]
-	\begin{Aufgabe}
-		Füge in die Bildunterschrift zur Löwenjagd eine Referenz auf \textrm{bear} ein und schreibe in das optionale Argument des \lstinline[basicstyle=\normalfont\normalsize]|\cite|-Befehls den Text \textrm{\qquote{bearbeitet}}:
-	\end{Aufgabe}
-	\begin{outputbox}
-		\vspace{-0.3cm}
-		\begin{center}
-			\textbf{Abbildung 1} - \textit{Vergleich verschiedener Dienste bei der Löwenjagd. [1, bearbeitet]}
-		\end{center}
-		\vspace{-0.3cm}
-	\end{outputbox}
-	\btVFill\Befehle
-	\begin{center}
-		\begin{tabular}{ll}
-			\toprule
-			\LaTeX\ Befehl							&	Funktion					\\ \midrule
-			\lstinline|\cite[]{}|					&	Zitierbefehl\\
-			\lstinline|\printbibliography|			&	Erstellen des Literaturverzeichnis\\
-			\lstinline|\citeauthor{}|				&	Zitieren des Autors \\
-			\lstinline|\citeyear{}|					&	Zitieren des Jahrs \\
-			\lstinline|\citetitle{}|				&	Zitieren des Titels \\
-			\lstinline|\psq|, \lstinline|\psqq|		&	\texttt{f} und \texttt{ff} \\
-			\bottomrule
-		\end{tabular}
-	\end{center}
-	\vspace{0.1cm}
 \end{frame}
 %-----------------------------------------------------------------------------------%
 %---------------------------------------FRAME---------------------------------------%
