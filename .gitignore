@@ -1,5 +1,7 @@
 *.aux
+*.bbl
 *.bcf
+*.blg
 *.log
 *.nav
 *.out
@@ -9,3 +11,10 @@
 *.toc
 *.vrb
 *.pdf
+*.ps
+*.dvi
+*.fls
+.latexmkrc
+*.fdb_latexmk
+.texnicle
+auto
