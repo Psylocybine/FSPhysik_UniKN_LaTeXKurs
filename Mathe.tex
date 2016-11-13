@@ -52,7 +52,8 @@
 			\lstinline|y_{x}|						&	$y_{x}$					\\
 			\lstinline|+|	und 	\lstinline|-|	&	$+$	und $-$				\\
 			\lstinline|\pm| und \lstinline|\mp|		&	$\pm$ und $\mp$			\\
-			\lstinline|\infty|						&	$\infty$			    \\
+			\lstinline|\infty|						&	$\infty$			    \\ \midrule
+			\lstinline|$...$|						&	Inline-Mathe-Umgebung   \\
 			\bottomrule
 		\end{tabular}
 	\end{center}
@@ -78,8 +79,8 @@
 
     \colorlet{lstg}{green!70!black}
 	\Code
-	\begin{lstlisting}[gobble=4]
-    Wir beschaffen uns einen zahmen Löwen, $L_0$, aus der Klasse $L(- \infty, \infty)$, dessen \textsc{Fourier}transformierte nirgends verschwindet und setzen ihn in der Wüste aus. $L_0$ konvergiert dann gegen unseren Käfig. Aufgrund des allgemeinen \textsc{Wiener-Tauber}-Theorems wird dann jeder andere Löwe $L$ gegen denselben Käfig konvergieren.
+	\begin{lstlisting}[gobble=8]
+	    Wir beschaffen uns einen zahmen Löwen, $L_0$, aus der Klasse $L(- \infty, \infty)$, dessen \textsc{Fourier}transformierte nirgends verschwindet und setzen ihn in der Wüste aus. $L_0$ konvergiert dann gegen unseren Käfig. Aufgrund des allgemeinen \textsc{Wiener}-\textsc{Tauber}-Theorems wird dann jeder andere Löwe $L$ gegen denselben Käfig konvergieren.
 	\end{lstlisting}
   \note[item]<1->{Tiefgestellt im inline-math-mode}
   \note[item]<1->{Symbole benötigen math-mode}
@@ -138,7 +139,8 @@
 			\lstinline|\cdot|			&	$\cdot$						\\
 			\lstinline|\frac{x}{y}|		&	$\frac{x}{y}$				\\ \addlinespace[0.5em]
 			\lstinline|( )|				&	$( )$						\\
-			\lstinline|\left( \right)|	&	$( ) \cdots \bigg( \bigg)$	\\
+			\lstinline|\left( \right)|	&	$( ) \cdots \bigg( \bigg)$	\\ \midrule
+			\lstinline|\begin{align}...\end{align}|	&	Abgesetzte Mathe-Umgebung	\\
 			\bottomrule
 		\end{tabular}
 	\end{center}
